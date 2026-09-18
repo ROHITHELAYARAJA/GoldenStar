@@ -169,20 +169,10 @@ export default function AboutPage() {
 
                 <div className="pt-2 flex flex-wrap items-center gap-3 text-xs font-semibold">
                   <a
-                    href="https://wa.me/919345243790"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href="mailto:hameedsahul9978@gmail.com"
                     className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white transition-all shadow-sm font-space font-bold"
                   >
-                    <MessageCircle className="w-4 h-4 text-[#FFD84D]" />
-                    <span>WhatsApp: 9345243790</span>
-                  </a>
-
-                  <a
-                    href="mailto:hameedsahul9978@gmail.com"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-[#FFD84D]/20 text-[#111111] border border-[#DEDEDE] transition-all font-space font-bold"
-                  >
-                    <Mail className="w-4 h-4 text-[#111111]" />
+                    <Mail className="w-4 h-4 text-[#FFD84D]" />
                     <span>hameedsahul9978@gmail.com</span>
                   </a>
 

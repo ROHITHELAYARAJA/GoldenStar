@@ -447,15 +447,6 @@ export default function ProductsPage() {
                 >
                   Enquire About Products &rarr;
                 </button>
-                <a
-                  href="https://wa.me/919345243790"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-white hover:bg-[#FFD84D]/20 text-[#111111] border border-[#DEDEDE] font-space font-bold text-xs sm:text-sm shadow-sm hover:scale-105 transition-all"
-                >
-                  <MessageCircle className="w-4 h-4 text-[#FF583E]" />
-                  <span>WhatsApp: 9345243790</span>
-                </a>
               </div>
             </div>
           </div>

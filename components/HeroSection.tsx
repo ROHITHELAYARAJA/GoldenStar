@@ -276,7 +276,7 @@ export default function HeroSection() {
               ========================================================================= */}
               {/* Card 1: Top-Left Floating Badge (50+ Countries Served) */}
               <div className="animate-float-1 absolute -top-4 -left-2 sm:-top-6 sm:-left-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-2xl shadow-[0_12px_28px_-4px_rgba(251,108,0,0.25)] flex items-center gap-2.5 sm:gap-3 transition-transform hover:scale-105 duration-300">
-                <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden ring-2 ring-[#F9B637]/70 shadow-xs shrink-0">
+                <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden shadow-xs shrink-0">
                   <Image
                     src="/assets/images/branding/real-globe.jpg"
                     alt="Real 3D Earth Globe"

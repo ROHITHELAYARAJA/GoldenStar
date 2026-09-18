@@ -34,7 +34,7 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 flex flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-left">
             <div className="relative flex items-center justify-center shrink-0">
-              <div className="relative w-8 h-8 rounded-full overflow-hidden shadow-xs border border-[#FFD84D]/60 ring-1 ring-[#FFD84D]/30 shrink-0">
+              <div className="relative w-8 h-8 rounded-full overflow-hidden shadow-xs shrink-0">
                 <Image
                   src="/assets/images/branding/real-globe.jpg"
                   alt="Real Earth Globe"

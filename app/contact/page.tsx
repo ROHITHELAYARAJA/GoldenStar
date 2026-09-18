@@ -117,15 +117,6 @@ export default function ContactPage() {
                   <h3 className="font-outfit text-xl sm:text-2xl font-extrabold text-[#111111] mt-0.5 tracking-tight">
                     Sahul Hameed
                   </h3>
-                  <a
-                    href="https://wa.me/919345243790"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 mt-2.5 px-4 py-1.5 rounded-full text-xs font-space font-bold bg-[#25D366]/10 hover:bg-[#25D366] text-[#128C7E] hover:text-white border border-[#25D366]/30 transition-all duration-200 shadow-2xs cursor-pointer"
-                  >
-                    <MessageCircle className="w-3.5 h-3.5 fill-current" />
-                    <span>WhatsApp: 9345243790</span>
-                  </a>
                 </div>
               </div>
             </ScrollReveal>

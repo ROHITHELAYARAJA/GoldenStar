@@ -220,29 +220,29 @@ export default function ServicesPage() {
 
           {/* Quick Inquiry Card */}
           <ScrollReveal animation="slide-up" delay={0.3} className="h-full">
-            <div className="luxury-card p-5 sm:p-8 bg-[#111111] text-white border border-[#DEDEDE] flex flex-col justify-between shadow-xl rounded-3xl h-full">
+            <div className="p-6 sm:p-8 bg-white text-[#111111] border-2 border-[#F9B637] flex flex-col justify-between shadow-lg hover:shadow-2xl rounded-3xl h-full transition-all duration-300">
               <div>
-                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFD84D] text-[#111111] flex items-center justify-center mb-4 sm:mb-6">
-                  <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#FFDD9C] to-[#FFD84D] text-[#111111] flex items-center justify-center mb-5 shadow-xs border border-[#F9B637]/50">
+                  <Sparkles className="w-6 h-6 text-[#111111]" />
                 </div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-white/10 text-white mb-2 sm:mb-3 font-dmsans uppercase">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[11px] font-urbanist font-black uppercase tracking-wider bg-[#FFDD9C]/45 text-[#E73F1E] border border-[#F9B637]/50 mb-3 shadow-2xs">
                   Custom Inquiries
                 </span>
-                <h3 className="text-lg sm:text-xl font-bold font-space text-white mb-2 sm:mb-3">
+                <h3 className="text-xl sm:text-2xl font-extrabold font-urbanist text-[#111111] mb-3">
                   Tailored Export Solutions
                 </h3>
-                <p className="text-xs sm:text-sm font-dmsans text-zinc-300 leading-relaxed mb-3 sm:mb-4 font-normal">
+                <p className="text-sm sm:text-[15px] font-opensans text-zinc-900 font-bold leading-relaxed mb-3">
                   Require customized container mix, specific mesh packaging sizes, or specialized phytosanitary parameters?
                 </p>
-                <p className="text-xs font-dmsans text-zinc-400">
+                <p className="text-xs sm:text-sm font-opensans text-zinc-700 font-semibold leading-relaxed">
                   Our export desk creates bespoke contracts aligned with your destination country port regulations.
                 </p>
               </div>
 
-              <div className="pt-4 sm:pt-6 mt-4 sm:mt-6 font-dmsans">
+              <div className="pt-6 mt-6 font-dmsans">
                 <button
                   onClick={() => openQuoteModal("Custom Trade Requirements")}
-                  className="w-full py-2.5 sm:py-3 rounded-xl bg-[#FF583E] hover:bg-[#FFD84D] hover:text-[#111111] text-white font-space font-bold text-xs sm:text-sm shadow-md transition-all"
+                  className="w-full py-3 sm:py-3.5 rounded-xl bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] hover:from-[#FB6C00] hover:to-[#E73F1E] text-white font-urbanist font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer uppercase tracking-wider"
                 >
                   <span>Request Custom Plan</span>
                 </button>

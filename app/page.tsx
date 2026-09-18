@@ -594,20 +594,10 @@ export default function HomePage() {
 
               <div className="flex flex-wrap items-center gap-4 pt-2 font-dmsans">
                 <a
-                  href="https://wa.me/919345243790"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-semibold text-xs shadow-sm transition-all hover:scale-105 font-space"
-                >
-                  <MessageCircle className="w-4 h-4 text-[#FFD84D]" />
-                  <span>Direct WhatsApp: +91 9345243790</span>
-                </a>
-
-                <a
                   href="mailto:hameedsahul9978@gmail.com"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white hover:bg-zinc-50 text-[#111111] font-semibold text-xs border border-[#DEDEDE] shadow-sm transition-all hover:scale-105 font-space"
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-semibold text-xs border border-[#111111] shadow-sm transition-all hover:scale-105 font-space"
                 >
-                  <Mail className="w-4 h-4 text-[#111111]" />
+                  <Mail className="w-4 h-4 text-[#FFD84D]" />
                   <span>hameedsahul9978@gmail.com</span>
                 </a>
               </div>
