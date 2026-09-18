@@ -26,6 +26,8 @@ import WhyChooseUsInteractive from "@/components/WhyChooseUsInteractive";
 import { Particles } from "@/components/ui/particles";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { CardSpotlight } from "@/components/ui/card-spotlight";
+import HeroSection from "@/components/HeroSection";
+import GetStartedButton from "@/components/ui/get-started-button";
 
 export default function HomePage() {
   const { openQuoteModal } = useQuoteModal();
@@ -71,92 +73,8 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-white text-[#111111] overflow-hidden">
-      {/* 🌟 Pristine Maritime Vessel Hero Showcase (Container Vessel with Text strictly over Red Hull) */}
-      <section className="relative w-full overflow-hidden">
-        <div className="relative w-full min-h-[620px] sm:min-h-[680px] lg:h-[calc(100vh-80px)] flex items-end">
-          {/* Background High-Definition Maritime Vessel Photograph - Pristine 8K Container Ship */}
-          {/* Unobstructed upper view: Airplane, sunset clouds, and blue cranes stay completely clear! */}
-          <div className="absolute inset-0 z-0">
-            <Image
-              src="/assets/images/hero/hero-container-vessel.jpg"
-              alt="The Golden Star - Maritime Container Vessel at Port"
-              fill
-              className="object-cover object-[center_32%]"
-              priority
-            />
-            {/* Localized Bottom Gradient strictly over the lower red hull and water region */}
-            <div className="absolute bottom-0 inset-x-0 h-[50%] bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-full sm:w-[60%] lg:w-[48%] h-[60%] bg-gradient-to-tr from-black/75 via-black/30 to-transparent pointer-events-none" />
-          </div>
-
-          {/* Hero Content strictly anchored over the RED HULL / Lower Vessel area */}
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-6 sm:pb-8 lg:pb-10">
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-              className="max-w-xl bg-black/60 backdrop-blur-md p-5 sm:p-6 rounded-3xl border border-white/20 shadow-2xl"
-            >
-              {/* Sleek Trade Pill Badge */}
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-[#FFD84D]/50 text-white text-xs font-space font-medium mb-3 shadow-sm">
-                <span className="text-[#FFD84D] font-bold tracking-wider uppercase text-[10px] sm:text-[11px]">
-                  DIRECT MARITIME EXPORT
-                </span>
-                <span className="text-zinc-300 hidden sm:inline">&bull; 100% Port Clearance</span>
-              </div>
-
-              {/* Bold Space Grotesk Headline (Exact from Golden Star Company .md) */}
-              <h1 className="font-space text-2xl sm:text-3xl lg:text-[38px] text-white font-bold leading-[1.15] tracking-tight mb-2.5 drop-shadow-lg">
-                From the Finest Farms{" "}
-                <span className="text-[#FFD84D]">
-                  to the World
-                </span>
-              </h1>
-
-              {/* Clean Tagline (Exact from Golden Star Company .md) */}
-              <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed max-w-lg mb-4 font-dmsans font-normal drop-shadow-sm">
-                Premium agricultural products, sourced with care and delivered across borders.
-              </p>
-
-              {/* Action Buttons: Learn About Us & Get a Quote */}
-              <div className="flex flex-wrap items-center gap-3">
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FF583E] hover:bg-[#E8492C] text-white font-space font-bold text-xs sm:text-sm shadow-lg transition-all duration-200 hover:scale-105 active:scale-95"
-                >
-                  <span>Learn About Us</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
-                </Link>
-
-                <button
-                  onClick={() => openQuoteModal("Hero Section")}
-                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FFD84D] hover:bg-[#FFE066] text-[#111111] font-space font-bold text-xs sm:text-sm transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg border border-[#E8C838]"
-                >
-                  <span>Get a Quote</span>
-                </button>
-              </div>
-
-              {/* Quick Trust Highlights directly inside Card */}
-              <div className="mt-3.5 pt-3 border-t border-white/15 flex flex-wrap items-center gap-3 sm:gap-4 text-[10px] sm:text-[11px] font-dmsans text-zinc-300">
-                <span className="flex items-center gap-1.5">
-                  <ShieldCheck className="w-3.5 h-3.5 text-[#FFD84D]" />
-                  Direct Farm Sourcing
-                </span>
-                <span className="text-zinc-500 hidden sm:inline">&bull;</span>
-                <span className="flex items-center gap-1.5">
-                  <Ship className="w-3.5 h-3.5 text-[#FFD84D]" />
-                  Cold-Chain Reefer
-                </span>
-                <span className="text-zinc-500 hidden sm:inline">&bull;</span>
-                <span className="flex items-center gap-1.5">
-                  <Award className="w-3.5 h-3.5 text-[#FFD84D]" />
-                  APEDA &amp; Spices Board
-                </span>
-              </div>
-            </motion.div>
-          </div>
-        </div>
-      </section>
+      {/* 🌟 Split Hero Showcase (Matching User Reference Layout with GSAP Motion) */}
+      <HeroSection />
 
       {/* 🌟 Product Categories Section (Enterprise Export Frames) */}
       <section className="py-24 max-w-7xl mx-auto px-6 sm:px-8">
@@ -200,8 +118,8 @@ export default function HomePage() {
               {/* Image Container with Smooth Zoom & Floating Badges */}
               <div className="w-full h-60 rounded-2xl overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
                 <Image
-                  src="/assets/images/products/fruits/mango.jpg"
-                  alt="Fresh Quality Fruits"
+                  src="/assets/images/products/fruits-display.jpg"
+                  alt="Fresh Quality Fruits Display"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
@@ -209,16 +127,15 @@ export default function HomePage() {
                 
                 {/* Top Left Number/Category Badge */}
                 <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
-                  <span>01 &bull; FRUITS</span>
+                  <span>01 / FRUITS</span>
                 </div>
 
                 {/* Floating Bottom Right Yellow Badge with Continuous Smooth Float */}
                 <motion.div
                   animate={{ y: [0, -4, 0] }}
                   transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center gap-1.5 group-hover:scale-105 transition-transform"
+                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
                 >
-                  <Sparkles className="w-2.5 h-2.5 text-[#111111]" />
                   <span>EXPORT GRADE A1</span>
                 </motion.div>
               </div>
@@ -314,8 +231,8 @@ export default function HomePage() {
               {/* Image Container with Smooth Zoom */}
               <div className="w-full h-60 rounded-2xl overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
                 <Image
-                  src="/assets/images/products/vegetables/onion.jpg"
-                  alt="Quality Vegetables Supply"
+                  src="/assets/images/products/vegetables-display.jpg"
+                  alt="Fresh Quality Vegetables Display"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
@@ -323,16 +240,15 @@ export default function HomePage() {
                 
                 {/* Top Left Number/Category Badge */}
                 <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
-                  <span>02 &bull; VEGETABLES</span>
+                  <span>02 / VEGETABLES</span>
                 </div>
 
                 {/* Floating Bottom Right Yellow Badge with Continuous Float */}
                 <motion.div
                   animate={{ y: [0, -4, 0] }}
                   transition={{ repeat: Infinity, duration: 3.2, ease: "easeInOut", delay: 0.2 }}
-                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center gap-1.5 group-hover:scale-105 transition-transform"
+                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
                 >
-                  <Sparkles className="w-2.5 h-2.5 text-[#111111]" />
                   <span>FARM HARVESTED</span>
                 </motion.div>
               </div>
@@ -438,8 +354,8 @@ export default function HomePage() {
               {/* Image Container with Smooth Zoom & Floating Origin Badge */}
               <div className="w-full h-60 rounded-2xl overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
                 <Image
-                  src="/assets/images/products/spices/black-pepper.jpg"
-                  alt="Authentic Indian Spices"
+                  src="/assets/images/products/spices-display.jpg"
+                  alt="Authentic Quality Indian Spices Display"
                   fill
                   className="object-cover group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
@@ -447,21 +363,15 @@ export default function HomePage() {
                 
                 {/* Top Left Number/Category Badge */}
                 <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
-                  <span>03 &bull; SPICES</span>
+                  <span>03 / SPICES</span>
                 </div>
 
-                {/* Floating Bottom Right Yellow Badge with Continuous Smooth Float & Icon Shimmer */}
+                {/* Floating Bottom Right Yellow Badge with Continuous Smooth Float */}
                 <motion.div
                   animate={{ y: [0, -5, 0] }}
                   transition={{ repeat: Infinity, duration: 2.8, ease: "easeInOut", delay: 0.4 }}
-                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center gap-1.5 group-hover:scale-105 transition-transform"
+                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
                 >
-                  <motion.span
-                    animate={{ rotate: [0, 10, -10, 0] }}
-                    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                  >
-                    ✨
-                  </motion.span>
                   <span>PURE INDIAN ORIGIN</span>
                 </motion.div>
               </div>
@@ -661,7 +571,7 @@ export default function HomePage() {
                   Sahul Hameed
                 </h3>
                 <p className="text-xs sm:text-sm font-semibold text-zinc-500 uppercase tracking-wider mt-1 font-dmsans">
-                  Founder &amp; Managing Director &bull; The Golden Star
+                  Founder &amp; Managing Director / The Golden Star
                 </p>
               </div>
 
@@ -710,13 +620,12 @@ export default function HomePage() {
           <p className="text-base sm:text-xl text-zinc-300 font-dmsans max-w-xl mx-auto leading-relaxed">
             &ldquo;Let&apos;s build a reliable supply connection.&rdquo;
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-4 pt-4 font-dmsans">
-            <button
+          <div className="flex flex-wrap items-center justify-center gap-5 pt-4 font-dmsans">
+            <GetStartedButton
+              label="Get Started Now"
               onClick={() => openQuoteModal("Home Footer CTA")}
-              className="px-8 py-3.5 rounded-full bg-[#FF583E] hover:bg-[#E8492C] text-white font-bold text-sm shadow-xl hover:scale-105 transition-all font-space"
-            >
-              Get a Quote
-            </button>
+              className="bg-[#FF583E] text-white hover:border-[#FF583E] hover:text-[#111111] font-space font-bold text-sm tracking-wide shadow-xl hover:shadow-[0_12px_28px_rgba(255,88,62,0.45)]"
+            />
             <Link
               href="/contact"
               className="px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/25 transition-all hover:scale-105 backdrop-blur-md shadow-sm font-space"

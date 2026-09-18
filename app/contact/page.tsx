@@ -99,10 +99,10 @@ export default function ContactPage() {
               </div>
             </ScrollReveal>
 
-            {/* Founder Profile Card */}
+            {/* Founder Profile Card - Professional Brand Theme */}
             <ScrollReveal animation="slide-up" delay={0.15}>
-              <div className="rounded-3xl p-6 bg-[#111111] text-white border border-zinc-800 shadow-xl flex items-center gap-5">
-                <div className="relative h-20 w-20 rounded-2xl overflow-hidden border-2 border-[#DEDEDE] shrink-0 bg-zinc-800">
+              <div className="rounded-3xl p-6 bg-white text-[#111111] border-2 border-[#F9B637]/40 shadow-sm hover:shadow-md transition-all flex items-center gap-5">
+                <div className="relative h-20 w-20 rounded-2xl overflow-hidden border-2 border-[#F9B637]/50 shrink-0 bg-zinc-50 shadow-xs">
                   <Image
                     src="/assets/images/branding/founder.png"
                     alt="Sahul Hameed"
@@ -111,19 +111,19 @@ export default function ContactPage() {
                   />
                 </div>
                 <div>
-                  <span className="text-[10px] font-space font-bold uppercase tracking-widest text-[#FF583E] block">
+                  <span className="text-[11px] font-space font-bold uppercase tracking-[0.2em] text-[#FB6C00] block">
                     Proprietor &amp; Managing Director
                   </span>
-                  <h3 className="font-space text-xl font-bold text-white mt-0.5">
-                    SAHUL HAMEED
+                  <h3 className="font-outfit text-xl sm:text-2xl font-extrabold text-[#111111] mt-0.5 tracking-tight">
+                    Sahul Hameed
                   </h3>
                   <a
                     href="https://wa.me/919345243790"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 mt-2 px-3.5 py-1.5 rounded-full text-xs font-space font-bold bg-[#FF583E] text-white hover:bg-white hover:text-[#111111] transition-colors"
+                    className="inline-flex items-center gap-2 mt-2.5 px-4 py-1.5 rounded-full text-xs font-space font-bold bg-[#25D366]/10 hover:bg-[#25D366] text-[#128C7E] hover:text-white border border-[#25D366]/30 transition-all duration-200 shadow-2xs cursor-pointer"
                   >
-                    <MessageCircle className="w-3.5 h-3.5 text-white" />
+                    <MessageCircle className="w-3.5 h-3.5 fill-current" />
                     <span>WhatsApp: 9345243790</span>
                   </a>
                 </div>

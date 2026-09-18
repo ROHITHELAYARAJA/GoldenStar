@@ -85,7 +85,7 @@ export default function AboutPage() {
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
                 <span className="absolute bottom-4 left-6 text-white text-sm font-bold font-space">
-                  Maritime Cargo Logistics &bull; The Golden Star
+                  Maritime Cargo Logistics / The Golden Star
                 </span>
               </div>
               <div className="p-7 space-y-5 font-dmsans">

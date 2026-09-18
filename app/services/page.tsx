@@ -124,8 +124,8 @@ export default function ServicesPage() {
         <ScrollReveal animation="scale" delay={0.1}>
           <div className="relative h-64 sm:h-96 w-full rounded-3xl overflow-hidden border border-[#DEDEDE] shadow-xl">
             <Image
-              src="/assets/images/hero/hero-container-vessel.jpg"
-              alt="International Cargo Port Operations"
+              src="/assets/images/hero/services-ocean-port.jpg"
+              alt="International Ocean Cargo Vessel"
               fill
               className="object-cover brightness-95"
               priority
@@ -195,7 +195,7 @@ export default function ServicesPage() {
                     <div className="space-y-2 pt-3 sm:pt-4 border-t border-[#DEDEDE]">
                       {item.points.map((pt, pIdx) => (
                         <div key={pIdx} className="flex items-start gap-2 text-xs font-dmsans text-zinc-700">
-                          <span className="text-[#111111] font-bold text-xs shrink-0">&bull;</span>
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#FB6C00] shrink-0 mt-0.5" />
                           <span>{pt}</span>
                         </div>
                       ))}

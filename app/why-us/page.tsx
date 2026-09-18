@@ -121,7 +121,7 @@ export default function WhyUsPage() {
         <ScrollReveal animation="scale" delay={0.1}>
           <div className="relative h-72 sm:h-96 w-full rounded-3xl overflow-hidden border border-[#DEDEDE] shadow-lg">
             <Image
-              src="/assets/images/hero/hero-container-vessel.jpg"
+              src="/assets/images/hero/global-corridors-port.png"
               alt="International Ocean Freight Shipping"
               fill
               className="object-cover brightness-95"
@@ -238,7 +238,7 @@ export default function WhyUsPage() {
                     {item.desc}
                   </p>
                   <div className="flex items-center gap-2 text-xs text-zinc-700 pt-3 border-t border-[#DEDEDE] font-dmsans">
-                    <span className="text-[#111111] font-bold text-xs shrink-0">&bull;</span>
+                    <CheckCircle2 className="w-3.5 h-3.5 text-[#FB6C00] shrink-0" />
                     <span>{item.point}</span>
                   </div>
                 </motion.div>
