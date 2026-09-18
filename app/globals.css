@@ -1,0 +1,192 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-primary: #FFFFFF;
+    --text-primary: #111111;
+    --primary: #111111;
+    --accent: #FF583E;
+    --surface: #FFD84D;
+    --border-color: #DEDEDE;
+    
+    /* Logo 3-Color Triad */
+    --gold-cream: #FFFDC1;
+    --gold-rich: #FFD84D;
+    --gold-bronze: #7D4E0C;
+    
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'DM Sans', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #FFFFFF;
+    color: #111111;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  body {
+    font-family: 'DM Sans', sans-serif;
+    background: #FFFFFF;
+    color: #111111;
+    overflow-x: hidden;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    color: #111111;
+    letter-spacing: -0.02em;
+    font-weight: 700;
+  }
+
+  p {
+    font-family: 'DM Sans', sans-serif;
+  }
+}
+
+/* Clean Professional Card Styles */
+.luxury-card {
+  background: #FFFFFF;
+  border: 1px solid #DEDEDE;
+  border-radius: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.03);
+  position: relative;
+  overflow: hidden;
+}
+
+.luxury-card:hover {
+  transform: translateY(-4px);
+  border-color: #111111;
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.08);
+}
+
+/* CTA Buttons */
+.btn-cta-coral {
+  background: #FF583E;
+  color: #FFFFFF;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 0.85rem 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.92rem;
+  letter-spacing: -0.01em;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 8px 24px -4px rgba(255, 88, 62, 0.35);
+}
+
+.btn-cta-coral:hover {
+  transform: translateY(-2px);
+  background: #E8492C;
+  box-shadow: 0 12px 30px -4px rgba(255, 88, 62, 0.45);
+}
+
+.btn-pill-primary {
+  background: #111111;
+  color: #FFFFFF;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 0.85rem 1.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+}
+
+.btn-pill-primary:hover {
+  background: #222222;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+}
+
+.btn-pill-secondary {
+  background: #FFFFFF;
+  color: #111111;
+  border: 1px solid #DEDEDE;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  border-radius: 9999px;
+  padding: 0.85rem 1.85rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  transition: all 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.btn-pill-secondary:hover {
+  background: #FFD84D;
+  border-color: #FFD84D;
+  color: #111111;
+  transform: translateY(-2px);
+}
+
+/* Clean Gold & Pill Badges */
+.badge-pill-spotlight {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #111111;
+  background: #FFFFFF;
+  border: 1px solid #DEDEDE;
+  padding: 0.4rem 1.1rem;
+  border-radius: 9999px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.badge-pill-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.78rem;
+  font-weight: 700;
+  font-family: 'Space Grotesk', sans-serif;
+  color: #111111;
+  background: #FFD84D;
+  border: 1px solid rgba(255, 216, 77, 0.6);
+  padding: 0.4rem 1rem;
+  border-radius: 9999px;
+}
+
+/* Custom Input Field */
+.luxury-input {
+  width: 100%;
+  border-radius: 0.85rem;
+  border: 1px solid #DEDEDE;
+  background: #FFFFFF;
+  padding: 0.85rem 1.15rem;
+  color: #111111;
+  font-size: 0.92rem;
+  font-family: 'DM Sans', sans-serif;
+  transition: all 0.2s ease;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02);
+}
+
+.luxury-input:focus {
+  outline: none;
+  border-color: #111111;
+  box-shadow: 0 0 0 3px rgba(255, 216, 77, 0.35);
+}
+
+.luxury-input::placeholder {
+  color: #888888;
+}

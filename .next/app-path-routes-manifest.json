@@ -1,0 +1,12 @@
+{
+  "/apple-icon.png/route": "/apple-icon.png",
+  "/icon.png/route": "/icon.png",
+  "/favicon.ico/route": "/favicon.ico",
+  "/_not-found/page": "/_not-found",
+  "/about/page": "/about",
+  "/contact/page": "/contact",
+  "/products/page": "/products",
+  "/page": "/",
+  "/why-us/page": "/why-us",
+  "/services/page": "/services"
+}

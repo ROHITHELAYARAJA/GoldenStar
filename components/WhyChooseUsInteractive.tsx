@@ -1,0 +1,214 @@
+"use client";
+
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Globe, MapPin, Package, Truck, ShieldCheck, ArrowUpRight } from "lucide-react";
+import { useQuoteModal } from "@/context/QuoteModalContext";
+
+interface MetricCard {
+  id: number;
+  stat: string;
+  title: string;
+  shortDesc: string;
+  fullDesc: string;
+  icon: React.ComponentType<{ className?: string }>;
+  tag: string;
+}
+
+export default function WhyChooseUsInteractive() {
+  const [activeCard, setActiveCard] = useState<number>(0);
+  const { openQuoteModal } = useQuoteModal();
+
+  const metrics: MetricCard[] = [
+    {
+      id: 0,
+      stat: "50+",
+      title: "Sourcing Locations",
+      shortDesc: "Direct farm partnerships across South India",
+      fullDesc:
+        "Direct partnerships across 50+ sourcing points in South India — from Guntur chillies and Salem mangoes to Erode turmeric and Kerala black pepper.",
+      icon: Globe,
+      tag: "PAN-SOUTH INDIA",
+    },
+    {
+      id: 1,
+      stat: "100+",
+      title: "Pan-India Supplier Network",
+      shortDesc: "Vetted agricultural farm clusters & growers",
+      fullDesc:
+        "Vetted agricultural farm clusters, certified growers, and cold-storage facilities ensuring round-the-year harvest continuity and uncompromising freshness.",
+      icon: MapPin,
+      tag: "CERTIFIED GROWERS",
+    },
+    {
+      id: 2,
+      stat: "6+",
+      title: "Multi-Category Trade",
+      shortDesc: "Fruits, Vegetables, Spices & Commodities",
+      fullDesc:
+        "Integrated procurement across Fresh Fruits, Farm Vegetables, Authentic Spices, and Essential Food Commodities tailored to destination market standards.",
+      icon: Package,
+      tag: "DIVERSE PORTFOLIO",
+    },
+    {
+      id: 3,
+      stat: "50+",
+      title: "Global Distribution",
+      shortDesc: "Worldwide port-to-port maritime shipping",
+      fullDesc:
+        "Dedicated maritime reefer container booking, multi-modal cold-chain transport, phytosanitary clearance, and punctual delivery to global trade hubs.",
+      icon: Truck,
+      tag: "WORLDWIDE PORTS",
+    },
+  ];
+
+  return (
+    <section className="py-20 sm:py-28 bg-white relative overflow-hidden border-t border-[#DEDEDE]">
+      {/* Background Subtle Ambient Tint */}
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#FFFDC1]/25 rounded-full blur-3xl pointer-events-none" />
+
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        {/* Section Header */}
+        <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
+          <motion.div
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFDC1] border border-[#D9B975]/40 shadow-sm text-xs font-space font-bold text-[#7D4E0C] mb-4"
+          >
+            <span className="w-2 h-2 rounded-full bg-[#D9B975]" />
+            <span className="tracking-wider uppercase text-[10px] font-space font-bold">
+              TRUSTED TRADE CAPABILITIES
+            </span>
+          </motion.div>
+
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="font-space text-2xl sm:text-4xl font-bold text-[#111111] tracking-tight leading-tight"
+          >
+            Why Choose Us
+          </motion.h2>
+
+          <motion.p
+            initial={{ opacity: 0, y: 15 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="font-dmsans text-sm sm:text-base text-zinc-600 mt-3 max-w-2xl mx-auto leading-relaxed font-normal"
+          >
+            We are your trusted partner for agricultural trade with comprehensive solutions — connecting direct South Indian farms with discerning global importers.
+          </motion.p>
+        </div>
+
+        {/* 🌟 Refined Clean Metric Cards Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 lg:gap-6 items-stretch">
+          {metrics.map((item, index) => {
+            const Icon = item.icon;
+            const isSelected = activeCard === item.id;
+
+            return (
+              <motion.div
+                key={item.id}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: index * 0.1 }}
+                whileHover={{ y: -8 }}
+                onClick={() => setActiveCard(item.id)}
+                className={`rounded-3xl p-6 sm:p-7 border shadow-sm transition-all duration-300 flex flex-col justify-between relative overflow-hidden group select-none cursor-pointer ${
+                  isSelected
+                    ? "bg-[#FFFDC1]/40 border-[#D9B975] shadow-[0_20px_40px_-15px_rgba(217,185,117,0.3)]"
+                    : "bg-white border-[#DEDEDE] hover:border-[#D9B975] hover:shadow-[0_16px_36px_-12px_rgba(217,185,117,0.2)]"
+                }`}
+              >
+                <div>
+                  {/* Top Bar: Icon + Category Tag */}
+                  <div className="flex items-center justify-between mb-5">
+                    <div className="w-12 h-12 rounded-2xl bg-[#FFFDC1] border border-[#D9B975]/35 flex items-center justify-center text-[#7D4E0C] group-hover:bg-[#FF5B3E] group-hover:text-white transition-all duration-300">
+                      <Icon className="w-5 h-5" />
+                    </div>
+
+                    <span className="text-[10px] font-space font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white border border-[#DEDEDE] text-[#7D4E0C] group-hover:border-[#D9B975] transition-colors">
+                      {item.tag}
+                    </span>
+                  </div>
+
+                  {/* Refined Stat Counter */}
+                  <div className="mb-2">
+                    <span className="font-space text-3xl sm:text-4xl font-bold tracking-tight leading-none text-[#111111] group-hover:text-[#7D4E0C] transition-colors duration-300">
+                      {item.stat}
+                    </span>
+                  </div>
+
+                  {/* Card Title */}
+                  <h3 className="font-space text-base sm:text-lg font-bold tracking-tight mb-2 text-[#111111]">
+                    {item.title}
+                  </h3>
+
+                  {/* Description */}
+                  <p className="font-dmsans text-xs sm:text-sm leading-relaxed text-zinc-600 font-normal">
+                    {item.shortDesc}
+                  </p>
+                </div>
+
+                {/* Bottom Highlight */}
+                <div className="pt-4 mt-5 border-t border-[#DEDEDE] flex items-center justify-between">
+                  <span className="text-[11px] font-dmsans font-semibold text-zinc-500 group-hover:text-[#7D4E0C] transition-colors">
+                    Standard Compliant
+                  </span>
+                  <div className="w-6 h-6 rounded-full bg-zinc-100 group-hover:bg-[#111111] group-hover:text-white flex items-center justify-center text-zinc-700 transition-all">
+                    <ArrowUpRight className="w-3.5 h-3.5" />
+                  </div>
+                </div>
+              </motion.div>
+            );
+          })}
+        </div>
+
+        {/* Bottom Fast Action Banner */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="mt-12 rounded-2xl bg-white border border-[#DEDEDE] p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4"
+        >
+          <div className="flex items-center gap-3.5">
+            <div className="w-10 h-10 rounded-xl bg-[#FFFDC1] border border-[#D9B975]/40 flex items-center justify-center text-[#7D4E0C] shrink-0">
+              <ShieldCheck className="w-5 h-5" />
+            </div>
+            <div>
+              <p className="text-xs sm:text-sm font-bold text-[#111111] font-space">
+                Need customized contract farming or designated CIF port terms?
+              </p>
+              <p className="text-[11px] sm:text-xs text-zinc-600 font-dmsans">
+                Founder Sahul Hameed coordinates directly with sourcing hubs across Tamil Nadu &amp; South India.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex items-center gap-3 shrink-0 w-full sm:w-auto font-dmsans">
+            <button
+              onClick={() => openQuoteModal("Why Choose Us Section")}
+              className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF5B3E] text-white font-bold text-xs sm:text-sm transition-all shadow hover:scale-105 font-space"
+            >
+              Request Sourcing Quote
+            </button>
+            <a
+              href="https://wa.me/919345243790"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto px-4 py-2.5 rounded-full bg-white hover:bg-[#FFFDC1] border border-[#DEDEDE] text-[#111111] hover:text-[#7D4E0C] font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 font-space"
+            >
+              <span>WhatsApp</span>
+            </a>
+          </div>
+        </motion.div>
+      </div>
+    </section>
+  );
+}
