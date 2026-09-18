@@ -34,9 +34,14 @@ export default function Footer() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 flex flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-left">
             <div className="relative flex items-center justify-center shrink-0">
-              <span className="w-8 h-8 rounded-full bg-[#111111] text-[#FFD84D] flex items-center justify-center shadow-xs border border-[#FFD84D]/40">
-                <Globe2 className="w-4 h-4 text-[#FFD84D] animate-[spin_12s_linear_infinite]" />
-              </span>
+              <div className="relative w-8 h-8 rounded-full overflow-hidden shadow-xs border border-[#FFD84D]/60 ring-1 ring-[#FFD84D]/30 shrink-0">
+                <Image
+                  src="/assets/images/branding/real-globe.jpg"
+                  alt="Real Earth Globe"
+                  fill
+                  className="object-cover animate-[spin_24s_linear_infinite]"
+                />
+              </div>
             </div>
             <div className="flex flex-wrap items-center gap-2">
               <span className="px-2.5 py-0.5 rounded-full text-[10px] font-space font-bold uppercase tracking-wider bg-[#FFD84D] text-[#111111] border border-[#E8C838] shadow-2xs">
@@ -225,7 +230,14 @@ export default function Footer() {
                 <span className="font-medium text-zinc-800">100% Phytosanitary Inspected</span>
               </div>
               <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-[#DEDEDE] shadow-xs">
-                <Globe2 className="w-4 h-4 text-[#111111] shrink-0" />
+                <div className="relative w-4 h-4 rounded-full overflow-hidden shrink-0 border border-[#FFD84D]/60">
+                  <Image
+                    src="/assets/images/branding/real-globe.jpg"
+                    alt="Real Earth Globe"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
                 <span className="font-medium text-zinc-800">APEDA &amp; Spices Board Adherent</span>
               </div>
               <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-[#DEDEDE] shadow-xs">
@@ -353,7 +365,14 @@ export default function Footer() {
             <span className="text-[9px] font-space font-bold text-zinc-800 block leading-tight">Phytosanitary</span>
           </div>
           <div className="p-2 rounded-xl bg-white border border-[#DEDEDE] text-center shadow-xs">
-            <Globe2 className="w-4 h-4 text-[#111111] mx-auto mb-1" />
+            <div className="relative w-4 h-4 rounded-full overflow-hidden mx-auto mb-1 shrink-0 border border-[#FFD84D]/60">
+              <Image
+                src="/assets/images/branding/real-globe.jpg"
+                alt="Real Earth Globe"
+                fill
+                className="object-cover"
+              />
+            </div>
             <span className="text-[9px] font-space font-bold text-zinc-800 block leading-tight">APEDA Board</span>
           </div>
           <div className="p-2 rounded-xl bg-white border border-[#DEDEDE] text-center shadow-xs">

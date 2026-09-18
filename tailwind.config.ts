@@ -41,9 +41,11 @@ const config: Config = {
       },
       fontFamily: {
         sans: ["'DM Sans'", "system-ui", "sans-serif"],
+        urbanist: ["'Urbanist'", "system-ui", "sans-serif"],
+        opensans: ["'Open Sans'", "system-ui", "sans-serif"],
         space: ["'Space Grotesk'", "sans-serif"],
-        heading: ["'Space Grotesk'", "sans-serif"],
-        body: ["'DM Sans'", "sans-serif"],
+        heading: ["'Urbanist'", "'Space Grotesk'", "sans-serif"],
+        body: ["'Open Sans'", "'DM Sans'", "sans-serif"],
         dmsans: ["'DM Sans'", "sans-serif"],
         outfit: ["'Outfit'", "'Space Grotesk'", "sans-serif"],
         cinzel: ["'Cinzel'", "'Playfair Display'", "serif"],

@@ -40,6 +40,7 @@ export default function HomePage() {
       icon: Leaf,
       desc: "We source quality fruits, vegetables, and spices through trusted farmers and suppliers.",
       highlight: "Direct Farm Procurement",
+      gradient: "from-[#E73F1E] to-[#FB6C00]",
     },
     {
       num: "02",
@@ -47,6 +48,7 @@ export default function HomePage() {
       icon: ShieldCheck,
       desc: "Products are carefully selected based on quality, freshness, and customer requirements.",
       highlight: "100% Quality Inspection",
+      gradient: "from-[#FB6C00] to-[#F9B637]",
     },
     {
       num: "03",
@@ -54,6 +56,7 @@ export default function HomePage() {
       icon: Package,
       desc: "Products are sorted, graded, packed, and prepared according to shipment requirements.",
       highlight: "Export-Grade Sorting",
+      gradient: "from-[#F9B637] to-[#FB6C00]",
     },
     {
       num: "04",
@@ -61,6 +64,7 @@ export default function HomePage() {
       icon: Ship,
       desc: "We coordinate documentation, logistics, and transportation for smooth international movement.",
       highlight: "Cold-Chain Maritime",
+      gradient: "from-[#FB6C00] to-[#E73F1E]",
     },
     {
       num: "05",
@@ -68,6 +72,7 @@ export default function HomePage() {
       icon: Globe2,
       desc: "Products reach their destination efficiently, helping our customers maintain a reliable supply.",
       highlight: "On-Time Destination Delivery",
+      gradient: "from-[#E73F1E] via-[#FB6C00] to-[#F9B637]",
     },
   ];
 
@@ -452,9 +457,9 @@ export default function HomePage() {
       {/* 🌟 Interactive "Why Choose Us" Metrics Section (Matching Reference Screenshot) */}
       <WhyChooseUsInteractive />
 
-      {/* 🌟 Upgraded "Our Promise" Section (Clean Light Background + Connected Animated Roadmap) */}
-      <section className="py-12 sm:py-16 bg-gradient-to-b from-zinc-50 via-white to-amber-50/20 border-t border-b border-[#DEDEDE] relative overflow-hidden">
-        <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
+      {/* 🌟 Upgraded "Our Promise" Section (Golden Star Brand Palette + Vibrant Animated Roadmap) */}
+      <section className="py-14 sm:py-18 bg-gradient-to-b from-zinc-50/80 via-white to-amber-50/20 border-t border-b border-[#F9B637]/30 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(#FB6C00_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.035] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
           <motion.div
@@ -462,27 +467,23 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-8 sm:mb-10"
+            className="text-center max-w-3xl mx-auto mb-10 sm:mb-12"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#111111] bg-[#FFD84D] px-3.5 py-1 rounded-full inline-block mb-3 font-dmsans border border-[#DEDEDE] shadow-sm">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E73F1E] bg-[#FFDD9C]/50 px-4 py-1.5 rounded-full inline-block mb-3 font-urbanist border border-[#F9B637]/60 shadow-xs">
               OUR PROMISE
             </span>
-            <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#111111] font-space">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#111111] font-urbanist">
               Our Promise
             </h2>
-            <p className="font-dmsans text-base sm:text-xl text-zinc-600 mt-2 italic">
+            <p className="font-opensans text-base sm:text-lg text-zinc-600 mt-2.5 italic">
               &ldquo;Every product. Every shipment. Every partnership — handled with care.&rdquo;
             </p>
           </motion.div>
 
-          {/* Connected Roadmap Timeline */}
-          <div className="relative mt-8">
-            <div className="hidden lg:block absolute top-[52px] left-[6%] right-[6%] h-[2px] bg-[#DEDEDE] z-0">
-              <motion.div
-                animate={{ x: ["-100%", "200%"] }}
-                transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                className="w-48 h-full bg-gradient-to-r from-transparent via-[#FFD84D] to-transparent"
-              />
+          {/* Connected Roadmap Timeline with Luminous Gold/Orange Gradient Track */}
+          <div className="relative mt-10">
+            <div className="hidden lg:block absolute top-[50px] left-[6%] right-[6%] h-[3px] bg-gradient-to-r from-[#FFDD9C] via-[#F9B637] to-[#FB6C00] rounded-full z-0 overflow-hidden shadow-xs">
+              <div className="w-48 h-full bg-gradient-to-r from-transparent via-[#E73F1E] to-transparent animate-pulse-track" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 relative z-10">
@@ -500,33 +501,41 @@ export default function HomePage() {
                     onMouseLeave={() => setActiveStepHover(null)}
                     className="flex flex-col items-center text-center group cursor-pointer"
                   >
+                    {/* Node Circle with Pure White Outer Ring + Radiant Gradient Core */}
                     <motion.div
                       whileHover={{ scale: 1.08, y: -4 }}
                       transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                      className={`w-24 h-24 rounded-full bg-white border-2 flex items-center justify-center mb-5 relative shadow-sm transition-all duration-300 ${
+                      className={`w-24 h-24 rounded-full bg-white border-2 flex items-center justify-center mb-5 relative shadow-md transition-all duration-300 ${
                         isHovered
-                          ? "border-[#111111] shadow-[0_0_20px_rgba(0,0,0,0.1)]"
-                          : "border-[#DEDEDE] group-hover:border-[#111111]"
+                          ? "border-[#E73F1E] shadow-[0_12px_32px_-4px_rgba(231,63,30,0.35)]"
+                          : "border-[#F9B637]/60 group-hover:border-[#E73F1E] group-hover:shadow-[0_12px_28px_-6px_rgba(251,108,0,0.3)]"
                       }`}
                     >
-                      <div className="w-16 h-16 rounded-full bg-[#111111] border border-white/10 flex items-center justify-center text-[#FFD84D] group-hover:bg-[#FF583E] group-hover:text-white transition-colors duration-300 shadow-inner">
-                        <IconComponent className="w-7 h-7 transition-transform group-hover:scale-110 duration-300" />
+                      {/* Gradient Core Container */}
+                      <div
+                        className={`w-16 h-16 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300`}
+                      >
+                        <IconComponent className="w-7 h-7 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)] transition-transform group-hover:scale-110 duration-300" />
                       </div>
 
-                      <span className="absolute -top-2 px-2.5 py-0.5 rounded-full text-[10px] font-space font-bold bg-[#FFD84D] text-[#111111] shadow-sm border border-[#DEDEDE]">
+                      {/* Top Step Number Pill in Creamy Gold & Flame Coral */}
+                      <span className="absolute -top-2.5 px-3 py-0.5 rounded-full text-[11px] font-urbanist font-black bg-[#FFDD9C] text-[#E73F1E] shadow-xs border border-[#F9B637]">
                         {step.num}
                       </span>
                     </motion.div>
 
-                    <h3 className="text-base sm:text-lg font-bold text-[#111111] font-space mb-1 group-hover:text-[#FF583E] transition-colors">
+                    {/* Step Name */}
+                    <h3 className="text-base sm:text-lg font-extrabold text-[#111111] font-urbanist mb-1.5 group-hover:text-[#E73F1E] transition-colors">
                       {step.num} — {step.name}
                     </h3>
 
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-[#111111] bg-[#FFD84D]/40 px-2.5 py-0.5 rounded-full mb-3 border border-[#DEDEDE] font-dmsans">
+                    {/* Highlight Badge */}
+                    <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider text-[#E73F1E] bg-[#FFDD9C]/45 px-3 py-0.5 rounded-full mb-3 border border-[#F9B637]/50 font-opensans shadow-2xs">
                       {step.highlight}
                     </span>
 
-                    <p className="text-xs text-zinc-600 leading-relaxed font-normal font-dmsans max-w-[220px]">
+                    {/* Step Description */}
+                    <p className="text-xs text-zinc-600 leading-relaxed font-normal font-opensans max-w-[220px]">
                       {step.desc}
                     </p>
                   </motion.div>

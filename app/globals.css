@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Space+Grotesk:wght@300..700&family=Urbanist:ital,wght@0,400..900;1,400..900&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -185,3 +185,79 @@
 .luxury-input::placeholder {
   color: #888888;
 }
+
+/* 🌟 Dynamic Floating & Shimmer Animations */
+@keyframes floatGentle1 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0.4deg);
+  }
+}
+
+@keyframes floatGentle2 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-11px) rotate(-0.4deg);
+  }
+}
+
+@keyframes floatGentle3 {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-7px) rotate(0.3deg);
+  }
+}
+
+@keyframes textGradientShimmer {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes progressPulseGlow {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(300%);
+    opacity: 0.3;
+  }
+}
+
+.animate-float-1 {
+  animation: floatGentle1 4.2s ease-in-out infinite;
+}
+
+.animate-float-2 {
+  animation: floatGentle2 5.2s ease-in-out infinite 0.6s;
+}
+
+.animate-float-3 {
+  animation: floatGentle3 4.8s ease-in-out infinite 1.2s;
+}
+
+.animate-gradient-text {
+  background-size: 200% auto;
+  animation: textGradientShimmer 5s ease-in-out infinite;
+}
+
+.animate-pulse-track {
+  animation: progressPulseGlow 3.5s ease-in-out infinite;
+}
+
