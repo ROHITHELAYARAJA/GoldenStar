@@ -25,7 +25,7 @@ export default function Navbar() {
       <div className="max-w-7xl w-full mx-auto bg-white/95 backdrop-blur-md rounded-full border-2 border-[#F9B637]/75 ring-1 ring-[#FFD84D]/50 shadow-[0_8px_30px_rgba(249,182,55,0.16),0_2px_8px_rgba(0,0,0,0.04)] px-5 sm:px-8 lg:px-10 py-3 sm:py-4 flex items-center justify-between gap-4 pointer-events-auto transition-all">
         {/* Left: Brand Emblem + Distinctive Cinzel Corporate Typography */}
         <Link href="/" className="flex items-center gap-2.5 sm:gap-3.5 group shrink-0">
-          <div className="relative h-10 w-10 sm:h-12 sm:w-12 shrink-0 transition-transform group-hover:scale-105 duration-300">
+          <div className="relative h-13 w-13 sm:h-16 sm:w-16 shrink-0 transition-transform group-hover:scale-105 duration-300">
             <Image
               src="/assets/images/branding/logo.png"
               alt="The Golden Star Emblem"
@@ -35,10 +35,10 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <span className="font-cinzel text-base sm:text-lg lg:text-xl font-bold tracking-[0.04em] text-[#111111] leading-tight group-hover:text-[#FB6C00] transition-colors">
+            <span className="font-cinzel text-lg sm:text-xl lg:text-2xl font-bold tracking-[0.04em] text-[#111111] leading-tight group-hover:text-[#FB6C00] transition-colors">
               The Golden Star
             </span>
-            <span className="font-space text-[8px] sm:text-[9.5px] uppercase font-bold tracking-[0.18em] text-[#FB6C00] mt-0.5">
+            <span className="font-space text-[8.5px] sm:text-[10px] uppercase font-bold tracking-[0.18em] text-[#FB6C00] mt-0.5">
               IMPORT &amp; EXPORT COMPANY
             </span>
           </div>
@@ -84,8 +84,8 @@ export default function Navbar() {
           <div className="relative w-full max-w-xs bg-white h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto border-l-2 border-[#F9B637]/60">
             <div>
               <div className="flex items-center justify-between pb-4 border-b border-[#DEDEDE] mb-6">
-                <div className="flex items-center gap-2.5">
-                  <div className="relative h-10 w-10 shrink-0">
+                <div className="flex items-center gap-3">
+                  <div className="relative h-13 w-13 shrink-0">
                     <Image
                       src="/assets/images/branding/logo.png"
                       alt="The Golden Star"
@@ -94,7 +94,7 @@ export default function Navbar() {
                     />
                   </div>
                   <div className="flex flex-col justify-center">
-                    <span className="font-cinzel text-base font-bold tracking-[0.04em] text-[#111111] leading-tight">
+                    <span className="font-cinzel text-lg font-bold tracking-[0.04em] text-[#111111] leading-tight">
                       The Golden Star
                     </span>
                     <span className="font-space text-[8.5px] uppercase font-bold tracking-[0.16em] text-[#FB6C00] mt-0.5">

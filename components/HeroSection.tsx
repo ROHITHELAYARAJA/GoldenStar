@@ -12,7 +12,6 @@ import {
   PhoneCall,
   CheckCircle2,
   Globe2,
-  Users2,
 } from "lucide-react";
 import gsap from "gsap";
 import GetStartedButton from "@/components/ui/get-started-button";
@@ -31,10 +30,10 @@ export default function HeroSection() {
 
         tl.from(".hero-word", {
           opacity: 0,
-          y: 28,
-          duration: 0.7,
-          stagger: 0.08,
-          ease: "back.out(1.4)",
+          y: 20,
+          duration: 0.55,
+          stagger: 0.12,
+          ease: "power2.out",
         })
           .from(
             ".hero-description-text",
@@ -133,23 +132,24 @@ export default function HeroSection() {
               LEFT COLUMN: Editorial Typography & High-Conversion CTAs
           ========================================================================= */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Main Headline: Clean White Background with Urbanist Font & Animated Shimmer Gradient */}
-            <h1 className="hero-title-main font-urbanist text-3xl sm:text-5xl lg:text-[60px] xl:text-[68px] font-extrabold text-[#111111] leading-[1.08] tracking-tight mb-5 sm:mb-6">
-              <span className="hero-word inline-block mr-2.5 sm:mr-3.5 transition-transform duration-300 hover:translate-y-[-2px]">
-                From
+            {/* Main Headline: Clean White Background with Urbanist Font & Smooth Sequential Word Animation */}
+            <h1 className="hero-title-main font-urbanist text-3xl sm:text-5xl lg:text-[58px] xl:text-[66px] font-extrabold text-[#111111] leading-[1.14] tracking-tight mb-5 sm:mb-6">
+              <span className="flex flex-wrap items-baseline gap-x-2.5 sm:gap-x-3.5">
+                <span className="hero-word inline-block">From</span>
+                <span className="hero-word inline-block">the</span>
+                <span className="hero-word inline-block text-zinc-900">Finest</span>
+                <span className="hero-word inline-block">Farms</span>
               </span>
-              <span className="hero-word inline-block mr-2.5 sm:mr-3.5 transition-transform duration-300 hover:translate-y-[-2px]">
-                the
-              </span>
-              <span className="hero-word inline-block mr-2.5 sm:mr-3.5 transition-transform duration-300 hover:translate-y-[-2px] text-zinc-900">
-                Finest
-              </span>
-              <span className="hero-word inline-block transition-transform duration-300 hover:translate-y-[-2px]">
-                Farms
-              </span>
-              <br className="hidden sm:block" />
-              <span className="hero-word inline-block bg-clip-text text-transparent bg-gradient-to-r from-[#E73F1E] via-[#FB6C00] via-[#F9B637] to-[#E73F1E] animate-gradient-text font-black">
-                to the World
+              <span className="flex flex-wrap items-baseline gap-x-2.5 sm:gap-x-3.5 mt-1 sm:mt-1.5">
+                <span className="hero-word inline-block bg-clip-text text-transparent bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] font-black">
+                  to
+                </span>
+                <span className="hero-word inline-block bg-clip-text text-transparent bg-gradient-to-r from-[#FB6C00] to-[#F9B637] font-black">
+                  the
+                </span>
+                <span className="hero-word inline-block bg-clip-text text-transparent bg-gradient-to-r from-[#F9B637] to-[#E73F1E] font-black">
+                  World
+                </span>
               </span>
             </h1>
 
@@ -305,23 +305,6 @@ export default function HeroSection() {
                 </span>
               </div>
 
-              {/* Card 3: Middle-Right Floating Badge (1000+ Global Partners) */}
-              <div className="animate-float-2 absolute top-1/2 -translate-y-1/2 -right-2 sm:-right-8 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] p-2.5 sm:p-3.5 rounded-2xl shadow-[0_14px_32px_-5px_rgba(251,108,0,0.25)] flex items-center gap-2.5 transition-transform hover:scale-105 duration-300">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-[#FB6C00] to-[#F9B637] flex items-center justify-center text-white shadow-xs shrink-0">
-                  <Users2 className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
-                </div>
-                <div>
-                  <div className="text-base sm:text-lg font-black font-urbanist bg-clip-text text-transparent bg-gradient-to-r from-[#FB6C00] to-[#F9B637] leading-none">
-                    1000+
-                  </div>
-                  <div className="text-[9.5px] sm:text-[10.5px] font-bold font-opensans text-zinc-900 uppercase tracking-wide mt-0.5">
-                    Global Partners
-                  </div>
-                  <div className="text-[8.5px] sm:text-[9.5px] text-zinc-500 font-opensans leading-none">
-                    Wholesalers &amp; Chains
-                  </div>
-                </div>
-              </div>
 
               {/* Card 4: Bottom-Left Floating Pill (Cold-Chain Reefer Logistics) */}
               <div className="absolute -bottom-5 -left-2 sm:-bottom-7 sm:-left-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] p-3 sm:p-3.5 rounded-2xl shadow-[0_16px_36px_-6px_rgba(231,63,30,0.25)] max-w-[240px] sm:max-w-[270px] transition-transform hover:scale-105 duration-300">
