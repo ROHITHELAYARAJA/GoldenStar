@@ -186,7 +186,7 @@ export default function ProductsPage() {
       {/* 🌟 Interactive Category Filter Tabs (Sleek Horizontal Segmented Bar - No Awkward Wrapping) */}
       <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">
         <ScrollReveal animation="fade" delay={0.1}>
-          <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-2 sm:gap-3 p-1.5 bg-zinc-100 rounded-2xl border border-[#DEDEDE] max-w-2xl mx-auto shadow-sm">
+          <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-2 sm:gap-3 p-1.5 bg-zinc-100 border border-[#DEDEDE] max-w-2xl mx-auto shadow-sm">
             {[
               { id: "all", label: "All Commodities" },
               { id: "fruits", label: "Fruits" },
@@ -196,7 +196,7 @@ export default function ProductsPage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`whitespace-nowrap py-2.5 px-4 sm:px-6 rounded-xl text-xs font-space font-bold uppercase tracking-wider transition-all duration-200 shrink-0 ${
+                className={`whitespace-nowrap py-2.5 px-4 sm:px-6 text-xs font-space font-bold uppercase tracking-wider transition-all duration-200 shrink-0 ${
                   activeTab === tab.id
                     ? "bg-[#111111] text-[#FFD84D] border border-[#111111] shadow-md scale-[1.02]"
                     : "text-zinc-600 hover:text-[#111111] hover:bg-white font-semibold"
@@ -234,11 +234,11 @@ export default function ProductsPage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
+                  className="bg-white border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
                 >
                   <div>
                     {/* Clean Image Frame */}
-                    <div className="relative h-32 sm:h-52 w-full rounded-xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
+                    <div className="relative h-32 sm:h-52 w-full overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
                       <Image
                         src={item.img}
                         alt={item.title}
@@ -267,7 +267,7 @@ export default function ProductsPage() {
                   {/* Enquiry Button */}
                   <button
                     onClick={() => openQuoteModal(`Fruits - ${item.title}`)}
-                    className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                    className="w-full py-2 sm:py-2.5 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
                   >
                     <span>Enquire Now</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
@@ -304,11 +304,11 @@ export default function ProductsPage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
+                  className="bg-white border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
                 >
                   <div>
                     {/* Clean Image Frame */}
-                    <div className="relative h-32 sm:h-52 w-full rounded-xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
+                    <div className="relative h-32 sm:h-52 w-full overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
                       <Image
                         src={item.img}
                         alt={item.title}
@@ -337,7 +337,7 @@ export default function ProductsPage() {
                   {/* Enquiry Button */}
                   <button
                     onClick={() => openQuoteModal(`Vegetables - ${item.title}`)}
-                    className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                    className="w-full py-2 sm:py-2.5 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
                   >
                     <span>Enquire Now</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
@@ -374,11 +374,11 @@ export default function ProductsPage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
+                  className="bg-white border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
                 >
                   <div>
                     {/* Clean Image Frame */}
-                    <div className="relative h-32 sm:h-52 w-full rounded-xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
+                    <div className="relative h-32 sm:h-52 w-full overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
                       <Image
                         src={item.img}
                         alt={item.title}
@@ -407,7 +407,7 @@ export default function ProductsPage() {
                   {/* Enquiry Button */}
                   <button
                     onClick={() => openQuoteModal(`Spices - ${item.title}`)}
-                    className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                    className="w-full py-2 sm:py-2.5 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
                   >
                     <span>Enquire Now</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
@@ -422,7 +422,7 @@ export default function ProductsPage() {
       {/* 🌟 Bottom Call-to-Action */}
       <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <ScrollReveal animation="scale">
-          <div className="relative rounded-3xl border border-[#DEDEDE] bg-white p-8 sm:p-14 text-center shadow-sm overflow-hidden">
+          <div className="relative border border-[#DEDEDE] bg-white p-8 sm:p-14 text-center shadow-sm overflow-hidden">
             <Particles
               className="absolute inset-0 pointer-events-none opacity-20"
               quantity={20}
@@ -443,7 +443,7 @@ export default function ProductsPage() {
               <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                 <button
                   onClick={() => openQuoteModal("All Agricultural Commodities")}
-                  className="px-6 sm:px-8 py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
+                  className="px-6 sm:px-8 py-3 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
                 >
                   Enquire About Products &rarr;
                 </button>

@@ -194,7 +194,7 @@ export default function ContactPage() {
 
             {/* SLA Badge */}
             <ScrollReveal animation="slide-up" delay={0.35}>
-              <div className="rounded-3xl p-6 bg-zinc-50 border border-[#DEDEDE]">
+              <div className="p-6 bg-zinc-50 border border-[#DEDEDE]">
                 <div className="flex items-center gap-3 mb-1.5">
                   <Clock className="w-5 h-5 text-[#FF583E]" />
                   <span className="font-space text-sm font-bold text-[#111111]">12-Hour Export Quotation Guarantee</span>
@@ -209,7 +209,7 @@ export default function ContactPage() {
           {/* Right Column: Interactive Send Enquiry Form (7 cols) */}
           <div className="lg:col-span-7">
             <ScrollReveal animation="slide-right" delay={0.15}>
-              <div className="rounded-3xl p-8 sm:p-12 shadow-sm border border-[#DEDEDE] bg-white">
+              <div className="p-8 sm:p-12 shadow-sm border border-[#DEDEDE] bg-white">
                 <div className="mb-8 pb-6 border-b border-[#DEDEDE]">
                   <div className="badge-pill-gold mb-3 inline-block">
                     <span className="uppercase tracking-wider text-[10px]">SEND AN ENQUIRY</span>
@@ -234,7 +234,7 @@ export default function ContactPage() {
                         placeholder="e.g. John Doe"
                         value={formData.name}
                         onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
+                        className="w-full px-4 py-3 border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                       />
                     </div>
                     <div>
@@ -247,7 +247,7 @@ export default function ContactPage() {
                         placeholder="e.g. Global Foods Trading LLC"
                         value={formData.company}
                         onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
+                        className="w-full px-4 py-3 border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                       />
                     </div>
                   </div>
@@ -263,7 +263,7 @@ export default function ContactPage() {
                         placeholder="e.g. buyer@company.com"
                         value={formData.email}
                         onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
+                        className="w-full px-4 py-3 border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                       />
                     </div>
                     <div>
@@ -276,7 +276,7 @@ export default function ContactPage() {
                         placeholder="e.g. +971 50 123 4567"
                         value={formData.phone}
                         onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
+                        className="w-full px-4 py-3 border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                       />
                     </div>
                   </div>
@@ -289,7 +289,7 @@ export default function ContactPage() {
                       <select
                         value={formData.product}
                         onChange={(e) => setFormData({ ...formData, product: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
+                        className="w-full px-4 py-3 border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                       >
                         <option value="Fruits">Fruits (Mango, Banana, Pomegranate, Grapes, etc.)</option>
                         <option value="Vegetables">Vegetables (Onion, Potato, Tomato, Okra, Chilli, Carrot)</option>
@@ -306,7 +306,7 @@ export default function ContactPage() {
                         placeholder="e.g. 1x40ft Reefer FCL or 10 Metric Tons"
                         value={formData.quantity}
                         onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                        className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
+                        className="w-full px-4 py-3 border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                       />
                     </div>
                   </div>
@@ -327,7 +327,7 @@ export default function ContactPage() {
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full py-4 rounded-full font-space font-bold text-sm bg-[#111111] hover:bg-[#FF583E] text-white shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2"
+                    className="w-full py-4 font-space font-bold text-sm bg-[#111111] hover:bg-[#FF583E] text-white shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2"
                   >
                     <Send className="w-4 h-4 text-[#FFD84D]" />
                     <span>{isSubmitting ? "TRANSMITTING INQUIRY..." : "SEND ENQUIRY →"}</span>
@@ -342,7 +342,7 @@ export default function ContactPage() {
       {/* Bottom Highlight Quote */}
       <section className="py-20 max-w-7xl mx-auto px-6 border-t border-[#DEDEDE]">
         <ScrollReveal animation="scale">
-          <div className="relative rounded-3xl border border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white p-10 sm:p-14 text-center shadow-sm overflow-hidden">
+          <div className="relative border border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white p-10 sm:p-14 text-center shadow-sm overflow-hidden">
             <Particles
               className="absolute inset-0 pointer-events-none opacity-20"
               quantity={20}

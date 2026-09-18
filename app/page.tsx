@@ -90,7 +90,7 @@ export default function HomePage() {
           transition={{ duration: 0.6 }}
           className="text-center max-w-3xl mx-auto mb-8 sm:mb-10"
         >
-          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#111111] bg-[#FFD84D] px-3.5 py-1 rounded-full inline-block mb-3 font-dmsans border border-[#DEDEDE] shadow-sm">
+          <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#111111] bg-[#FFD84D] px-3.5 py-1 inline-block mb-3 font-dmsans border border-[#DEDEDE] shadow-sm">
             WHAT WE TRADE
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#111111] font-space">
@@ -114,14 +114,14 @@ export default function HomePage() {
               transition: { type: "spring", stiffness: 300, damping: 22 }
             }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="rounded-3xl bg-white border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+            className="bg-white border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
             {/* Shimmer / Light Beam Sweep across card on hover */}
             <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
 
             <div className="p-6 sm:p-7">
               {/* Image Container with Smooth Zoom & Floating Badges */}
-              <div className="w-full h-60 rounded-2xl overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
+              <div className="w-full h-60 overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
                 <Image
                   src="/assets/images/products/fruits-display.jpg"
                   alt="Fresh Quality Fruits Display"
@@ -139,7 +139,7 @@ export default function HomePage() {
                 <motion.div
                   animate={{ y: [0, -4, 0] }}
                   transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
+                  className="absolute bottom-3 right-3 px-3 py-1 bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
                 >
                   <span>EXPORT GRADE A1</span>
                 </motion.div>
@@ -163,13 +163,13 @@ export default function HomePage() {
               {/* Key Features Bullet Points with High-Visibility Yellow Circle Checks */}
               <div className="space-y-2.5 mb-6 text-xs text-zinc-700 font-dmsans">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="w-5 h-5 bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
                     <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
                   <span className="font-medium text-zinc-800">Cold-chain refrigerated export packaging</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="w-5 h-5 bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
                     <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
                   <span className="font-medium text-zinc-800">Phytosanitary inspection certified</span>
@@ -187,7 +187,7 @@ export default function HomePage() {
                       key={item}
                       whileHover={{ scale: 1.08, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-2.5 py-1 rounded-lg bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-colors cursor-pointer shadow-xs"
+                      className="px-2.5 py-1 bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-colors cursor-pointer shadow-xs"
                     >
                       {item}
                     </motion.span>
@@ -209,7 +209,7 @@ export default function HomePage() {
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => openQuoteModal("Fruits")}
-                className="px-4 py-2 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
+                className="px-4 py-2 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
               >
                 Inquire Rates
               </motion.button>
@@ -227,14 +227,14 @@ export default function HomePage() {
               transition: { type: "spring", stiffness: 300, damping: 22 }
             }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
-            className="rounded-3xl bg-white border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+            className="bg-white border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
             {/* Shimmer Sweep on Hover */}
             <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
 
             <div className="p-6 sm:p-7">
               {/* Image Container with Smooth Zoom */}
-              <div className="w-full h-60 rounded-2xl overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
+              <div className="w-full h-60 overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
                 <Image
                   src="/assets/images/products/vegetables-display.jpg"
                   alt="Fresh Quality Vegetables Display"
@@ -252,7 +252,7 @@ export default function HomePage() {
                 <motion.div
                   animate={{ y: [0, -4, 0] }}
                   transition={{ repeat: Infinity, duration: 3.2, ease: "easeInOut", delay: 0.2 }}
-                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
+                  className="absolute bottom-3 right-3 px-3 py-1 bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
                 >
                   <span>FARM HARVESTED</span>
                 </motion.div>
@@ -276,13 +276,13 @@ export default function HomePage() {
               {/* Key Features Bullet Points with High-Visibility Yellow Circle Checks */}
               <div className="space-y-2.5 mb-6 text-xs text-zinc-700 font-dmsans">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="w-5 h-5 bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
                     <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
                   <span className="font-medium text-zinc-800">Carefully sorted, graded &amp; mesh packed</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="w-5 h-5 bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
                     <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
                   <span className="font-medium text-zinc-800">Bulk cargo &amp; containerized reefer supply</span>
@@ -300,7 +300,7 @@ export default function HomePage() {
                       key={item}
                       whileHover={{ scale: 1.08, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-2.5 py-1 rounded-lg bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-colors cursor-pointer shadow-xs"
+                      className="px-2.5 py-1 bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-colors cursor-pointer shadow-xs"
                     >
                       {item}
                     </motion.span>
@@ -322,7 +322,7 @@ export default function HomePage() {
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => openQuoteModal("Vegetables")}
-                className="px-4 py-2 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
+                className="px-4 py-2 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
               >
                 Inquire Rates
               </motion.button>
@@ -340,7 +340,7 @@ export default function HomePage() {
               transition: { type: "spring", stiffness: 300, damping: 22 }
             }}
             transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.24 }}
-            className="rounded-3xl bg-white border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+            className="bg-white border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
             {/* Shimmer Sweep on Hover */}
             <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
@@ -352,12 +352,12 @@ export default function HomePage() {
                 scale: [0.96, 1.04, 0.96]
               }}
               transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute top-10 inset-x-6 h-64 bg-gradient-to-tr from-[#FFD84D]/35 via-[#FF583E]/25 to-amber-500/30 rounded-3xl blur-2xl pointer-events-none -z-0 opacity-40 group-hover:opacity-100 transition-opacity"
+              className="absolute top-10 inset-x-6 h-64 bg-gradient-to-tr from-[#FFD84D]/35 via-[#FF583E]/25 to-amber-500/30 blur-2xl pointer-events-none -z-0 opacity-40 group-hover:opacity-100 transition-opacity"
             />
 
             <div className="p-6 sm:p-7 relative z-10">
               {/* Image Container with Smooth Zoom & Floating Origin Badge */}
-              <div className="w-full h-60 rounded-2xl overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
+              <div className="w-full h-60 overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
                 <Image
                   src="/assets/images/products/spices-display.jpg"
                   alt="Authentic Quality Indian Spices Display"
@@ -375,7 +375,7 @@ export default function HomePage() {
                 <motion.div
                   animate={{ y: [0, -5, 0] }}
                   transition={{ repeat: Infinity, duration: 2.8, ease: "easeInOut", delay: 0.4 }}
-                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
+                  className="absolute bottom-3 right-3 px-3 py-1 bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
                 >
                   <span>PURE INDIAN ORIGIN</span>
                 </motion.div>
@@ -399,13 +399,13 @@ export default function HomePage() {
               {/* Key Features Bullet Points with High-Visibility Yellow Circle Checks */}
               <div className="space-y-2.5 mb-6 text-xs text-zinc-700 font-dmsans">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="w-5 h-5 bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
                     <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
                   <span className="font-medium text-zinc-800">Aroma sealed moisture barrier packing</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                  <div className="w-5 h-5 bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
                     <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
                   <span className="font-medium text-zinc-800">Lab tested for high essential oil content</span>
@@ -423,7 +423,7 @@ export default function HomePage() {
                       key={item}
                       whileHover={{ scale: 1.08, y: -2 }}
                       whileTap={{ scale: 0.95 }}
-                      className="px-2.5 py-1 rounded-lg bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-colors cursor-pointer shadow-xs"
+                      className="px-2.5 py-1 bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-colors cursor-pointer shadow-xs"
                     >
                       {item}
                     </motion.span>
@@ -445,7 +445,7 @@ export default function HomePage() {
                 whileHover={{ scale: 1.06 }}
                 whileTap={{ scale: 0.96 }}
                 onClick={() => openQuoteModal("Spices")}
-                className="px-4 py-2 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
+                className="px-4 py-2 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
               >
                 Inquire Rates
               </motion.button>
@@ -469,7 +469,7 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-10 sm:mb-12"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E73F1E] bg-[#FFDD9C]/50 px-4 py-1.5 rounded-full inline-block mb-3 font-urbanist border border-[#F9B637]/60 shadow-xs">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E73F1E] bg-[#FFDD9C]/50 px-4 py-1.5 inline-block mb-3 font-urbanist border border-[#F9B637]/60 shadow-xs">
               OUR PROMISE
             </span>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#111111] font-urbanist">
@@ -482,7 +482,7 @@ export default function HomePage() {
 
           {/* Connected Roadmap Timeline with Luminous Gold/Orange Gradient Track */}
           <div className="relative mt-10">
-            <div className="hidden lg:block absolute top-[50px] left-[6%] right-[6%] h-[3px] bg-gradient-to-r from-[#FFDD9C] via-[#F9B637] to-[#FB6C00] rounded-full z-0 overflow-hidden shadow-xs">
+            <div className="hidden lg:block absolute top-[50px] left-[6%] right-[6%] h-[3px] bg-gradient-to-r from-[#FFDD9C] via-[#F9B637] to-[#FB6C00] z-0 overflow-hidden shadow-xs">
               <div className="w-48 h-full bg-gradient-to-r from-transparent via-[#E73F1E] to-transparent animate-pulse-track" />
             </div>
 
@@ -505,7 +505,7 @@ export default function HomePage() {
                     <motion.div
                       whileHover={{ scale: 1.08, y: -4 }}
                       transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                      className={`w-24 h-24 rounded-full bg-white border-2 flex items-center justify-center mb-5 relative shadow-md transition-all duration-300 ${
+                      className={`w-24 h-24 bg-white border-2 flex items-center justify-center mb-5 relative shadow-md transition-all duration-300 ${
                         isHovered
                           ? "border-[#E73F1E] shadow-[0_12px_32px_-4px_rgba(231,63,30,0.35)]"
                           : "border-[#F9B637]/60 group-hover:border-[#E73F1E] group-hover:shadow-[0_12px_28px_-6px_rgba(251,108,0,0.3)]"
@@ -513,13 +513,13 @@ export default function HomePage() {
                     >
                       {/* Gradient Core Container */}
                       <div
-                        className={`w-16 h-16 rounded-full bg-gradient-to-br ${step.gradient} flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300`}
+                        className={`w-16 h-16 bg-gradient-to-br ${step.gradient} flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300`}
                       >
                         <IconComponent className="w-7 h-7 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)] transition-transform group-hover:scale-110 duration-300" />
                       </div>
 
                       {/* Top Step Number Pill in Creamy Gold & Flame Coral */}
-                      <span className="absolute -top-2.5 px-3 py-0.5 rounded-full text-[11px] font-urbanist font-black bg-[#FFDD9C] text-[#E73F1E] shadow-xs border border-[#F9B637]">
+                      <span className="absolute -top-2.5 px-3 py-0.5 text-[11px] font-urbanist font-black bg-[#FFDD9C] text-[#E73F1E] shadow-xs border border-[#F9B637]">
                         {step.num}
                       </span>
                     </motion.div>
@@ -530,7 +530,7 @@ export default function HomePage() {
                     </h3>
 
                     {/* Highlight Badge */}
-                    <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider text-[#E73F1E] bg-[#FFDD9C]/45 px-3 py-0.5 rounded-full mb-3 border border-[#F9B637]/50 font-opensans shadow-2xs">
+                    <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider text-[#E73F1E] bg-[#FFDD9C]/45 px-3 py-0.5 mb-3 border border-[#F9B637]/50 font-opensans shadow-2xs">
                       {step.highlight}
                     </span>
 
@@ -553,14 +553,14 @@ export default function HomePage() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="bg-white rounded-3xl p-8 sm:p-12 lg:p-14 border border-[#DEDEDE] shadow-sm hover:border-[#111111] transition-colors"
+          className="bg-white p-8 sm:p-12 lg:p-14 border border-[#DEDEDE] shadow-sm hover:border-[#111111] transition-colors"
         >
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
             <div className="lg:col-span-4 flex justify-center">
               <motion.div
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.4 }}
-                className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden border-2 border-[#DEDEDE] shadow-xl bg-zinc-100"
+                className="relative w-64 h-80 sm:w-72 sm:h-96 overflow-hidden border-2 border-[#DEDEDE] shadow-xl bg-zinc-100"
               >
                 <Image
                   src="/assets/images/branding/founder.png"
@@ -573,7 +573,7 @@ export default function HomePage() {
 
             <div className="lg:col-span-8 space-y-6">
               <div>
-                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#111111] bg-[#FFD84D] px-3 py-1 rounded-full inline-block mb-2 font-dmsans border border-[#DEDEDE] shadow-sm">
+                <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#111111] bg-[#FFD84D] px-3 py-1 inline-block mb-2 font-dmsans border border-[#DEDEDE] shadow-sm">
                   EXECUTIVE GOVERNANCE
                 </span>
                 <h3 className="text-2xl sm:text-3xl font-bold text-[#111111] font-space">
@@ -595,7 +595,7 @@ export default function HomePage() {
               <div className="flex flex-wrap items-center gap-4 pt-2 font-dmsans">
                 <a
                   href="mailto:hameedsahul9978@gmail.com"
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-semibold text-xs border border-[#111111] shadow-sm transition-all hover:scale-105 font-space"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-[#111111] hover:bg-[#FF583E] text-white font-semibold text-xs border border-[#111111] shadow-sm transition-all hover:scale-105 font-space"
                 >
                   <Mail className="w-4 h-4 text-[#FFD84D]" />
                   <span>hameedsahul9978@gmail.com</span>
@@ -610,7 +610,7 @@ export default function HomePage() {
       <section className="py-10 sm:py-14 bg-[#111111] text-white text-center relative overflow-hidden border-t border-zinc-800">
         <Particles quantity={25} color="#FF583E" className="opacity-25" />
         <ScrollReveal animation="slide-up" duration={0.6} className="max-w-4xl mx-auto px-6 space-y-3.5 sm:space-y-4 relative z-10">
-          <span className="inline-block text-xs font-bold uppercase tracking-[0.24em] text-[#111111] bg-[#FFD84D] px-4 py-1.5 rounded-full border border-[#DEDEDE] font-dmsans shadow-sm">
+          <span className="inline-block text-xs font-bold uppercase tracking-[0.24em] text-[#111111] bg-[#FFD84D] px-4 py-1.5 border border-[#DEDEDE] font-dmsans shadow-sm">
             LET&apos;S CONNECT BEYOND BORDERS
           </span>
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-space text-white tracking-tight drop-shadow-lg">
@@ -627,7 +627,7 @@ export default function HomePage() {
             />
             <Link
               href="/contact"
-              className="px-7 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/25 transition-all hover:scale-105 backdrop-blur-md shadow-sm font-space"
+              className="px-7 py-3 bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/20 hover:border-white/40 transition-all duration-200 font-space backdrop-blur-md shadow-sm font-space"
             >
               Contact Us
             </Link>

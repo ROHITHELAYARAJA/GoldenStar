@@ -103,7 +103,7 @@ export default function HeroSection() {
       {/* 🌟 Professional Ambient Warm Illumination on Pure White Canvas */}
       {/* Soft creamy gold glow at top-right (#FFDD9C) */}
       <div
-        className="absolute top-0 right-10 w-[550px] h-[550px] rounded-full pointer-events-none -z-0"
+        className="absolute top-0 right-10 w-[550px] h-[550px] pointer-events-none -z-0"
         style={{
           background:
             "radial-gradient(circle, rgba(255, 221, 156, 0.28) 0%, rgba(249, 182, 55, 0.08) 45%, transparent 70%)",
@@ -111,7 +111,7 @@ export default function HeroSection() {
       />
       {/* Delicate saffron glow at bottom-left (#FB6C00) */}
       <div
-        className="absolute -bottom-20 -left-10 w-[480px] h-[480px] rounded-full pointer-events-none -z-0"
+        className="absolute -bottom-20 -left-10 w-[480px] h-[480px] pointer-events-none -z-0"
         style={{
           background:
             "radial-gradient(circle, rgba(251, 108, 0, 0.08) 0%, rgba(255, 221, 156, 0.12) 50%, transparent 70%)",
@@ -119,7 +119,7 @@ export default function HeroSection() {
       />
       {/* Gentle flame accent hint (#E73F1E) */}
       <div
-        className="absolute top-1/3 right-1/3 w-[360px] h-[360px] rounded-full pointer-events-none -z-0"
+        className="absolute top-1/3 right-1/3 w-[360px] h-[360px] pointer-events-none -z-0"
         style={{
           background:
             "radial-gradient(circle, rgba(231, 63, 30, 0.04) 0%, transparent 60%)",
@@ -177,7 +177,7 @@ export default function HeroSection() {
               {/* Box 2: Secondary Action Button in Crisp White & Gold Border */}
               <Link
                 href="/about"
-                className="h-12 px-5 rounded-full bg-white hover:bg-[#FFDD9C]/20 text-[#111111] border-2 border-[#F9B637] hover:border-[#FB6C00] font-urbanist font-bold text-xs tracking-wider uppercase shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
+                className="h-12 px-5 bg-white hover:bg-[#FFDD9C]/20 text-[#111111] border-2 border-[#F9B637] hover:border-[#FB6C00] font-urbanist font-bold text-xs tracking-wider uppercase shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
               >
                 <span>LEARN ABOUT US</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#FB6C00]" />
@@ -188,7 +188,7 @@ export default function HeroSection() {
                 href="https://wa.me/919443389648?text=Hello%20The%20Golden%20Star,%20I%20would%20like%20to%20inquire%20about%20agricultural%20exports."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-12 px-4 rounded-full bg-white/95 hover:bg-zinc-50 text-zinc-800 hover:text-[#E73F1E] border border-[#F9B637]/70 hover:border-[#FB6C00] font-urbanist font-semibold text-xs shadow-xs hover:shadow-sm transition-all duration-200 inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
+                className="h-12 px-4 bg-white/95 hover:bg-zinc-50 text-zinc-800 hover:text-[#E73F1E] border border-[#F9B637]/70 hover:border-[#FB6C00] font-urbanist font-semibold text-xs shadow-xs hover:shadow-sm transition-all duration-200 inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
               >
                 <PhoneCall className="w-3.5 h-3.5 text-[#FB6C00] shrink-0" />
                 <span>
@@ -259,7 +259,7 @@ export default function HeroSection() {
             {/* Outer Wrapper for Image + Floating Elements (Allows Elements to Float Outside) */}
             <div className="relative mx-auto max-w-[460px] lg:max-w-none">
               {/* Clean Unobstructed Ship Image Frame */}
-              <div className="hero-visual-frame relative w-full h-[480px] sm:h-[550px] lg:h-[600px] rounded-3xl sm:rounded-[36px] overflow-hidden shadow-[0_22px_55px_-12px_rgba(0,0,0,0.2)] border-2 border-[#F9B637]/50 bg-zinc-50 group">
+              <div className="hero-visual-frame relative w-full h-[480px] sm:h-[550px] lg:h-[600px] overflow-hidden shadow-[0_22px_55px_-12px_rgba(0,0,0,0.2)] border-2 border-[#F9B637]/50 bg-zinc-50 group">
                 <Image
                   src="/assets/images/hero/hero-maersk-port-cranes.jpg"
                   alt="The Golden Star - International Maritime Container Cargo Vessel under Port Cranes"
@@ -275,7 +275,7 @@ export default function HeroSection() {
                   FLOATING CARDS OUTSIDE THE SHIP FRAME (Structured, Balanced, Non-Colliding)
               ========================================================================= */}
               {/* Card 1: Top-Left Floating Badge (50+ Countries Served) */}
-              <div className="animate-float-1 absolute -top-4 -left-2 sm:-top-6 sm:-left-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] px-3 py-2 sm:px-3.5 sm:py-2.5 rounded-2xl shadow-[0_12px_28px_-4px_rgba(251,108,0,0.25)] flex items-center gap-2.5 sm:gap-3 transition-transform hover:scale-105 duration-300">
+              <div className="animate-float-1 absolute -top-4 -left-2 sm:-top-6 sm:-left-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_12px_28px_-4px_rgba(251,108,0,0.25)] flex items-center gap-2.5 sm:gap-3 transition-transform hover:scale-105 duration-300">
                 <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden shadow-xs shrink-0">
                   <Image
                     src="/assets/images/branding/real-globe.jpg"
@@ -298,7 +298,7 @@ export default function HeroSection() {
               </div>
 
               {/* Card 2: Top-Right Floating Pill (Govt Recognized Export House) */}
-              <div className="absolute -top-3 right-1 sm:-top-5 sm:-right-4 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] px-3 py-1.5 sm:px-4 sm:py-2 rounded-full shadow-[0_10px_24px_-4px_rgba(0,0,0,0.12)] flex items-center gap-1.5 sm:gap-2 shrink-0 transition-transform hover:scale-105 duration-300">
+              <div className="absolute -top-3 right-1 sm:-top-5 sm:-right-4 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] px-3 py-1.5 sm:px-4 sm:py-2 shadow-[0_10px_24px_-4px_rgba(0,0,0,0.12)] flex items-center gap-1.5 sm:gap-2 shrink-0 transition-transform hover:scale-105 duration-300">
                 <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FB6C00] shrink-0" />
                 <span className="text-[9px] sm:text-[10.5px] font-urbanist font-bold uppercase tracking-wider text-[#111111] whitespace-nowrap">
                   Govt Recognized &bull; APEDA Certified
@@ -307,7 +307,7 @@ export default function HeroSection() {
 
 
               {/* Card 4: Bottom-Left Floating Pill (Cold-Chain Reefer Logistics) */}
-              <div className="absolute -bottom-5 -left-2 sm:-bottom-7 sm:-left-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] p-3 sm:p-3.5 rounded-2xl shadow-[0_16px_36px_-6px_rgba(231,63,30,0.25)] max-w-[240px] sm:max-w-[270px] transition-transform hover:scale-105 duration-300">
+              <div className="absolute -bottom-5 -left-2 sm:-bottom-7 sm:-left-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] p-3 sm:p-3.5 shadow-[0_16px_36px_-6px_rgba(231,63,30,0.25)] max-w-[240px] sm:max-w-[270px] transition-transform hover:scale-105 duration-300">
                 <div className="flex items-center gap-1.5 mb-1">
                   <Ship className="w-3.5 h-3.5 text-[#E73F1E] shrink-0" />
                   <span className="text-[9px] sm:text-[10px] font-urbanist font-bold uppercase tracking-wider text-[#FB6C00]">
@@ -324,8 +324,8 @@ export default function HeroSection() {
               </div>
 
               {/* Card 5: Bottom-Right Floating Badge (99.8% On-Time Clearance) */}
-              <div className="animate-float-3 absolute -bottom-5 -right-2 sm:-bottom-7 sm:-right-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] p-2.5 sm:p-3.5 rounded-2xl shadow-[0_16px_36px_-6px_rgba(231,63,30,0.25)] flex items-center gap-2.5 transition-transform hover:scale-105 duration-300">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-xl bg-gradient-to-br from-[#E73F1E] via-[#FB6C00] to-[#F9B637] flex items-center justify-center text-white shadow-xs shrink-0">
+              <div className="animate-float-3 absolute -bottom-5 -right-2 sm:-bottom-7 sm:-right-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] p-2.5 sm:p-3.5 shadow-[0_16px_36px_-6px_rgba(231,63,30,0.25)] flex items-center gap-2.5 transition-transform hover:scale-105 duration-300">
+                <div className="w-8 h-8 sm:w-9 sm:h-9 bg-gradient-to-br from-[#E73F1E] via-[#FB6C00] to-[#F9B637] flex items-center justify-center text-white shadow-xs shrink-0">
                   <Award className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
                 </div>
                 <div>

@@ -147,7 +147,7 @@ export default function AboutPage() {
 
           <ScrollReveal animation="scale" delay={0.1}>
             <div className="luxury-card p-8 sm:p-10 bg-white max-w-4xl mx-auto shadow-sm border border-[#DEDEDE] flex flex-col md:flex-row items-center gap-8 sm:gap-10">
-              <div className="relative h-60 w-60 rounded-2xl overflow-hidden border-2 border-[#DEDEDE] shadow-lg shrink-0">
+              <div className="relative h-60 w-60 overflow-hidden border-2 border-[#DEDEDE] shadow-lg shrink-0">
                 <Image
                   src="/assets/images/branding/founder.png"
                   alt="Sahul Hameed - Founder The Golden Star"
@@ -170,13 +170,13 @@ export default function AboutPage() {
                 <div className="pt-2 flex flex-wrap items-center gap-3 text-xs font-semibold">
                   <a
                     href="mailto:hameedsahul9978@gmail.com"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white transition-all shadow-sm font-space font-bold"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-[#111111] hover:bg-[#FF583E] text-white transition-all shadow-sm font-space font-bold"
                   >
                     <Mail className="w-4 h-4 text-[#FFD84D]" />
                     <span>hameedsahul9978@gmail.com</span>
                   </a>
 
-                  <div className="flex items-center gap-1.5 text-zinc-700 bg-zinc-100 px-3.5 py-2 rounded-full text-xs">
+                  <div className="flex items-center gap-1.5 text-zinc-700 bg-zinc-100 px-3.5 py-2 text-xs">
                     <MapPin className="w-3.5 h-3.5 text-[#FF583E]" />
                     <span>Adiramapattinam, Thanjavur, Tamil Nadu</span>
                   </div>
@@ -194,7 +194,7 @@ export default function AboutPage() {
           <ScrollReveal animation="slide-left" delay={0.1} className="h-full">
             <div className="luxury-card p-8 sm:p-10 border border-[#DEDEDE] h-full">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D]">
+                <div className="p-3 bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D]">
                   <Target className="w-6 h-6" />
                 </div>
                 <span className="badge-pill-gold">STRATEGIC PURPOSE</span>
@@ -215,7 +215,7 @@ export default function AboutPage() {
           <ScrollReveal animation="slide-right" delay={0.2} className="h-full">
             <div className="luxury-card p-8 sm:p-10 border border-[#DEDEDE] h-full">
               <div className="flex items-center gap-3 mb-4">
-                <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D]">
+                <div className="p-3 bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D]">
                   <Eye className="w-6 h-6" />
                 </div>
                 <span className="badge-pill-gold">GLOBAL OUTLOOK</span>
@@ -237,7 +237,7 @@ export default function AboutPage() {
       {/* Closing CTA */}
       <section className="py-16 max-w-7xl mx-auto px-6">
         <ScrollReveal animation="scale">
-          <div className="relative rounded-3xl border border-[#DEDEDE] bg-white p-10 sm:p-14 text-center shadow-sm overflow-hidden">
+          <div className="relative border border-[#DEDEDE] bg-white p-10 sm:p-14 text-center shadow-sm overflow-hidden">
             <Particles
               className="absolute inset-0 pointer-events-none opacity-20"
               quantity={20}
