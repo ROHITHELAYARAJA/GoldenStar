@@ -64,9 +64,6 @@ export default function WhyChooseUsInteractive() {
 
   return (
     <section className="py-20 sm:py-28 bg-white relative overflow-hidden border-t border-[#DEDEDE]">
-      {/* Background Subtle Ambient Tint */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[350px] bg-[#FFFDC1]/25 rounded-full blur-3xl pointer-events-none" />
-
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto mb-14 sm:mb-18">
@@ -75,9 +72,9 @@ export default function WhyChooseUsInteractive() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFDC1] border border-[#D9B975]/40 shadow-sm text-xs font-space font-bold text-[#7D4E0C] mb-4"
+            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFD84D] border border-[#DEDEDE] shadow-sm text-xs font-space font-bold text-[#111111] mb-4"
           >
-            <span className="w-2 h-2 rounded-full bg-[#D9B975]" />
+            <span className="w-2 h-2 rounded-full bg-[#FF583E]" />
             <span className="tracking-wider uppercase text-[10px] font-space font-bold">
               TRUSTED TRADE CAPABILITIES
             </span>
@@ -117,29 +114,29 @@ export default function WhyChooseUsInteractive() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.4, delay: index * 0.1 }}
-                whileHover={{ y: -8 }}
+                whileHover={{ y: -6 }}
                 onClick={() => setActiveCard(item.id)}
                 className={`rounded-3xl p-6 sm:p-7 border shadow-sm transition-all duration-300 flex flex-col justify-between relative overflow-hidden group select-none cursor-pointer ${
                   isSelected
-                    ? "bg-[#FFFDC1]/40 border-[#D9B975] shadow-[0_20px_40px_-15px_rgba(217,185,117,0.3)]"
-                    : "bg-white border-[#DEDEDE] hover:border-[#D9B975] hover:shadow-[0_16px_36px_-12px_rgba(217,185,117,0.2)]"
+                    ? "bg-[#FFD84D]/15 border-[#111111] shadow-[0_16px_36px_-12px_rgba(0,0,0,0.08)]"
+                    : "bg-white border-[#DEDEDE] hover:border-[#111111] hover:shadow-[0_12px_28px_-10px_rgba(0,0,0,0.06)]"
                 }`}
               >
                 <div>
                   {/* Top Bar: Icon + Category Tag */}
                   <div className="flex items-center justify-between mb-5">
-                    <div className="w-12 h-12 rounded-2xl bg-[#FFFDC1] border border-[#D9B975]/35 flex items-center justify-center text-[#7D4E0C] group-hover:bg-[#FF5B3E] group-hover:text-white transition-all duration-300">
+                    <div className="w-12 h-12 rounded-2xl bg-zinc-100 border border-[#DEDEDE] flex items-center justify-center text-[#111111] group-hover:bg-[#FF583E] group-hover:text-white transition-all duration-300">
                       <Icon className="w-5 h-5" />
                     </div>
 
-                    <span className="text-[10px] font-space font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white border border-[#DEDEDE] text-[#7D4E0C] group-hover:border-[#D9B975] transition-colors">
+                    <span className="text-[10px] font-space font-bold uppercase tracking-wider px-2.5 py-1 rounded-full bg-white border border-[#DEDEDE] text-[#111111] group-hover:border-[#111111] transition-colors">
                       {item.tag}
                     </span>
                   </div>
 
                   {/* Refined Stat Counter */}
                   <div className="mb-2">
-                    <span className="font-space text-3xl sm:text-4xl font-bold tracking-tight leading-none text-[#111111] group-hover:text-[#7D4E0C] transition-colors duration-300">
+                    <span className="font-space text-3xl sm:text-4xl font-bold tracking-tight leading-none text-[#111111] group-hover:text-[#FF583E] transition-colors duration-300">
                       {item.stat}
                     </span>
                   </div>
@@ -157,7 +154,7 @@ export default function WhyChooseUsInteractive() {
 
                 {/* Bottom Highlight */}
                 <div className="pt-4 mt-5 border-t border-[#DEDEDE] flex items-center justify-between">
-                  <span className="text-[11px] font-dmsans font-semibold text-zinc-500 group-hover:text-[#7D4E0C] transition-colors">
+                  <span className="text-[11px] font-dmsans font-semibold text-zinc-500 group-hover:text-[#111111] transition-colors">
                     Standard Compliant
                   </span>
                   <div className="w-6 h-6 rounded-full bg-zinc-100 group-hover:bg-[#111111] group-hover:text-white flex items-center justify-center text-zinc-700 transition-all">
@@ -178,7 +175,7 @@ export default function WhyChooseUsInteractive() {
           className="mt-12 rounded-2xl bg-white border border-[#DEDEDE] p-5 sm:p-6 shadow-sm flex flex-col sm:flex-row items-center justify-between gap-4"
         >
           <div className="flex items-center gap-3.5">
-            <div className="w-10 h-10 rounded-xl bg-[#FFFDC1] border border-[#D9B975]/40 flex items-center justify-center text-[#7D4E0C] shrink-0">
+            <div className="w-10 h-10 rounded-xl bg-[#FFD84D]/40 border border-[#FFD84D] flex items-center justify-center text-[#111111] shrink-0">
               <ShieldCheck className="w-5 h-5" />
             </div>
             <div>
@@ -194,7 +191,7 @@ export default function WhyChooseUsInteractive() {
           <div className="flex items-center gap-3 shrink-0 w-full sm:w-auto font-dmsans">
             <button
               onClick={() => openQuoteModal("Why Choose Us Section")}
-              className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF5B3E] text-white font-bold text-xs sm:text-sm transition-all shadow hover:scale-105 font-space"
+              className="w-full sm:w-auto px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-bold text-xs sm:text-sm transition-all shadow hover:scale-105 font-space"
             >
               Request Sourcing Quote
             </button>
@@ -202,7 +199,7 @@ export default function WhyChooseUsInteractive() {
               href="https://wa.me/919345243790"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto px-4 py-2.5 rounded-full bg-white hover:bg-[#FFFDC1] border border-[#DEDEDE] text-[#111111] hover:text-[#7D4E0C] font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 font-space"
+              className="w-full sm:w-auto px-4 py-2.5 rounded-full bg-white hover:bg-[#FFD84D]/30 border border-[#DEDEDE] text-[#111111] font-semibold text-xs transition-colors flex items-center justify-center gap-1.5 font-space"
             >
               <span>WhatsApp</span>
             </a>

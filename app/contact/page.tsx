@@ -47,16 +47,15 @@ export default function ContactPage() {
   };
 
   return (
-    <main className="min-h-screen bg-[#FCFCFD] text-zinc-950">
+    <main className="min-h-screen bg-white text-[#111111]">
       {/* Subpage Hero Banner */}
-      <section className="py-16 sm:py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 via-white to-[#FFFDC1]/20">
+      <section className="py-16 sm:py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 via-white to-zinc-50">
         <div className="max-w-4xl mx-auto px-6 text-center">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFDC1] border border-[#D9B975]/40 text-xs font-space font-bold text-[#7D4E0C] mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#D9B975]" />
+          <div className="badge-pill-gold mb-4 inline-block">
             <span className="uppercase tracking-wider text-[10px]">CONTACT EXPORT DESK</span>
           </div>
           <h1 className="font-space text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#111111] mb-4">
-            Let&apos;s Take Quality <span className="text-[#7D4E0C]">Beyond Borders</span>
+            Let&apos;s Take Quality <span className="text-[#FF583E]">Beyond Borders</span>
           </h1>
           <p className="font-dmsans text-base sm:text-lg text-zinc-700 italic max-w-2xl mx-auto">
             &ldquo;Whether you&apos;re looking for fresh fruits, quality vegetables, or authentic spices, we&apos;re ready to connect.&rdquo;
@@ -73,8 +72,7 @@ export default function ContactPage() {
           {/* Left Column: Direct Desk & Founder Info (5 cols) */}
           <div className="lg:col-span-5 space-y-6">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFFDC1] border border-[#D9B975]/40 text-xs font-space font-bold text-[#7D4E0C] mb-3">
-                <span className="w-2 h-2 rounded-full bg-[#D9B975]" />
+              <div className="badge-pill-gold mb-3 inline-block">
                 <span className="uppercase tracking-wider text-[10px]">DIRECT TRADE DESK</span>
               </div>
               <h2 className="font-space text-2xl sm:text-3xl font-bold text-[#111111] mb-2">
@@ -87,7 +85,7 @@ export default function ContactPage() {
 
             {/* Founder Profile Card */}
             <div className="rounded-3xl p-6 bg-[#111111] text-white border border-zinc-800 shadow-xl flex items-center gap-5">
-              <div className="relative h-20 w-20 rounded-2xl overflow-hidden border-2 border-[#D9B975] shrink-0 bg-zinc-800">
+              <div className="relative h-20 w-20 rounded-2xl overflow-hidden border-2 border-[#DEDEDE] shrink-0 bg-zinc-800">
                 <Image
                   src="/assets/images/branding/founder.png"
                   alt="Sahul Hameed"
@@ -96,7 +94,7 @@ export default function ContactPage() {
                 />
               </div>
               <div>
-                <span className="text-[10px] font-space font-bold uppercase tracking-widest text-[#D9B975] block">
+                <span className="text-[10px] font-space font-bold uppercase tracking-widest text-[#FF583E] block">
                   Proprietor &amp; Managing Director
                 </span>
                 <h3 className="font-space text-xl font-bold text-white mt-0.5">
@@ -106,17 +104,17 @@ export default function ContactPage() {
                   href="https://wa.me/919345243790"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1.5 mt-2 px-3.5 py-1.5 rounded-full text-xs font-space font-bold bg-[#FFFDC1] text-[#7D4E0C] border border-[#D9B975] hover:bg-[#D9B975] hover:text-[#111111] transition-colors"
+                  className="inline-flex items-center gap-1.5 mt-2 px-3.5 py-1.5 rounded-full text-xs font-space font-bold bg-[#FF583E] text-white hover:bg-white hover:text-[#111111] transition-colors"
                 >
-                  <MessageCircle className="w-3.5 h-3.5 text-[#7D4E0C]" />
+                  <MessageCircle className="w-3.5 h-3.5 text-white" />
                   <span>WhatsApp: 9345243790</span>
                 </a>
               </div>
             </div>
 
             {/* Phone & WhatsApp Card */}
-            <div className="rounded-3xl p-6 bg-white border border-[#DEDEDE] hover:border-[#D9B975] flex items-start gap-4 shadow-sm transition-colors">
-              <div className="p-3 rounded-2xl bg-[#FFFDC1] text-[#7D4E0C] border border-[#D9B975]/40 shrink-0">
+            <div className="rounded-3xl p-6 bg-white border border-[#DEDEDE] hover:border-[#FF583E] flex items-start gap-4 shadow-sm transition-colors">
+              <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D] shrink-0">
                 <Phone className="w-5 h-5" />
               </div>
               <div>
@@ -127,7 +125,7 @@ export default function ContactPage() {
                   href="https://wa.me/919345243790"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-space text-base font-bold text-[#111111] mt-1 hover:text-[#7D4E0C] transition-colors block"
+                  className="font-space text-base font-bold text-[#111111] mt-1 hover:text-[#FF583E] transition-colors block"
                 >
                   +91 9345243790
                 </a>
@@ -138,8 +136,8 @@ export default function ContactPage() {
             </div>
 
             {/* Email Card */}
-            <div className="rounded-3xl p-6 bg-white border border-[#DEDEDE] hover:border-[#D9B975] flex items-start gap-4 shadow-sm transition-colors">
-              <div className="p-3 rounded-2xl bg-[#FFFDC1] text-[#7D4E0C] border border-[#D9B975]/40 shrink-0">
+            <div className="rounded-3xl p-6 bg-white border border-[#DEDEDE] hover:border-[#FF583E] flex items-start gap-4 shadow-sm transition-colors">
+              <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D] shrink-0">
                 <Mail className="w-5 h-5" />
               </div>
               <div>
@@ -148,7 +146,7 @@ export default function ContactPage() {
                 </span>
                 <a
                   href="mailto:hameedsahul9978@gmail.com"
-                  className="font-space text-sm font-bold text-[#111111] mt-1 hover:text-[#7D4E0C] transition-colors block"
+                  className="font-space text-sm font-bold text-[#111111] mt-1 hover:text-[#FF583E] transition-colors block"
                 >
                   hameedsahul9978@gmail.com
                 </a>
@@ -159,8 +157,8 @@ export default function ContactPage() {
             </div>
 
             {/* Official Registered Address Card */}
-            <div className="rounded-3xl p-6 bg-white border border-[#DEDEDE] hover:border-[#D9B975] flex items-start gap-4 shadow-sm transition-colors">
-              <div className="p-3 rounded-2xl bg-[#FFFDC1] text-[#7D4E0C] border border-[#D9B975]/40 shrink-0">
+            <div className="rounded-3xl p-6 bg-white border border-[#DEDEDE] hover:border-[#FF583E] flex items-start gap-4 shadow-sm transition-colors">
+              <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D] shrink-0">
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
@@ -180,9 +178,9 @@ export default function ContactPage() {
             </div>
 
             {/* SLA Badge */}
-            <div className="rounded-3xl p-6 bg-[#FFFDC1]/40 border border-[#D9B975]">
+            <div className="rounded-3xl p-6 bg-zinc-50 border border-[#DEDEDE]">
               <div className="flex items-center gap-3 mb-1.5">
-                <Clock className="w-5 h-5 text-[#7D4E0C]" />
+                <Clock className="w-5 h-5 text-[#FF583E]" />
                 <span className="font-space text-sm font-bold text-[#111111]">12-Hour Export Quotation Guarantee</span>
               </div>
               <p className="font-dmsans text-xs text-zinc-700 leading-relaxed">
@@ -195,8 +193,7 @@ export default function ContactPage() {
           <div className="lg:col-span-7">
             <div className="rounded-3xl p-8 sm:p-12 shadow-sm border border-[#DEDEDE] bg-white">
               <div className="mb-8 pb-6 border-b border-[#DEDEDE]">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFFDC1] border border-[#D9B975]/40 text-xs font-space font-bold text-[#7D4E0C] mb-3">
-                  <span className="w-2 h-2 rounded-full bg-[#D9B975]" />
+                <div className="badge-pill-gold mb-3 inline-block">
                   <span className="uppercase tracking-wider text-[10px]">SEND AN ENQUIRY</span>
                 </div>
                 <h2 className="font-space text-2xl sm:text-3xl font-bold text-[#111111] mb-2">
@@ -219,7 +216,7 @@ export default function ContactPage() {
                       placeholder="e.g. John Doe"
                       value={formData.name}
                       onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-sm font-dmsans text-[#111111]"
+                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                     />
                   </div>
                   <div>
@@ -232,7 +229,7 @@ export default function ContactPage() {
                       placeholder="e.g. Global Foods Trading LLC"
                       value={formData.company}
                       onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-sm font-dmsans text-[#111111]"
+                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                     />
                   </div>
                 </div>
@@ -248,7 +245,7 @@ export default function ContactPage() {
                       placeholder="e.g. buyer@company.com"
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-sm font-dmsans text-[#111111]"
+                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                     />
                   </div>
                   <div>
@@ -261,7 +258,7 @@ export default function ContactPage() {
                       placeholder="e.g. +971 50 123 4567"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-sm font-dmsans text-[#111111]"
+                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                     />
                   </div>
                 </div>
@@ -274,7 +271,7 @@ export default function ContactPage() {
                     <select
                       value={formData.product}
                       onChange={(e) => setFormData({ ...formData, product: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-sm font-dmsans text-[#111111]"
+                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                     >
                       <option value="Fruits">Fruits (Mango, Banana, Pomegranate, Grapes, etc.)</option>
                       <option value="Vegetables">Vegetables (Onion, Potato, Tomato, Okra, Chilli, Carrot)</option>
@@ -291,7 +288,7 @@ export default function ContactPage() {
                       placeholder="e.g. 1x40ft Reefer FCL or 10 Metric Tons"
                       value={formData.quantity}
                       onChange={(e) => setFormData({ ...formData, quantity: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-sm font-dmsans text-[#111111]"
+                      className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                     />
                   </div>
                 </div>
@@ -305,16 +302,16 @@ export default function ContactPage() {
                     placeholder="Tell us your destination seaport/airport, preferred packaging specs, or delivery schedule..."
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-sm font-dmsans text-[#111111]"
+                    className="w-full px-4 py-3 rounded-xl border border-[#DEDEDE] focus:border-[#FF583E] focus:outline-none focus:ring-2 focus:ring-[#FF583E]/20 bg-white text-sm font-dmsans text-[#111111]"
                   />
                 </div>
 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full py-4 rounded-full font-space font-bold text-sm bg-[#111111] hover:bg-[#FF5B3E] text-white shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2"
+                  className="w-full py-4 rounded-full font-space font-bold text-sm bg-[#111111] hover:bg-[#FF583E] text-white shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2"
                 >
-                  <Send className="w-4 h-4 text-[#FFFDC1]" />
+                  <Send className="w-4 h-4 text-[#FFD84D]" />
                   <span>{isSubmitting ? "TRANSMITTING INQUIRY..." : "SEND ENQUIRY →"}</span>
                 </button>
               </form>
@@ -326,12 +323,11 @@ export default function ContactPage() {
       {/* Bottom Highlight Quote */}
       <section className="py-20 max-w-7xl mx-auto px-6 border-t border-[#DEDEDE]">
         <div className="rounded-3xl border border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white p-10 sm:p-14 text-center shadow-sm">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFFDC1] border border-[#D9B975]/40 text-xs font-space font-bold text-[#7D4E0C] mb-4">
-            <span className="w-2 h-2 rounded-full bg-[#D9B975]" />
+          <div className="badge-pill-gold mb-4 inline-block">
             <span className="uppercase tracking-wider text-[10px]">THE GOLDEN STAR COMMITMENT</span>
           </div>
           <h2 className="font-space text-2xl sm:text-4xl font-bold tracking-tight text-[#111111] mb-3">
-            Your Requirement. Our Connection. <span className="text-[#7D4E0C]">Global Possibilities.</span>
+            Your Requirement. Our Connection. <span className="text-[#FF583E]">Global Possibilities.</span>
           </h2>
           <p className="font-dmsans text-base sm:text-lg text-zinc-600 max-w-xl mx-auto italic font-normal">
             &ldquo;Quality that travels. Trust that stays.&rdquo;

@@ -87,11 +87,11 @@ export default function WhyUsPage() {
       {/* Subpage Hero Banner */}
       <section className="py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white">
         <div className="max-w-7xl mx-auto px-6 text-center max-w-3xl">
-          <span className="text-xs font-dmsans font-semibold uppercase tracking-[0.2em] text-[#7D4E0C] bg-[#FFFDC1] px-3.5 py-1 rounded-full inline-block mb-3 border border-[#D9B975]/40">
+          <span className="badge-pill-gold inline-block mb-3">
             GLOBAL REACH
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-space font-bold tracking-tight text-[#111111] mb-3">
-            Connecting Producers With <span className="font-dmsans italic text-[#D9B975] font-normal">Markets Worldwide</span>
+            Connecting Producers With <span className="font-dmsans italic text-[#FF583E] font-normal">Markets Worldwide</span>
           </h1>
           <p className="font-dmsans text-base sm:text-xl text-zinc-600 italic">
             &ldquo;From Local Origins to Global Opportunities.&rdquo;
@@ -106,14 +106,14 @@ export default function WhyUsPage() {
       <section className="py-12 max-w-7xl mx-auto px-6">
         <div className="relative h-72 sm:h-96 w-full rounded-3xl overflow-hidden border border-[#DEDEDE] shadow-lg">
           <Image
-            src="/assets/images/hero/hero-sea-freight.jpg"
+            src="/assets/images/hero/hero-container-vessel.jpg"
             alt="International Ocean Freight Shipping"
             fill
             className="object-cover brightness-95"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/30 to-transparent flex flex-col justify-end p-8 sm:p-12 text-white">
-            <span className="badge-pill bg-white/90 text-zinc-950 mb-2 w-fit font-dmsans text-xs">
+            <span className="badge-pill-gold mb-2 w-fit">
               Trade Reach &amp; Integrity
             </span>
             <h2 className="text-xl sm:text-2xl font-bold font-space text-white max-w-xl">
@@ -132,7 +132,7 @@ export default function WhyUsPage() {
       {/* Section 1: Our Global Approach */}
       <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-16">
-          <span className="text-xs font-dmsans font-semibold uppercase tracking-[0.2em] text-[#7D4E0C] bg-[#FFFDC1] px-3.5 py-1 rounded-full inline-block mb-3 border border-[#D9B975]/40">
+          <span className="badge-pill-gold inline-block mb-3">
             OUR GLOBAL APPROACH
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
@@ -153,7 +153,7 @@ export default function WhyUsPage() {
                 className="luxury-card p-6 sm:p-8 flex flex-col justify-between group shadow-sm border border-[#DEDEDE]"
               >
                 <div>
-                  <div className="w-12 h-12 rounded-2xl bg-[#FFFDC1] border border-[#D9B975]/35 flex items-center justify-center text-[#7D4E0C] mb-6 group-hover:bg-[#FF5B3E] group-hover:text-white transition-colors duration-300">
+                  <div className="w-12 h-12 rounded-2xl bg-[#FFD84D]/30 border border-[#FFD84D] flex items-center justify-center text-[#111111] mb-6 group-hover:bg-[#FF583E] group-hover:text-white transition-colors duration-300">
                     <Icon className="w-5 h-5" />
                   </div>
                   <h3 className="text-base sm:text-lg font-bold font-space text-[#111111] mb-2">
@@ -176,7 +176,7 @@ export default function WhyUsPage() {
       <section className="py-20 bg-zinc-50 border-y border-[#DEDEDE]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-dmsans font-semibold uppercase tracking-[0.2em] text-[#7D4E0C] bg-[#FFFDC1] px-3.5 py-1 rounded-full inline-block mb-3 border border-[#D9B975]/40">
+            <span className="badge-pill-gold inline-block mb-3">
               WHY THE GOLDEN STAR?
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
@@ -196,7 +196,7 @@ export default function WhyUsPage() {
               >
                 <div className="flex items-center justify-between mb-4">
                   <div className="badge-pill-gold text-[10px] font-space">Advantage {item.num}</div>
-                  <span className="font-space font-bold text-xl text-[#7D4E0C]">
+                  <span className="font-space font-bold text-xl text-[#FF583E]">
                     {item.num}
                   </span>
                 </div>
@@ -207,7 +207,7 @@ export default function WhyUsPage() {
                   {item.desc}
                 </p>
                 <div className="flex items-center gap-2 text-xs text-zinc-700 pt-3 border-t border-[#DEDEDE] font-dmsans">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#D9B975] shrink-0" />
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#FF583E] shrink-0" />
                   <span>{item.point}</span>
                 </div>
               </motion.div>
@@ -219,13 +219,13 @@ export default function WhyUsPage() {
       {/* Section 3: Our Trade Journey */}
       <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="text-center max-w-2xl mx-auto mb-14">
-          <span className="text-xs font-dmsans font-semibold uppercase tracking-[0.2em] text-[#7D4E0C] bg-[#FFFDC1] px-3.5 py-1 rounded-full inline-block mb-3 border border-[#D9B975]/40">
+          <span className="badge-pill-gold inline-block mb-3">
             OUR TRADE JOURNEY
           </span>
           <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
             End-to-End Trade Integrity
           </h2>
-          <p className="font-dmsans font-semibold text-lg text-[#7D4E0C]">
+          <p className="font-dmsans font-semibold text-lg text-[#FF583E]">
             SOURCE &rarr; SELECT &rarr; PREPARE &rarr; SHIP &rarr; DELIVER
           </p>
           <p className="text-xs text-zinc-600 mt-2 font-dmsans">
@@ -239,7 +239,7 @@ export default function WhyUsPage() {
               key={idx}
               className="luxury-card p-6 text-center flex flex-col justify-center items-center shadow-sm border border-[#DEDEDE]"
             >
-              <div className="w-10 h-10 rounded-full bg-[#FFFDC1] border border-[#D9B975]/35 flex items-center justify-center font-space font-bold text-sm text-[#7D4E0C] mb-4">
+              <div className="w-10 h-10 rounded-full bg-[#FFD84D] border border-[#FFD84D] flex items-center justify-center font-space font-bold text-sm text-[#111111] mb-4">
                 {step.step}
               </div>
               <h4 className="text-base font-bold font-space text-[#111111] tracking-wider mb-1">
@@ -268,7 +268,7 @@ export default function WhyUsPage() {
               className="btn-pill-primary text-sm py-3 px-7 font-space"
             >
               <span>GET A QUOTE</span>
-              <ArrowUpRight className="w-4 h-4 text-[#FFFDC1]" />
+              <ArrowUpRight className="w-4 h-4 text-[#FFD84D]" />
             </button>
             <Link href="/contact" className="btn-pill-secondary text-sm py-3 px-7 font-space">
               <span>Contact Our Team</span>

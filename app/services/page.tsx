@@ -91,13 +91,13 @@ export default function ServicesPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white text-zinc-950">
+    <main className="min-h-screen bg-white text-[#111111]">
       {/* Subpage Hero Banner */}
       <section className="py-16 sm:py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white">
         <div className="max-w-7xl mx-auto px-6 text-center max-w-3xl">
           <div className="badge-pill-gold mb-4 font-dmsans">OUR SERVICES</div>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-space tracking-tight text-[#111111] mb-3">
-            What We Do — <span className="text-[#7D4E0C]">From Source to Destination</span>
+            What We Do — <span className="text-[#FF583E]">From Source to Destination</span>
           </h1>
           <p className="font-dmsans text-base sm:text-lg text-zinc-600 leading-relaxed max-w-2xl mx-auto">
             From sourcing to delivery, The Golden Star brings together the right products, people, and processes to create a smooth and reliable agricultural trade experience.
@@ -109,14 +109,14 @@ export default function ServicesPage() {
       <section className="py-8 sm:py-12 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="relative h-64 sm:h-96 w-full rounded-3xl overflow-hidden border border-[#DEDEDE] shadow-xl">
           <Image
-            src="/assets/images/hero/hero-cargo-port.jpg"
+            src="/assets/images/hero/hero-container-vessel.jpg"
             alt="International Cargo Port Operations"
             fill
             className="object-cover brightness-95"
             priority
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent flex flex-col justify-end p-6 sm:p-12 text-white">
-            <span className="badge-pill bg-white/90 text-zinc-950 mb-2 w-fit font-dmsans text-[10px] sm:text-xs">
+            <span className="badge-pill-gold mb-2 w-fit font-dmsans text-[10px] sm:text-xs">
               International Trade Logistics
             </span>
             <h2 className="text-lg sm:text-2xl font-bold font-space text-white max-w-xl">
@@ -149,19 +149,19 @@ export default function ServicesPage() {
                 key={idx}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className="luxury-card p-5 sm:p-8 flex flex-col justify-between group shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(217,185,117,0.22)] hover:border-[#D9B975] transition-all duration-300 rounded-3xl"
+                className="luxury-card p-5 sm:p-8 flex flex-col justify-between group shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 rounded-3xl"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4 sm:mb-6">
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFFDC1] border border-[#D9B975]/35 flex items-center justify-center text-[#7D4E0C] group-hover:bg-[#FF5B3E] group-hover:text-white transition-colors duration-300">
+                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFD84D]/30 border border-[#FFD84D] flex items-center justify-center text-[#111111] group-hover:bg-[#FF583E] group-hover:text-white transition-colors duration-300">
                       <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                     </div>
-                    <span className="font-space font-bold text-xl sm:text-2xl text-zinc-300 group-hover:text-[#7D4E0C] transition-colors duration-300">
+                    <span className="font-space font-bold text-xl sm:text-2xl text-zinc-300 group-hover:text-[#FF583E] transition-colors duration-300">
                       {item.num}
                     </span>
                   </div>
 
-                  <span className="badge-pill text-[10px] mb-2 sm:mb-3 font-dmsans font-semibold uppercase">{item.badge}</span>
+                  <span className="badge-pill-gold text-[10px] mb-2 sm:mb-3 font-dmsans font-semibold uppercase">{item.badge}</span>
                   <h3 className="text-base sm:text-lg font-bold font-space text-[#111111] mb-2 sm:mb-3">
                     {item.title}
                   </h3>
@@ -172,7 +172,7 @@ export default function ServicesPage() {
                   <div className="space-y-2 pt-3 sm:pt-4 border-t border-[#DEDEDE]">
                     {item.points.map((pt, pIdx) => (
                       <div key={pIdx} className="flex items-start gap-2 text-xs font-dmsans text-zinc-700">
-                        <span className="w-1.5 h-1.5 rounded-full bg-[#D9B975] shrink-0 mt-1" />
+                        <span className="w-1.5 h-1.5 rounded-full bg-[#FF583E] shrink-0 mt-1" />
                         <span>{pt}</span>
                       </div>
                     ))}
@@ -180,12 +180,12 @@ export default function ServicesPage() {
                 </div>
 
                 <div className="pt-4 sm:pt-6 mt-4 sm:mt-6 border-t border-[#DEDEDE] flex items-center justify-between font-dmsans">
-                  <span className="text-xs font-semibold text-zinc-400 group-hover:text-[#7D4E0C] transition-colors">
+                  <span className="text-xs font-semibold text-zinc-400 group-hover:text-[#FF583E] transition-colors">
                     Specification Ready
                   </span>
                   <button
                     onClick={() => openQuoteModal(`Service - ${item.title}`)}
-                    className="p-2 rounded-xl bg-zinc-100 group-hover:bg-[#111111] group-hover:text-[#FFFDC1] text-zinc-700 transition-all flex items-center justify-center"
+                    className="p-2 rounded-xl bg-zinc-100 group-hover:bg-[#FF583E] group-hover:text-white text-zinc-700 transition-all flex items-center justify-center"
                   >
                     <ArrowUpRight className="w-4 h-4" />
                   </button>
@@ -197,7 +197,7 @@ export default function ServicesPage() {
           {/* Quick Inquiry Card */}
           <div className="luxury-card p-5 sm:p-8 bg-[#111111] text-white border border-[#DEDEDE] flex flex-col justify-between shadow-xl rounded-3xl">
             <div>
-              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#D9B975] text-[#111111] flex items-center justify-center mb-4 sm:mb-6">
+              <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-2xl bg-[#FFD84D] text-[#111111] flex items-center justify-center mb-4 sm:mb-6">
                 <Sparkles className="w-5 h-5 sm:w-6 sm:h-6" />
               </div>
               <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] sm:text-xs font-bold bg-white/10 text-white mb-2 sm:mb-3 font-dmsans uppercase">
@@ -217,7 +217,7 @@ export default function ServicesPage() {
             <div className="pt-4 sm:pt-6 mt-4 sm:mt-6 font-dmsans">
               <button
                 onClick={() => openQuoteModal("Custom Trade Requirements")}
-                className="w-full py-2.5 sm:py-3 rounded-xl bg-[#D9B975] hover:bg-[#FF5B3E] hover:text-white text-[#111111] font-space font-bold text-xs sm:text-sm shadow-md transition-all"
+                className="w-full py-2.5 sm:py-3 rounded-xl bg-[#FF583E] hover:bg-[#FFD84D] hover:text-[#111111] text-white font-space font-bold text-xs sm:text-sm shadow-md transition-all"
               >
                 <span>Request Custom Plan</span>
               </button>
@@ -234,7 +234,7 @@ export default function ServicesPage() {
             <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
               One Journey. Every Step Connected.
             </h2>
-            <p className="font-dmsans font-semibold text-lg text-[#7D4E0C]">
+            <p className="font-dmsans font-semibold text-lg text-[#FF583E]">
               SOURCE &rarr; SELECT &rarr; PACK &rarr; SHIP &rarr; DELIVER
             </p>
           </div>
@@ -245,7 +245,7 @@ export default function ServicesPage() {
                 key={idx}
                 className="luxury-card p-6 text-center flex flex-col justify-center items-center shadow-sm"
               >
-                <div className="w-10 h-10 rounded-full bg-[#FFFDC1] border border-[#D9B975]/35 flex items-center justify-center font-bold text-sm text-[#7D4E0C] font-space mb-4">
+                <div className="w-10 h-10 rounded-full bg-[#FFD84D] border border-[#FFD84D] flex items-center justify-center font-bold text-sm text-[#111111] font-space mb-4">
                   {step.step}
                 </div>
                 <h4 className="text-base font-bold text-[#111111] font-space tracking-wider mb-1">
@@ -274,7 +274,7 @@ export default function ServicesPage() {
             className="btn-pill-primary text-sm py-3.5 px-8 font-space"
           >
             <span>DISCUSS YOUR REQUIREMENTS</span>
-            <ArrowUpRight className="w-4 h-4 text-[#FFFDC1]" />
+            <ArrowUpRight className="w-4 h-4 text-[#FFD84D]" />
           </button>
         </div>
       </section>

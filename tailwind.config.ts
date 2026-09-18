@@ -16,9 +16,7 @@ const config: Config = {
           accent: "#FF583E",
           surface: "#FFD84D",
           border: "#DEDEDE",
-          cream: "#FFFDC1",
           gold: "#FFD84D",
-          bronze: "#7D4E0C",
         },
         accent: {
           DEFAULT: "#FF583E",
@@ -27,7 +25,6 @@ const config: Config = {
         },
         surface: {
           DEFAULT: "#FFD84D",
-          warm: "#FFFDC1",
           card: "#FFFDF0",
         },
         border: {

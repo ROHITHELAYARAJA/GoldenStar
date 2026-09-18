@@ -49,27 +49,28 @@ export default function QuickNavWidget() {
         href="https://wa.me/919345243790"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#111111] text-white backdrop-blur-md border border-[#DEDEDE] shadow-xl text-xs font-semibold font-dmsans hover:border-[#D9B975] hover:scale-105 transition-all"
+        className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#111111] text-white backdrop-blur-md border border-[#DEDEDE] shadow-xl text-xs font-semibold font-dmsans hover:border-[#FFD84D] hover:scale-105 transition-all"
       >
         <span className="relative flex h-2 w-2">
-          <span className="inline-flex rounded-full h-2 w-2 bg-[#D9B975]"></span>
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF583E] opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF583E]"></span>
         </span>
-        <MessageCircle className="w-3.5 h-3.5 text-[#D9B975]" />
-        <span className="hidden md:inline">Sahul Hameed Desk</span>
+        <MessageCircle className="w-3.5 h-3.5 text-[#FFD84D]" />
+        <span className="hidden md:inline">Founder Desk</span>
       </a>
 
       {/* Floating Status & Next Page Pill */}
       <Link
         href={pageInfo.next}
-        className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#111111] backdrop-blur-md border border-[#DEDEDE] shadow-xl text-xs font-semibold text-white hover:border-[#D9B975] transition-all hover:scale-105 group font-dmsans"
+        className="flex items-center gap-2.5 px-4 py-2 rounded-full bg-[#111111] backdrop-blur-md border border-[#DEDEDE] shadow-xl text-xs font-semibold text-white hover:border-[#FFD84D] transition-all hover:scale-105 group font-dmsans"
       >
-        <span className="text-[10px] font-space font-bold text-[#111111] bg-[#FFFDC1] px-2 py-0.5 rounded-full">
+        <span className="text-[10px] font-space font-bold text-[#111111] bg-[#FFD84D] px-2 py-0.5 rounded-full">
           {scrollProgress}%
         </span>
-        <span className="text-[#FFFDC1] font-medium font-space">
+        <span className="text-white font-medium font-space">
           {pageInfo.num} <span className="text-zinc-500">/</span> {pageInfo.label}
         </span>
-        <ChevronRight className="w-3.5 h-3.5 text-zinc-400 group-hover:translate-x-0.5 group-hover:text-[#D9B975] transition-all" />
+        <ChevronRight className="w-3.5 h-3.5 text-zinc-400 group-hover:translate-x-0.5 group-hover:text-[#FF583E] transition-all" />
       </Link>
     </div>
   );

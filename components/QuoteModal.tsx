@@ -48,8 +48,8 @@ export default function QuoteModal() {
         </button>
 
         <div className="mb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFFDC1] border border-[#D9B975]/40 text-xs font-space font-bold text-[#7D4E0C] mb-3">
-            <ShieldCheck className="w-3.5 h-3.5 text-[#7D4E0C]" />
+          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFD84D] border border-[#DEDEDE] text-xs font-space font-bold text-[#111111] mb-3 shadow-sm">
+            <ShieldCheck className="w-3.5 h-3.5 text-[#111111]" />
             <span className="uppercase tracking-wider text-[10px]">DIRECT EXPORT DESK</span>
           </div>
           <h3 className="font-space text-2xl sm:text-3xl font-bold text-[#111111]">
@@ -74,7 +74,7 @@ export default function QuoteModal() {
                   className={`py-2 px-3 rounded-xl text-xs font-space font-bold border transition-all ${
                     formData.category.toLowerCase().includes(cat.toLowerCase())
                       ? "bg-[#111111] text-white border-[#111111] shadow-sm"
-                      : "bg-zinc-50 text-zinc-700 border-[#DEDEDE] hover:bg-[#FFFDC1] hover:text-[#7D4E0C]"
+                      : "bg-zinc-50 text-zinc-700 border-[#DEDEDE] hover:bg-[#FFD84D]/30 hover:text-[#111111]"
                   }`}
                 >
                   {cat}
@@ -94,7 +94,7 @@ export default function QuoteModal() {
                 placeholder="Your Name"
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-xs font-dmsans text-[#111111]"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FFD84D]/40 bg-white text-xs font-dmsans text-[#111111]"
               />
             </div>
             <div>
@@ -107,7 +107,7 @@ export default function QuoteModal() {
                 placeholder="Buyer / Importer Co."
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-xs font-dmsans text-[#111111]"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FFD84D]/40 bg-white text-xs font-dmsans text-[#111111]"
               />
             </div>
           </div>
@@ -123,7 +123,7 @@ export default function QuoteModal() {
                 placeholder="buyer@company.com"
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-xs font-dmsans text-[#111111]"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FFD84D]/40 bg-white text-xs font-dmsans text-[#111111]"
               />
             </div>
             <div>
@@ -136,7 +136,7 @@ export default function QuoteModal() {
                 placeholder="+ Country Code &amp; No."
                 value={formData.phone}
                 onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-xs font-dmsans text-[#111111]"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FFD84D]/40 bg-white text-xs font-dmsans text-[#111111]"
               />
             </div>
           </div>
@@ -149,7 +149,7 @@ export default function QuoteModal() {
               <select
                 value={formData.volume}
                 onChange={(e) => setFormData({ ...formData, volume: e.target.value })}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-xs font-dmsans text-[#111111]"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FFD84D]/40 bg-white text-xs font-dmsans text-[#111111]"
               >
                 <option value="FCL 20ft Reefer Container">FCL 20ft Reefer Container</option>
                 <option value="FCL 40ft Reefer Container">FCL 40ft Reefer Container</option>
@@ -167,17 +167,17 @@ export default function QuoteModal() {
                 placeholder="e.g. Jebel Ali, Rotterdam"
                 value={formData.destination}
                 onChange={(e) => setFormData({ ...formData, destination: e.target.value })}
-                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#D9B975] focus:outline-none focus:ring-2 focus:ring-[#FFFDC1] bg-white text-xs font-dmsans text-[#111111]"
+                className="w-full px-3.5 py-2.5 rounded-xl border border-[#DEDEDE] focus:border-[#111111] focus:outline-none focus:ring-2 focus:ring-[#FFD84D]/40 bg-white text-xs font-dmsans text-[#111111]"
               />
             </div>
           </div>
 
           <button
             type="submit"
-            className="w-full mt-2 py-3.5 rounded-full bg-[#111111] hover:bg-[#FF5B3E] text-white flex items-center justify-center gap-2 text-xs font-space font-bold shadow-lg hover:scale-[1.01] transition-all"
+            className="w-full mt-2 py-3.5 rounded-full bg-[#FF583E] hover:bg-[#E8492C] text-white flex items-center justify-center gap-2 text-xs font-space font-bold shadow-lg hover:scale-[1.01] transition-all"
           >
             <span>Submit Quotation Request</span>
-            <ArrowUpRight className="w-4 h-4 text-[#FFFDC1]" />
+            <ArrowUpRight className="w-4 h-4 text-white" />
           </button>
         </form>
       </div>

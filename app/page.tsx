@@ -70,96 +70,55 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-white text-[#111111] overflow-hidden">
-      {/* 🌟 Animated Global Live Ticker Marquee */}
-      <div className="w-full bg-[#111111] text-white py-2.5 overflow-hidden border-b border-zinc-800">
-        <motion.div
-          animate={{ x: [0, -1000] }}
-          transition={{ repeat: Infinity, duration: 24, ease: "linear" }}
-          className="flex items-center gap-10 whitespace-nowrap text-xs font-semibold tracking-wider text-zinc-300 uppercase font-dmsans"
-        >
-          <span>🌾 SOURCING BELT: Tamil Nadu &bull; Maharashtra &bull; Kerala &bull; Karnataka &bull; Andhra Pradesh</span>
-          <span className="text-[#FFD84D]">&bull;</span>
-          <span>🚢 MARITIME CORRIDORS: UAE &bull; Singapore &bull; Malaysia &bull; Saudi Arabia &bull; UK &bull; Europe</span>
-          <span className="text-[#FF583E]">&bull;</span>
-          <span>⭐ THE GOLDEN STAR: 100% Phytosanitary Certified &bull; Temperature Monitored Reefer Supply</span>
-          <span className="text-[#FFD84D]">&bull;</span>
-          <span>📞 Direct Export Desk: +91 9345243790 (Founder Sahul Hameed)</span>
-          <span className="text-[#FF583E]">&bull;</span>
-          <span>🌾 SOURCING BELT: Tamil Nadu &bull; Maharashtra &bull; Kerala &bull; Karnataka &bull; Andhra Pradesh</span>
-        </motion.div>
-      </div>
-
-      {/* 🌟 Pristine Maritime Vessel Hero Showcase (Single Dedicated Hero Image) */}
+      {/* 🌟 Pristine Maritime Vessel Hero Showcase (Clean, Ultra-Sharp 8K Vessel Photo) */}
       <section className="relative w-full overflow-hidden">
-        <div className="relative w-full min-h-[600px] sm:min-h-[680px] lg:min-h-[740px] flex items-center">
-          {/* Background High-Definition Maritime Vessel Photograph (The One and Only Hero Image) */}
+        <div className="relative w-full min-h-[600px] sm:min-h-[660px] lg:min-h-[720px] flex items-center">
+          {/* Background High-Definition Maritime Vessel Photograph - Pristine 8K, No Noise, No Broken Pixels */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/assets/images/hero/hero-container-vessel.jpg"
-              alt="The Golden Star - Global Maritime Agricultural Export Vessel"
+              src="/assets/images/hero/hero-ocean-harvest.jpg"
+              alt="The Golden Star - From the Finest Farms to the World"
               fill
               className="object-cover object-center"
               priority
             />
-            {/* Cinematic Gradient: Clean dark text backdrop on the left while keeping ship, cranes, plane and sunset sky visible */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent sm:w-[75%] lg:w-[60%]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/30" />
+            {/* Cinematic Gradient: Clean dark backdrop on the left for maximum text contrast while keeping ship and sunrise vivid */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent sm:w-[75%] lg:w-[58%]" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
           </div>
 
-          {/* Hero Content (Left Aligned, Executive Space Grotesk & DM Sans Typography) */}
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-20">
+          {/* Hero Content (Clean Executive Space Grotesk & DM Sans Typography - Exact from Document) */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-24">
             <div className="max-w-2xl">
-              {/* Eyebrow Subtitle Pill */}
-              <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-black/40 backdrop-blur-md border border-white/20 text-xs font-dmsans font-bold tracking-[0.2em] text-[#FFD84D] uppercase mb-5 shadow-sm">
-                <span className="w-2 h-2 rounded-full bg-[#FF583E]" />
-                <span>GLOBAL MARITIME AGRICULTURAL EXPORT</span>
-              </div>
-
-              {/* Bold Space Grotesk Headline */}
-              <h1 className="font-space text-3xl sm:text-5xl lg:text-[54px] text-white font-bold leading-[1.12] tracking-tight mb-5 drop-shadow-xl">
-                From South India&apos;s Finest Farms
+              {/* Bold Space Grotesk Headline (Exact from Golden Star Company .md) */}
+              <h1 className="font-space text-3xl sm:text-5xl lg:text-[56px] text-white font-bold leading-[1.12] tracking-tight mb-5 drop-shadow-xl">
+                From the Finest Farms
                 <span className="text-[#FFD84D] block mt-1.5">
-                  to Worldwide Seaports
+                  to the World
                 </span>
               </h1>
 
-              {/* Clean Tagline */}
-              <p className="text-sm sm:text-base lg:text-lg text-zinc-200 leading-relaxed max-w-xl mb-8 font-dmsans font-normal drop-shadow-md">
-                Direct procurement from verified farm belts in Tamil Nadu and South India. Exporting premium fresh fruits, farm vegetables, and authentic spices with certified phytosanitary standards and cold-chain integrity.
+              {/* Clean Tagline (Exact from Golden Star Company .md) */}
+              <p className="text-base sm:text-lg lg:text-xl text-zinc-200 leading-relaxed max-w-xl mb-8 font-dmsans font-normal drop-shadow-md">
+                Premium agricultural products, sourced with care and delivered across borders.
               </p>
 
-              {/* Action Buttons: Accent Coral and Obsidian Clean */}
+              {/* Action Buttons: Learn About Us & Get a Quote */}
               <div className="flex flex-wrap items-center gap-4">
                 <Link
-                  href="/products"
-                  className="inline-flex items-center gap-2.5 px-7 py-3.5 rounded-full bg-[#FF583E] hover:bg-[#E8492C] text-white font-space font-bold text-sm shadow-xl transition-all duration-200 hover:scale-105"
+                  href="/about"
+                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#FF583E] hover:bg-[#E8492C] text-white font-space font-bold text-sm shadow-xl transition-all duration-200 hover:scale-105"
                 >
-                  <span>Explore Commodities</span>
-                  <ArrowRight className="w-4 h-4" />
+                  <span>Learn About Us</span>
+                  <ArrowRight className="w-4 h-4 text-[#FFD84D]" />
                 </Link>
 
                 <button
                   onClick={() => openQuoteModal("Hero Section")}
-                  className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-black/50 hover:bg-black text-white font-space font-bold text-sm backdrop-blur-md border border-white/30 transition-all hover:scale-105 shadow-xl"
+                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-black/50 hover:bg-black text-white font-space font-bold text-sm backdrop-blur-md border border-white/30 transition-all hover:scale-105 shadow-xl"
                 >
-                  <span>Request Export Quote</span>
+                  <span>Get a Quote</span>
                 </button>
-              </div>
-
-              {/* Key Trust Stats Strip */}
-              <div className="grid grid-cols-3 gap-4 pt-10 mt-8 border-t border-white/15 max-w-lg">
-                <div>
-                  <div className="text-2xl sm:text-3xl font-bold text-white font-space">50+</div>
-                  <div className="text-xs text-zinc-300 font-dmsans mt-0.5">Sourcing Clusters</div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-bold text-[#FFD84D] font-space">100%</div>
-                  <div className="text-xs text-zinc-300 font-dmsans mt-0.5">Phytosanitary Inspected</div>
-                </div>
-                <div>
-                  <div className="text-2xl sm:text-3xl font-bold text-white font-space">Reefer</div>
-                  <div className="text-xs text-zinc-300 font-dmsans mt-0.5">Cold-Chain Maritime</div>
-                </div>
               </div>
             </div>
           </div>

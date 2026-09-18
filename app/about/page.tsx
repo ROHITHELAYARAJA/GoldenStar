@@ -25,11 +25,11 @@ export default function AboutPage() {
       {/* Subpage Hero Banner */}
       <section className="py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white">
         <div className="max-w-7xl mx-auto px-6 text-center max-w-3xl">
-          <span className="text-xs font-dmsans font-semibold uppercase tracking-[0.2em] text-[#7D4E0C] bg-[#FFFDC1] px-3.5 py-1 rounded-full inline-block mb-3 border border-[#D9B975]/40">
+          <span className="badge-pill-gold inline-block mb-3">
             CORPORATE OVERVIEW
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-space tracking-tight text-[#111111] mb-3">
-            Built to Connect. <span className="font-dmsans italic text-[#D9B975] font-normal">Driven to Deliver.</span>
+            Built to Connect. <span className="font-dmsans italic text-[#FF583E] font-normal">Driven to Deliver.</span>
           </h1>
           <p className="font-dmsans text-base sm:text-xl text-zinc-600 italic">
             &ldquo;Creating trusted connections between quality producers and global markets.&rdquo;
@@ -41,13 +41,13 @@ export default function AboutPage() {
       <section className="py-20 max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <span className="text-xs font-dmsans font-semibold uppercase tracking-[0.2em] text-[#7D4E0C] bg-[#FFFDC1] px-3.5 py-1 rounded-full inline-block mb-3 border border-[#D9B975]/40">
+            <span className="badge-pill-gold inline-block mb-3">
               OUR IDENTITY
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-2">
               Who Are We?
             </h2>
-            <p className="font-dmsans font-semibold text-lg text-[#7D4E0C] mb-5">
+            <p className="font-dmsans font-semibold text-lg text-[#111111] mb-5">
               Rooted in Quality. Reaching the World.
             </p>
             <p className="text-base text-zinc-800 font-medium leading-relaxed mb-5 font-dmsans">
@@ -61,7 +61,7 @@ export default function AboutPage() {
           <div className="luxury-card p-0 overflow-hidden shadow-sm border border-[#DEDEDE]">
             <div className="relative h-64 w-full">
               <Image
-                src="/assets/images/hero/hero-global-vessel.jpg"
+                src="/assets/images/hero/hero-container-vessel.jpg"
                 alt="Global Trade Connection Vessel"
                 fill
                 className="object-cover"
@@ -73,7 +73,7 @@ export default function AboutPage() {
             </div>
             <div className="p-7 space-y-5 font-dmsans">
               <div className="border-b border-[#DEDEDE] pb-4">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#7D4E0C] block">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF583E] block">
                   Direct Farm Sourcing
                 </span>
                 <h4 className="text-base font-bold font-space text-[#111111] mt-1">
@@ -84,7 +84,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div className="border-b border-[#DEDEDE] pb-4">
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#7D4E0C] block">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF583E] block">
                   Quality Assurance
                 </span>
                 <h4 className="text-base font-bold font-space text-[#111111] mt-1">
@@ -95,7 +95,7 @@ export default function AboutPage() {
                 </p>
               </div>
               <div>
-                <span className="text-[11px] font-bold uppercase tracking-wider text-[#7D4E0C] block">
+                <span className="text-[11px] font-bold uppercase tracking-wider text-[#FF583E] block">
                   Maritime Logistics
                 </span>
                 <h4 className="text-base font-bold font-space text-[#111111] mt-1">
@@ -114,7 +114,7 @@ export default function AboutPage() {
       <section className="py-20 bg-zinc-50 border-y border-[#DEDEDE]">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="text-xs font-dmsans font-semibold uppercase tracking-[0.2em] text-[#7D4E0C] bg-[#FFFDC1] px-3.5 py-1 rounded-full inline-block mb-3 border border-[#D9B975]/40">
+            <span className="badge-pill-gold inline-block mb-3">
               EXECUTIVE LEADERSHIP
             </span>
             <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111]">
@@ -136,7 +136,7 @@ export default function AboutPage() {
             </div>
 
             <div className="space-y-4 text-left font-dmsans">
-              <span className="text-xs font-bold uppercase tracking-wider text-[#7D4E0C] block font-space">
+              <span className="text-xs font-bold uppercase tracking-wider text-[#FF583E] block font-space">
                 Managing Director &amp; Trade Lead
               </span>
               <h3 className="text-2xl sm:text-3xl font-bold font-space text-[#111111]">
@@ -151,22 +151,22 @@ export default function AboutPage() {
                   href="https://wa.me/919345243790"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF5B3E] text-white transition-all shadow-sm font-space font-bold"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white transition-all shadow-sm font-space font-bold"
                 >
-                  <MessageCircle className="w-4 h-4 text-[#D9B975]" />
+                  <MessageCircle className="w-4 h-4 text-[#FFD84D]" />
                   <span>WhatsApp: 9345243790</span>
                 </a>
 
                 <a
                   href="mailto:hameedsahul9978@gmail.com"
-                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-[#FFFDC1] text-[#111111] hover:text-[#7D4E0C] border border-[#DEDEDE] transition-all font-space font-bold"
+                  className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white hover:bg-[#FFD84D]/20 text-[#111111] border border-[#DEDEDE] transition-all font-space font-bold"
                 >
-                  <Mail className="w-4 h-4 text-[#7D4E0C]" />
+                  <Mail className="w-4 h-4 text-[#111111]" />
                   <span>hameedsahul9978@gmail.com</span>
                 </a>
 
                 <div className="flex items-center gap-1.5 text-zinc-700 bg-zinc-100 px-3.5 py-2 rounded-full text-xs">
-                  <MapPin className="w-3.5 h-3.5 text-[#FF5B3E]" />
+                  <MapPin className="w-3.5 h-3.5 text-[#FF583E]" />
                   <span>Adiramapattinam, Thanjavur, Tamil Nadu</span>
                 </div>
               </div>
@@ -181,7 +181,7 @@ export default function AboutPage() {
           {/* Mission */}
           <div className="luxury-card p-8 sm:p-10 border border-[#DEDEDE]">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-2xl bg-[#FFFDC1] text-[#7D4E0C] border border-[#D9B975]/35">
+              <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D]">
                 <Target className="w-6 h-6" />
               </div>
               <span className="badge-pill-gold">STRATEGIC PURPOSE</span>
@@ -189,7 +189,7 @@ export default function AboutPage() {
             <h2 className="text-xl sm:text-2xl font-bold font-space text-[#111111] mb-2">
               Our Mission
             </h2>
-            <p className="font-dmsans text-sm font-semibold text-[#7D4E0C] mb-4">
+            <p className="font-dmsans text-sm font-semibold text-[#FF583E] mb-4">
               Rooted in Origin. Driven by Purpose.
             </p>
             <p className="text-sm text-zinc-600 leading-relaxed font-dmsans">
@@ -200,7 +200,7 @@ export default function AboutPage() {
           {/* Vision */}
           <div className="luxury-card p-8 sm:p-10 border border-[#DEDEDE]">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-3 rounded-2xl bg-[#FFFDC1] text-[#7D4E0C] border border-[#D9B975]/35">
+              <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D]">
                 <Eye className="w-6 h-6" />
               </div>
               <span className="badge-pill-gold">GLOBAL OUTLOOK</span>
@@ -208,7 +208,7 @@ export default function AboutPage() {
             <h2 className="text-xl sm:text-2xl font-bold font-space text-[#111111] mb-2">
               Our Vision
             </h2>
-            <p className="font-dmsans text-sm font-semibold text-[#7D4E0C] mb-4">
+            <p className="font-dmsans text-sm font-semibold text-[#FF583E] mb-4">
               A World Connected by Quality.
             </p>
             <p className="text-sm text-zinc-600 leading-relaxed font-dmsans">
@@ -235,7 +235,7 @@ export default function AboutPage() {
               className="btn-pill-primary text-sm py-3 px-7 font-space"
             >
               <span>Get a Quote</span>
-              <ArrowUpRight className="w-4 h-4 text-[#FFFDC1]" />
+              <ArrowUpRight className="w-4 h-4 text-[#FFD84D]" />
             </button>
             <Link href="/contact" className="btn-pill-secondary text-sm py-3 px-7 font-space">
               <span>Contact Us</span>

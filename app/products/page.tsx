@@ -157,11 +157,11 @@ export default function ProductsPage() {
       {/* 🌟 Subpage Hero Banner */}
       <section className="py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white">
         <div className="max-w-7xl mx-auto px-6 text-center max-w-3xl">
-          <span className="text-xs font-dmsans font-semibold uppercase tracking-[0.2em] text-[#7D4E0C] bg-[#FFFDC1] px-3.5 py-1 rounded-full inline-block mb-3 border border-[#D9B975]/40">
+          <span className="badge-pill-gold inline-block mb-3">
             OUR PRODUCTS
           </span>
           <h1 className="text-3xl sm:text-4xl lg:text-5xl font-space font-bold tracking-tight text-[#111111] mb-3">
-            A World of <span className="font-dmsans italic text-[#D9B975] font-normal">Freshness &amp; Flavour</span>
+            A World of <span className="font-dmsans italic text-[#FF583E] font-normal">Freshness &amp; Flavour</span>
           </h1>
           <p className="font-dmsans text-base sm:text-xl text-zinc-600 italic">
             &ldquo;Premium fruits, vegetables, and spices sourced with care for markets around the world.&rdquo;
@@ -171,7 +171,7 @@ export default function ProductsPage() {
 
       {/* 🌟 Interactive Category Filter Tabs (Sleek Horizontal Segmented Bar - No Awkward Wrapping) */}
       <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-2 sm:gap-3 p-1.5 bg-[#FFFDC1]/30 rounded-2xl border border-[#DEDEDE] max-w-2xl mx-auto shadow-sm">
+        <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-2 sm:gap-3 p-1.5 bg-zinc-100 rounded-2xl border border-[#DEDEDE] max-w-2xl mx-auto shadow-sm">
           {[
             { id: "all", label: "All Commodities" },
             { id: "fruits", label: "Fruits" },
@@ -183,7 +183,7 @@ export default function ProductsPage() {
               onClick={() => setActiveTab(tab.id as any)}
               className={`whitespace-nowrap py-2.5 px-4 sm:px-6 rounded-xl text-xs font-space font-bold uppercase tracking-wider transition-all duration-200 shrink-0 ${
                 activeTab === tab.id
-                  ? "bg-[#111111] text-[#FFFDC1] border border-[#111111] shadow-md scale-[1.02]"
+                  ? "bg-[#111111] text-[#FFD84D] border border-[#111111] shadow-md scale-[1.02]"
                   : "text-zinc-600 hover:text-[#111111] hover:bg-white font-semibold"
               }`}
             >
@@ -211,7 +211,7 @@ export default function ProductsPage() {
                 key={idx}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(217,185,117,0.22)] hover:border-[#D9B975] transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Clean Image Frame */}
@@ -225,7 +225,7 @@ export default function ProductsPage() {
                   </div>
 
                   {/* Product Title */}
-                  <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#7D4E0C] transition-colors line-clamp-1">
+                  <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#FF583E] transition-colors line-clamp-1">
                     {item.title}
                   </h3>
 
@@ -236,7 +236,7 @@ export default function ProductsPage() {
 
                   {/* Location Origin */}
                   <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-zinc-700 font-medium mb-3 sm:mb-5 pb-2 sm:pb-3 border-b border-[#DEDEDE] font-dmsans">
-                    <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF5B3E] shrink-0" />
+                    <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF583E] shrink-0" />
                     <span className="truncate">{item.location}</span>
                   </div>
                 </div>
@@ -244,10 +244,10 @@ export default function ProductsPage() {
                 {/* Enquiry Button */}
                 <button
                   onClick={() => openQuoteModal(`Fruits - ${item.title}`)}
-                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF5B3E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
                 >
                   <span>Enquire Now</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#FFFDC1]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
                 </button>
               </motion.div>
             ))}
@@ -273,7 +273,7 @@ export default function ProductsPage() {
                 key={idx}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(217,185,117,0.22)] hover:border-[#D9B975] transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Clean Image Frame */}
@@ -287,7 +287,7 @@ export default function ProductsPage() {
                   </div>
 
                   {/* Product Title */}
-                  <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#7D4E0C] transition-colors line-clamp-1">
+                  <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#FF583E] transition-colors line-clamp-1">
                     {item.title}
                   </h3>
 
@@ -298,7 +298,7 @@ export default function ProductsPage() {
 
                   {/* Location Origin */}
                   <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-zinc-700 font-medium mb-3 sm:mb-5 pb-2 sm:pb-3 border-b border-[#DEDEDE] font-dmsans">
-                    <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF5B3E] shrink-0" />
+                    <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF583E] shrink-0" />
                     <span className="truncate">{item.location}</span>
                   </div>
                 </div>
@@ -306,10 +306,10 @@ export default function ProductsPage() {
                 {/* Enquiry Button */}
                 <button
                   onClick={() => openQuoteModal(`Vegetables - ${item.title}`)}
-                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF5B3E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
                 >
                   <span>Enquire Now</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#FFFDC1]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
                 </button>
               </motion.div>
             ))}
@@ -335,7 +335,7 @@ export default function ProductsPage() {
                 key={idx}
                 whileHover={{ y: -6 }}
                 transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(217,185,117,0.22)] hover:border-[#D9B975] transition-all duration-300 flex flex-col justify-between group"
+                className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group"
               >
                 <div>
                   {/* Clean Image Frame */}
@@ -349,7 +349,7 @@ export default function ProductsPage() {
                   </div>
 
                   {/* Product Title */}
-                  <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#7D4E0C] transition-colors line-clamp-1">
+                  <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#FF583E] transition-colors line-clamp-1">
                     {item.title}
                   </h3>
 
@@ -360,7 +360,7 @@ export default function ProductsPage() {
 
                   {/* Location Origin */}
                   <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-zinc-700 font-medium mb-3 sm:mb-5 pb-2 sm:pb-3 border-b border-[#DEDEDE] font-dmsans">
-                    <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF5B3E] shrink-0" />
+                    <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF583E] shrink-0" />
                     <span className="truncate">{item.location}</span>
                   </div>
                 </div>
@@ -368,10 +368,10 @@ export default function ProductsPage() {
                 {/* Enquiry Button */}
                 <button
                   onClick={() => openQuoteModal(`Spices - ${item.title}`)}
-                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF5B3E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
                 >
                   <span>Enquire Now</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#FFFDC1]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
                 </button>
               </motion.div>
             ))}
@@ -382,11 +382,11 @@ export default function ProductsPage() {
       {/* 🌟 Bottom Call-to-Action */}
       <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <div className="rounded-3xl border border-[#DEDEDE] bg-white p-8 sm:p-14 text-center shadow-sm">
-          <span className="text-xs font-dmsans font-semibold uppercase tracking-[0.2em] text-[#7D4E0C] bg-[#FFFDC1] px-3.5 py-1 rounded-full inline-block mb-3 border border-[#D9B975]/40">
+          <span className="badge-pill-gold inline-block mb-3">
             CUSTOM EXPORT SPECIFICATIONS
           </span>
           <h2 className="text-xl sm:text-3xl font-space font-bold tracking-tight text-[#111111] mb-3">
-            Sourced With Care. <span className="text-[#7D4E0C]">Delivered With Purpose.</span>
+            Sourced With Care. <span className="text-[#FF583E]">Delivered With Purpose.</span>
           </h2>
           <p className="text-xs sm:text-base font-dmsans text-zinc-600 mb-8 max-w-xl mx-auto leading-relaxed">
             Need customized packaging, bulk container loads, or specific phytosanitary grading? Share your specifications directly with founder <strong>Sahul Hameed</strong>.
@@ -395,7 +395,7 @@ export default function ProductsPage() {
           <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
             <button
               onClick={() => openQuoteModal("All Agricultural Commodities")}
-              className="px-6 sm:px-8 py-3 rounded-full bg-[#111111] hover:bg-[#FF5B3E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
+              className="px-6 sm:px-8 py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
             >
               Enquire About Products &rarr;
             </button>
@@ -403,9 +403,9 @@ export default function ProductsPage() {
               href="https://wa.me/919345243790"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-white hover:bg-[#FFFDC1] text-[#111111] hover:text-[#7D4E0C] border border-[#DEDEDE] font-space font-bold text-xs sm:text-sm shadow-sm hover:scale-105 transition-all"
+              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-white hover:bg-[#FFD84D]/20 text-[#111111] border border-[#DEDEDE] font-space font-bold text-xs sm:text-sm shadow-sm hover:scale-105 transition-all"
             >
-              <MessageCircle className="w-4 h-4 text-[#7D4E0C]" />
+              <MessageCircle className="w-4 h-4 text-[#FF583E]" />
               <span>WhatsApp: 9345243790</span>
             </a>
           </div>
