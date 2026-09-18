@@ -77,13 +77,13 @@ export default function HomePage() {
       <HeroSection />
 
       {/* 🌟 Product Categories Section (Enterprise Export Frames) */}
-      <section className="py-24 max-w-7xl mx-auto px-6 sm:px-8">
+      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-6 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 25 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="text-center max-w-3xl mx-auto mb-16"
+          className="text-center max-w-3xl mx-auto mb-8 sm:mb-10"
         >
           <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#111111] bg-[#FFD84D] px-3.5 py-1 rounded-full inline-block mb-3 font-dmsans border border-[#DEDEDE] shadow-sm">
             WHAT WE TRADE
@@ -453,7 +453,7 @@ export default function HomePage() {
       <WhyChooseUsInteractive />
 
       {/* 🌟 Upgraded "Our Promise" Section (Clean Light Background + Connected Animated Roadmap) */}
-      <section className="py-24 bg-gradient-to-b from-zinc-50 via-white to-amber-50/20 border-t border-b border-[#DEDEDE] relative overflow-hidden">
+      <section className="py-12 sm:py-16 bg-gradient-to-b from-zinc-50 via-white to-amber-50/20 border-t border-b border-[#DEDEDE] relative overflow-hidden">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:32px_32px] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
@@ -462,7 +462,7 @@ export default function HomePage() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="text-center max-w-3xl mx-auto mb-16"
+            className="text-center max-w-3xl mx-auto mb-8 sm:mb-10"
           >
             <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#111111] bg-[#FFD84D] px-3.5 py-1 rounded-full inline-block mb-3 font-dmsans border border-[#DEDEDE] shadow-sm">
               OUR PROMISE
@@ -538,7 +538,7 @@ export default function HomePage() {
       </section>
 
       {/* 🌟 Founder & Managing Director Section */}
-      <section className="py-24 max-w-7xl mx-auto px-6 sm:px-8">
+      <section className="py-10 sm:py-14 max-w-7xl mx-auto px-6 sm:px-8">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -608,19 +608,19 @@ export default function HomePage() {
       </section>
 
       {/* 🌟 Closing CTA Section with Ambient Particles & ScrollReveal */}
-      <section className="py-24 bg-[#111111] text-white text-center relative overflow-hidden border-t border-zinc-800">
+      <section className="py-10 sm:py-14 bg-[#111111] text-white text-center relative overflow-hidden border-t border-zinc-800">
         <Particles quantity={25} color="#FF583E" className="opacity-25" />
-        <ScrollReveal animation="slide-up" duration={0.6} className="max-w-4xl mx-auto px-6 space-y-6 relative z-10">
+        <ScrollReveal animation="slide-up" duration={0.6} className="max-w-4xl mx-auto px-6 space-y-3.5 sm:space-y-4 relative z-10">
           <span className="inline-block text-xs font-bold uppercase tracking-[0.24em] text-[#111111] bg-[#FFD84D] px-4 py-1.5 rounded-full border border-[#DEDEDE] font-dmsans shadow-sm">
             LET&apos;S CONNECT BEYOND BORDERS
           </span>
-          <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold font-space text-white tracking-tight drop-shadow-lg">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold font-space text-white tracking-tight drop-shadow-lg">
             Looking for a Trusted Trade Partner?
           </h2>
-          <p className="text-base sm:text-xl text-zinc-300 font-dmsans max-w-xl mx-auto leading-relaxed">
+          <p className="text-sm sm:text-base text-zinc-300 font-dmsans max-w-xl mx-auto leading-relaxed">
             &ldquo;Let&apos;s build a reliable supply connection.&rdquo;
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-5 pt-4 font-dmsans">
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4 pt-2 font-dmsans">
             <GetStartedButton
               label="Get Started Now"
               onClick={() => openQuoteModal("Home Footer CTA")}
@@ -628,7 +628,7 @@ export default function HomePage() {
             />
             <Link
               href="/contact"
-              className="px-8 py-3.5 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/25 transition-all hover:scale-105 backdrop-blur-md shadow-sm font-space"
+              className="px-7 py-3 rounded-full bg-white/10 hover:bg-white/20 text-white font-semibold text-sm border border-white/25 transition-all hover:scale-105 backdrop-blur-md shadow-sm font-space"
             >
               Contact Us
             </Link>
