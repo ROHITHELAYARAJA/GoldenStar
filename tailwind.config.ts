@@ -45,7 +45,7 @@ const config: Config = {
         heading: ["'Space Grotesk'", "sans-serif"],
         body: ["'DM Sans'", "sans-serif"],
         dmsans: ["'DM Sans'", "sans-serif"],
-        outfit: ["'Space Grotesk'", "sans-serif"],
+        outfit: ["'Outfit'", "'Space Grotesk'", "sans-serif"],
         inter: ["'DM Sans'", "sans-serif"],
         manrope: ["'DM Sans'", "sans-serif"],
         mono: ["'JetBrains Mono'", "monospace"],

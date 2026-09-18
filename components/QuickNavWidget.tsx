@@ -51,10 +51,6 @@ export default function QuickNavWidget() {
         rel="noopener noreferrer"
         className="flex items-center gap-2 px-4 py-2 rounded-full bg-[#111111] text-white backdrop-blur-md border border-[#DEDEDE] shadow-xl text-xs font-semibold font-dmsans hover:border-[#FFD84D] hover:scale-105 transition-all"
       >
-        <span className="relative flex h-2 w-2">
-          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF583E] opacity-75"></span>
-          <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF583E]"></span>
-        </span>
         <MessageCircle className="w-3.5 h-3.5 text-[#FFD84D]" />
         <span className="hidden md:inline">Founder Desk</span>
       </a>

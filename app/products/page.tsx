@@ -5,6 +5,8 @@ import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { useQuoteModal } from "@/context/QuoteModalContext";
 import { MapPin, ArrowRight, Sparkles, MessageCircle } from "lucide-react";
+import { Particles } from "@/components/ui/particles";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export default function ProductsPage() {
   const { openQuoteModal } = useQuoteModal();
@@ -155,101 +157,123 @@ export default function ProductsPage() {
   return (
     <main className="min-h-screen bg-white text-[#111111] pb-20">
       {/* 🌟 Subpage Hero Banner */}
-      <section className="py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white">
-        <div className="max-w-7xl mx-auto px-6 text-center max-w-3xl">
-          <span className="badge-pill-gold inline-block mb-3">
-            OUR PRODUCTS
-          </span>
-          <h1 className="text-3xl sm:text-4xl lg:text-5xl font-space font-bold tracking-tight text-[#111111] mb-3">
-            A World of <span className="font-dmsans italic text-[#FF583E] font-normal">Freshness &amp; Flavour</span>
-          </h1>
-          <p className="font-dmsans text-base sm:text-xl text-zinc-600 italic">
-            &ldquo;Premium fruits, vegetables, and spices sourced with care for markets around the world.&rdquo;
-          </p>
+      <section className="relative py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white overflow-hidden">
+        <Particles
+          className="absolute inset-0 pointer-events-none opacity-20"
+          quantity={25}
+          color="#FFD84D"
+          ease={60}
+        />
+        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center max-w-3xl">
+          <ScrollReveal animation="slide-down" delay={0.05}>
+            <span className="badge-pill-gold inline-block mb-3">
+              OUR PRODUCTS
+            </span>
+          </ScrollReveal>
+          <ScrollReveal animation="slide-up" delay={0.15}>
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-space font-bold tracking-tight text-[#111111] mb-3">
+              A World of <span className="font-dmsans italic text-[#FF583E] font-normal">Freshness &amp; Flavour</span>
+            </h1>
+          </ScrollReveal>
+          <ScrollReveal animation="fade" delay={0.25}>
+            <p className="font-dmsans text-base sm:text-xl text-zinc-600 italic">
+              &ldquo;Premium fruits, vegetables, and spices sourced with care for markets around the world.&rdquo;
+            </p>
+          </ScrollReveal>
         </div>
       </section>
 
       {/* 🌟 Interactive Category Filter Tabs (Sleek Horizontal Segmented Bar - No Awkward Wrapping) */}
       <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-2 sm:gap-3 p-1.5 bg-zinc-100 rounded-2xl border border-[#DEDEDE] max-w-2xl mx-auto shadow-sm">
-          {[
-            { id: "all", label: "All Commodities" },
-            { id: "fruits", label: "Fruits" },
-            { id: "vegetables", label: "Vegetables" },
-            { id: "spices", label: "Chillies & Spices" },
-          ].map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id as any)}
-              className={`whitespace-nowrap py-2.5 px-4 sm:px-6 rounded-xl text-xs font-space font-bold uppercase tracking-wider transition-all duration-200 shrink-0 ${
-                activeTab === tab.id
-                  ? "bg-[#111111] text-[#FFD84D] border border-[#111111] shadow-md scale-[1.02]"
-                  : "text-zinc-600 hover:text-[#111111] hover:bg-white font-semibold"
-              }`}
-            >
-              {tab.label}
-            </button>
-          ))}
-        </div>
+        <ScrollReveal animation="fade" delay={0.1}>
+          <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-2 sm:gap-3 p-1.5 bg-zinc-100 rounded-2xl border border-[#DEDEDE] max-w-2xl mx-auto shadow-sm">
+            {[
+              { id: "all", label: "All Commodities" },
+              { id: "fruits", label: "Fruits" },
+              { id: "vegetables", label: "Vegetables" },
+              { id: "spices", label: "Chillies & Spices" },
+            ].map((tab) => (
+              <button
+                key={tab.id}
+                onClick={() => setActiveTab(tab.id as any)}
+                className={`whitespace-nowrap py-2.5 px-4 sm:px-6 rounded-xl text-xs font-space font-bold uppercase tracking-wider transition-all duration-200 shrink-0 ${
+                  activeTab === tab.id
+                    ? "bg-[#111111] text-[#FFD84D] border border-[#111111] shadow-md scale-[1.02]"
+                    : "text-zinc-600 hover:text-[#111111] hover:bg-white font-semibold"
+                }`}
+              >
+                {tab.label}
+              </button>
+            ))}
+          </div>
+        </ScrollReveal>
       </section>
 
       {/* 🌟 Section 1: Fruits (Responsive 2-Column on Mobile, 3-Column on Desktop) */}
       {(activeTab === "all" || activeTab === "fruits") && (
         <section className="py-8 sm:py-12 max-w-7xl mx-auto px-3 sm:px-6" id="fruits">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <h2 className="text-xl sm:text-3xl font-space font-bold text-[#111111]">
-              Fresh Fruits
-            </h2>
-            <p className="text-xs sm:text-sm text-zinc-600 mt-2 font-dmsans font-normal">
-              Naturally grown and carefully selected fruits sourced for quality, freshness, and reliable global supply.
-            </p>
-          </div>
+          <ScrollReveal animation="slide-up">
+            <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-3xl font-space font-bold text-[#111111]">
+                Fresh Fruits
+              </h2>
+              <p className="text-xs sm:text-sm text-zinc-600 mt-2 font-dmsans font-normal">
+                Naturally grown and carefully selected fruits sourced for quality, freshness, and reliable global supply.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
             {fruits.map((item, idx) => (
-              <motion.div
+              <ScrollReveal
                 key={idx}
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group"
+                animation="slide-up"
+                delay={(idx % 3) * 0.1}
+                className="h-full"
               >
-                <div>
-                  {/* Clean Image Frame */}
-                  <div className="relative h-32 sm:h-52 w-full rounded-xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-
-                  {/* Product Title */}
-                  <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#FF583E] transition-colors line-clamp-1">
-                    {item.title}
-                  </h3>
-
-                  {/* Short & Punchy Description */}
-                  <p className="text-[11px] sm:text-xs font-dmsans text-zinc-600 leading-snug sm:leading-relaxed font-normal mb-2 sm:mb-4 min-h-[28px] sm:min-h-[38px] line-clamp-2">
-                    {item.desc}
-                  </p>
-
-                  {/* Location Origin */}
-                  <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-zinc-700 font-medium mb-3 sm:mb-5 pb-2 sm:pb-3 border-b border-[#DEDEDE] font-dmsans">
-                    <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF583E] shrink-0" />
-                    <span className="truncate">{item.location}</span>
-                  </div>
-                </div>
-
-                {/* Enquiry Button */}
-                <button
-                  onClick={() => openQuoteModal(`Fruits - ${item.title}`)}
-                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
                 >
-                  <span>Enquire Now</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
-                </button>
-              </motion.div>
+                  <div>
+                    {/* Clean Image Frame */}
+                    <div className="relative h-32 sm:h-52 w-full rounded-xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Product Title */}
+                    <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#FF583E] transition-colors line-clamp-1">
+                      {item.title}
+                    </h3>
+
+                    {/* Short & Punchy Description */}
+                    <p className="text-[11px] sm:text-xs font-dmsans text-zinc-600 leading-snug sm:leading-relaxed font-normal mb-2 sm:mb-4 min-h-[28px] sm:min-h-[38px] line-clamp-2">
+                      {item.desc}
+                    </p>
+
+                    {/* Location Origin */}
+                    <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-zinc-700 font-medium mb-3 sm:mb-5 pb-2 sm:pb-3 border-b border-[#DEDEDE] font-dmsans">
+                      <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF583E] shrink-0" />
+                      <span className="truncate">{item.location}</span>
+                    </div>
+                  </div>
+
+                  {/* Enquiry Button */}
+                  <button
+                    onClick={() => openQuoteModal(`Fruits - ${item.title}`)}
+                    className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                  >
+                    <span>Enquire Now</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
+                  </button>
+                </motion.div>
+              </ScrollReveal>
             ))}
           </div>
         </section>
@@ -258,60 +282,68 @@ export default function ProductsPage() {
       {/* 🌟 Section 2: Vegetables (Responsive 2-Column on Mobile, 3-Column on Desktop) */}
       {(activeTab === "all" || activeTab === "vegetables") && (
         <section className="py-8 sm:py-12 max-w-7xl mx-auto px-3 sm:px-6 border-t border-[#DEDEDE]" id="vegetables">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <h2 className="text-xl sm:text-3xl font-space font-bold text-[#111111]">
-              Fresh Vegetables
-            </h2>
-            <p className="text-xs sm:text-sm text-zinc-600 mt-2 font-dmsans font-normal">
-              Quality vegetables carefully sourced and handled to meet the strict requirements of international markets.
-            </p>
-          </div>
+          <ScrollReveal animation="slide-up">
+            <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-3xl font-space font-bold text-[#111111]">
+                Fresh Vegetables
+              </h2>
+              <p className="text-xs sm:text-sm text-zinc-600 mt-2 font-dmsans font-normal">
+                Quality vegetables carefully sourced and handled to meet the strict requirements of international markets.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
             {vegetables.map((item, idx) => (
-              <motion.div
+              <ScrollReveal
                 key={idx}
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group"
+                animation="slide-up"
+                delay={(idx % 3) * 0.1}
+                className="h-full"
               >
-                <div>
-                  {/* Clean Image Frame */}
-                  <div className="relative h-32 sm:h-52 w-full rounded-xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-
-                  {/* Product Title */}
-                  <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#FF583E] transition-colors line-clamp-1">
-                    {item.title}
-                  </h3>
-
-                  {/* Short & Punchy Description */}
-                  <p className="text-[11px] sm:text-xs font-dmsans text-zinc-600 leading-snug sm:leading-relaxed font-normal mb-2 sm:mb-4 min-h-[28px] sm:min-h-[38px] line-clamp-2">
-                    {item.desc}
-                  </p>
-
-                  {/* Location Origin */}
-                  <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-zinc-700 font-medium mb-3 sm:mb-5 pb-2 sm:pb-3 border-b border-[#DEDEDE] font-dmsans">
-                    <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF583E] shrink-0" />
-                    <span className="truncate">{item.location}</span>
-                  </div>
-                </div>
-
-                {/* Enquiry Button */}
-                <button
-                  onClick={() => openQuoteModal(`Vegetables - ${item.title}`)}
-                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
                 >
-                  <span>Enquire Now</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
-                </button>
-              </motion.div>
+                  <div>
+                    {/* Clean Image Frame */}
+                    <div className="relative h-32 sm:h-52 w-full rounded-xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Product Title */}
+                    <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#FF583E] transition-colors line-clamp-1">
+                      {item.title}
+                    </h3>
+
+                    {/* Short & Punchy Description */}
+                    <p className="text-[11px] sm:text-xs font-dmsans text-zinc-600 leading-snug sm:leading-relaxed font-normal mb-2 sm:mb-4 min-h-[28px] sm:min-h-[38px] line-clamp-2">
+                      {item.desc}
+                    </p>
+
+                    {/* Location Origin */}
+                    <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-zinc-700 font-medium mb-3 sm:mb-5 pb-2 sm:pb-3 border-b border-[#DEDEDE] font-dmsans">
+                      <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF583E] shrink-0" />
+                      <span className="truncate">{item.location}</span>
+                    </div>
+                  </div>
+
+                  {/* Enquiry Button */}
+                  <button
+                    onClick={() => openQuoteModal(`Vegetables - ${item.title}`)}
+                    className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                  >
+                    <span>Enquire Now</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
+                  </button>
+                </motion.div>
+              </ScrollReveal>
             ))}
           </div>
         </section>
@@ -320,60 +352,68 @@ export default function ProductsPage() {
       {/* 🌟 Section 3: Chillies & Spices (Responsive 2-Column on Mobile, 3-Column on Desktop) */}
       {(activeTab === "all" || activeTab === "spices") && (
         <section className="py-8 sm:py-12 max-w-7xl mx-auto px-3 sm:px-6 border-t border-[#DEDEDE]" id="spices">
-          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-            <h2 className="text-xl sm:text-3xl font-space font-bold text-[#111111]">
-              Chillies &amp; Spices
-            </h2>
-            <p className="text-xs sm:text-sm text-zinc-600 mt-2 font-dmsans font-normal">
-              Premium quality spices and chillies sourced from the finest growing regions across India.
-            </p>
-          </div>
+          <ScrollReveal animation="slide-up">
+            <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
+              <h2 className="text-xl sm:text-3xl font-space font-bold text-[#111111]">
+                Chillies &amp; Spices
+              </h2>
+              <p className="text-xs sm:text-sm text-zinc-600 mt-2 font-dmsans font-normal">
+                Premium quality spices and chillies sourced from the finest growing regions across India.
+              </p>
+            </div>
+          </ScrollReveal>
 
           <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
             {spices.map((item, idx) => (
-              <motion.div
+              <ScrollReveal
                 key={idx}
-                whileHover={{ y: -6 }}
-                transition={{ duration: 0.3 }}
-                className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group"
+                animation="slide-up"
+                delay={(idx % 3) * 0.1}
+                className="h-full"
               >
-                <div>
-                  {/* Clean Image Frame */}
-                  <div className="relative h-32 sm:h-52 w-full rounded-xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
-                    <Image
-                      src={item.img}
-                      alt={item.title}
-                      fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
-                    />
-                  </div>
-
-                  {/* Product Title */}
-                  <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#FF583E] transition-colors line-clamp-1">
-                    {item.title}
-                  </h3>
-
-                  {/* Short & Punchy Description */}
-                  <p className="text-[11px] sm:text-xs font-dmsans text-zinc-600 leading-snug sm:leading-relaxed font-normal mb-2 sm:mb-4 min-h-[28px] sm:min-h-[38px] line-clamp-2">
-                    {item.desc}
-                  </p>
-
-                  {/* Location Origin */}
-                  <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-zinc-700 font-medium mb-3 sm:mb-5 pb-2 sm:pb-3 border-b border-[#DEDEDE] font-dmsans">
-                    <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF583E] shrink-0" />
-                    <span className="truncate">{item.location}</span>
-                  </div>
-                </div>
-
-                {/* Enquiry Button */}
-                <button
-                  onClick={() => openQuoteModal(`Spices - ${item.title}`)}
-                  className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                <motion.div
+                  whileHover={{ y: -6 }}
+                  transition={{ duration: 0.3 }}
+                  className="bg-white rounded-2xl sm:rounded-3xl border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
                 >
-                  <span>Enquire Now</span>
-                  <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
-                </button>
-              </motion.div>
+                  <div>
+                    {/* Clean Image Frame */}
+                    <div className="relative h-32 sm:h-52 w-full rounded-xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
+                      <Image
+                        src={item.img}
+                        alt={item.title}
+                        fill
+                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+
+                    {/* Product Title */}
+                    <h3 className="text-sm sm:text-lg font-bold font-space text-[#111111] mb-1 group-hover:text-[#FF583E] transition-colors line-clamp-1">
+                      {item.title}
+                    </h3>
+
+                    {/* Short & Punchy Description */}
+                    <p className="text-[11px] sm:text-xs font-dmsans text-zinc-600 leading-snug sm:leading-relaxed font-normal mb-2 sm:mb-4 min-h-[28px] sm:min-h-[38px] line-clamp-2">
+                      {item.desc}
+                    </p>
+
+                    {/* Location Origin */}
+                    <div className="flex items-center gap-1 sm:gap-1.5 text-[10px] sm:text-xs text-zinc-700 font-medium mb-3 sm:mb-5 pb-2 sm:pb-3 border-b border-[#DEDEDE] font-dmsans">
+                      <MapPin className="w-3 h-3 sm:w-3.5 sm:h-3.5 text-[#FF583E] shrink-0" />
+                      <span className="truncate">{item.location}</span>
+                    </div>
+                  </div>
+
+                  {/* Enquiry Button */}
+                  <button
+                    onClick={() => openQuoteModal(`Spices - ${item.title}`)}
+                    className="w-full py-2 sm:py-2.5 rounded-lg sm:rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                  >
+                    <span>Enquire Now</span>
+                    <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
+                  </button>
+                </motion.div>
+              </ScrollReveal>
             ))}
           </div>
         </section>
@@ -381,35 +421,45 @@ export default function ProductsPage() {
 
       {/* 🌟 Bottom Call-to-Action */}
       <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="rounded-3xl border border-[#DEDEDE] bg-white p-8 sm:p-14 text-center shadow-sm">
-          <span className="badge-pill-gold inline-block mb-3">
-            CUSTOM EXPORT SPECIFICATIONS
-          </span>
-          <h2 className="text-xl sm:text-3xl font-space font-bold tracking-tight text-[#111111] mb-3">
-            Sourced With Care. <span className="text-[#FF583E]">Delivered With Purpose.</span>
-          </h2>
-          <p className="text-xs sm:text-base font-dmsans text-zinc-600 mb-8 max-w-xl mx-auto leading-relaxed">
-            Need customized packaging, bulk container loads, or specific phytosanitary grading? Share your specifications directly with founder <strong>Sahul Hameed</strong>.
-          </p>
+        <ScrollReveal animation="scale">
+          <div className="relative rounded-3xl border border-[#DEDEDE] bg-white p-8 sm:p-14 text-center shadow-sm overflow-hidden">
+            <Particles
+              className="absolute inset-0 pointer-events-none opacity-20"
+              quantity={20}
+              color="#FF583E"
+              ease={50}
+            />
+            <div className="relative z-10">
+              <span className="badge-pill-gold inline-block mb-3">
+                CUSTOM EXPORT SPECIFICATIONS
+              </span>
+              <h2 className="text-xl sm:text-3xl font-space font-bold tracking-tight text-[#111111] mb-3">
+                Sourced With Care. <span className="text-[#FF583E]">Delivered With Purpose.</span>
+              </h2>
+              <p className="text-xs sm:text-base font-dmsans text-zinc-600 mb-8 max-w-xl mx-auto leading-relaxed">
+                Every product begins with the right source. We focus on quality, careful selection, and dependable supply to create a seamless journey from origin to destination.
+              </p>
 
-          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
-            <button
-              onClick={() => openQuoteModal("All Agricultural Commodities")}
-              className="px-6 sm:px-8 py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
-            >
-              Enquire About Products &rarr;
-            </button>
-            <a
-              href="https://wa.me/919345243790"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-white hover:bg-[#FFD84D]/20 text-[#111111] border border-[#DEDEDE] font-space font-bold text-xs sm:text-sm shadow-sm hover:scale-105 transition-all"
-            >
-              <MessageCircle className="w-4 h-4 text-[#FF583E]" />
-              <span>WhatsApp: 9345243790</span>
-            </a>
+              <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
+                <button
+                  onClick={() => openQuoteModal("All Agricultural Commodities")}
+                  className="px-6 sm:px-8 py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
+                >
+                  Enquire About Products &rarr;
+                </button>
+                <a
+                  href="https://wa.me/919345243790"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 sm:px-7 py-3 rounded-full bg-white hover:bg-[#FFD84D]/20 text-[#111111] border border-[#DEDEDE] font-space font-bold text-xs sm:text-sm shadow-sm hover:scale-105 transition-all"
+                >
+                  <MessageCircle className="w-4 h-4 text-[#FF583E]" />
+                  <span>WhatsApp: 9345243790</span>
+                </a>
+              </div>
+            </div>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   );

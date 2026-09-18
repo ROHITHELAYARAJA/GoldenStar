@@ -7,8 +7,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useQuoteModal } from "@/context/QuoteModalContext";
 import {
   ArrowRight,
-  ChevronLeft,
-  ChevronRight,
   ShieldCheck,
   CheckCircle2,
   Ship,
@@ -25,6 +23,9 @@ import {
   Award,
 } from "lucide-react";
 import WhyChooseUsInteractive from "@/components/WhyChooseUsInteractive";
+import { Particles } from "@/components/ui/particles";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { CardSpotlight } from "@/components/ui/card-spotlight";
 
 export default function HomePage() {
   const { openQuoteModal } = useQuoteModal();
@@ -70,57 +71,89 @@ export default function HomePage() {
 
   return (
     <main className="min-h-screen bg-white text-[#111111] overflow-hidden">
-      {/* 🌟 Pristine Maritime Vessel Hero Showcase (Clean, Ultra-Sharp 8K Vessel Photo) */}
+      {/* 🌟 Pristine Maritime Vessel Hero Showcase (Container Vessel with Text strictly over Red Hull) */}
       <section className="relative w-full overflow-hidden">
-        <div className="relative w-full min-h-[600px] sm:min-h-[660px] lg:min-h-[720px] flex items-center">
-          {/* Background High-Definition Maritime Vessel Photograph - Pristine 8K, No Noise, No Broken Pixels */}
+        <div className="relative w-full min-h-[620px] sm:min-h-[680px] lg:h-[calc(100vh-80px)] flex items-end">
+          {/* Background High-Definition Maritime Vessel Photograph - Pristine 8K Container Ship */}
+          {/* Unobstructed upper view: Airplane, sunset clouds, and blue cranes stay completely clear! */}
           <div className="absolute inset-0 z-0">
             <Image
-              src="/assets/images/hero/hero-ocean-harvest.jpg"
-              alt="The Golden Star - From the Finest Farms to the World"
+              src="/assets/images/hero/hero-container-vessel.jpg"
+              alt="The Golden Star - Maritime Container Vessel at Port"
               fill
-              className="object-cover object-center"
+              className="object-cover object-[center_32%]"
               priority
             />
-            {/* Cinematic Gradient: Clean dark backdrop on the left for maximum text contrast while keeping ship and sunrise vivid */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/55 to-transparent sm:w-[75%] lg:w-[58%]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+            {/* Localized Bottom Gradient strictly over the lower red hull and water region */}
+            <div className="absolute bottom-0 inset-x-0 h-[50%] bg-gradient-to-t from-black/85 via-black/40 to-transparent pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-full sm:w-[60%] lg:w-[48%] h-[60%] bg-gradient-to-tr from-black/75 via-black/30 to-transparent pointer-events-none" />
           </div>
 
-          {/* Hero Content (Clean Executive Space Grotesk & DM Sans Typography - Exact from Document) */}
-          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 py-16 sm:py-24">
-            <div className="max-w-2xl">
+          {/* Hero Content strictly anchored over the RED HULL / Lower Vessel area */}
+          <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-8 lg:px-12 pb-6 sm:pb-8 lg:pb-10">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
+              className="max-w-xl bg-black/60 backdrop-blur-md p-5 sm:p-6 rounded-3xl border border-white/20 shadow-2xl"
+            >
+              {/* Sleek Trade Pill Badge */}
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 backdrop-blur-md border border-[#FFD84D]/50 text-white text-xs font-space font-medium mb-3 shadow-sm">
+                <span className="text-[#FFD84D] font-bold tracking-wider uppercase text-[10px] sm:text-[11px]">
+                  DIRECT MARITIME EXPORT
+                </span>
+                <span className="text-zinc-300 hidden sm:inline">&bull; 100% Port Clearance</span>
+              </div>
+
               {/* Bold Space Grotesk Headline (Exact from Golden Star Company .md) */}
-              <h1 className="font-space text-3xl sm:text-5xl lg:text-[56px] text-white font-bold leading-[1.12] tracking-tight mb-5 drop-shadow-xl">
-                From the Finest Farms
-                <span className="text-[#FFD84D] block mt-1.5">
+              <h1 className="font-space text-2xl sm:text-3xl lg:text-[38px] text-white font-bold leading-[1.15] tracking-tight mb-2.5 drop-shadow-lg">
+                From the Finest Farms{" "}
+                <span className="text-[#FFD84D]">
                   to the World
                 </span>
               </h1>
 
               {/* Clean Tagline (Exact from Golden Star Company .md) */}
-              <p className="text-base sm:text-lg lg:text-xl text-zinc-200 leading-relaxed max-w-xl mb-8 font-dmsans font-normal drop-shadow-md">
+              <p className="text-xs sm:text-sm text-zinc-200 leading-relaxed max-w-lg mb-4 font-dmsans font-normal drop-shadow-sm">
                 Premium agricultural products, sourced with care and delivered across borders.
               </p>
 
               {/* Action Buttons: Learn About Us & Get a Quote */}
-              <div className="flex flex-wrap items-center gap-4">
+              <div className="flex flex-wrap items-center gap-3">
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2.5 px-8 py-3.5 rounded-full bg-[#FF583E] hover:bg-[#E8492C] text-white font-space font-bold text-sm shadow-xl transition-all duration-200 hover:scale-105"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FF583E] hover:bg-[#E8492C] text-white font-space font-bold text-xs sm:text-sm shadow-lg transition-all duration-200 hover:scale-105 active:scale-95"
                 >
                   <span>Learn About Us</span>
-                  <ArrowRight className="w-4 h-4 text-[#FFD84D]" />
+                  <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
                 </Link>
 
                 <button
                   onClick={() => openQuoteModal("Hero Section")}
-                  className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full bg-black/50 hover:bg-black text-white font-space font-bold text-sm backdrop-blur-md border border-white/30 transition-all hover:scale-105 shadow-xl"
+                  className="inline-flex items-center gap-2 px-6 py-2.5 rounded-full bg-[#FFD84D] hover:bg-[#FFE066] text-[#111111] font-space font-bold text-xs sm:text-sm transition-all duration-200 hover:scale-105 active:scale-95 shadow-lg border border-[#E8C838]"
                 >
                   <span>Get a Quote</span>
                 </button>
               </div>
-            </div>
+
+              {/* Quick Trust Highlights directly inside Card */}
+              <div className="mt-3.5 pt-3 border-t border-white/15 flex flex-wrap items-center gap-3 sm:gap-4 text-[10px] sm:text-[11px] font-dmsans text-zinc-300">
+                <span className="flex items-center gap-1.5">
+                  <ShieldCheck className="w-3.5 h-3.5 text-[#FFD84D]" />
+                  Direct Farm Sourcing
+                </span>
+                <span className="text-zinc-500 hidden sm:inline">&bull;</span>
+                <span className="flex items-center gap-1.5">
+                  <Ship className="w-3.5 h-3.5 text-[#FFD84D]" />
+                  Cold-Chain Reefer
+                </span>
+                <span className="text-zinc-500 hidden sm:inline">&bull;</span>
+                <span className="flex items-center gap-1.5">
+                  <Award className="w-3.5 h-3.5 text-[#FFD84D]" />
+                  APEDA &amp; Spices Board
+                </span>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
@@ -138,48 +171,56 @@ export default function HomePage() {
             WHAT WE TRADE
           </span>
           <h2 className="text-2xl sm:text-4xl font-bold tracking-tight text-[#111111] font-space">
-            Bringing Nature&apos;s Finest Products
+            What We Trade
           </h2>
-          <p className="text-base text-zinc-600 mt-2 font-dmsans">
-            &ldquo;From trusted Indian orchards and farms to international wholesale markets.&rdquo;
+          <p className="text-base sm:text-lg text-zinc-600 mt-2 font-dmsans">
+            Bringing nature&rsquo;s finest products to global markets.
           </p>
         </motion.div>
 
-        {/* 3 Luxury Product Frames with Fluid Dynamic Framer Motion Animations & Exact Palette */}
+        {/* 3 Luxury Product Frames with Smooth Motion Physics & User-Approved Layout */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* 🍎 Fruits Card Frame */}
+          {/* 🍎 Fruits Card Frame (2nd Image) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -10, scale: 1.01 }}
-            transition={{ type: "spring", stiffness: 260, damping: 20 }}
-            className="rounded-3xl bg-white border border-[#DEDEDE] hover:border-[#111111] shadow-sm hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+            viewport={{ once: true, margin: "-40px" }}
+            whileHover={{
+              y: -10,
+              boxShadow: "0 20px 45px -10px rgba(255, 216, 77, 0.45), 0 0 0 2px #FFD84D",
+              transition: { type: "spring", stiffness: 300, damping: 22 }
+            }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
+            className="rounded-3xl bg-white border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
-            {/* Top Glowing Accent Stripe */}
-            <div className="h-1.5 w-full bg-gradient-to-r from-[#FFD84D] via-[#FF583E] to-[#111111] opacity-90 group-hover:opacity-100 transition-opacity" />
+            {/* Shimmer / Light Beam Sweep across card on hover */}
+            <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
 
             <div className="p-6 sm:p-7">
-              {/* Image Container with Smooth Scale & Sleek Pill Overlays */}
+              {/* Image Container with Smooth Zoom & Floating Badges */}
               <div className="w-full h-60 rounded-2xl overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
                 <Image
                   src="/assets/images/products/fruits/mango.jpg"
                   alt="Fresh Quality Fruits"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
                 
-                {/* Top Badge */}
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-space font-bold text-[#111111] shadow-sm flex items-center gap-1.5 border border-[#DEDEDE]">
-                  <span className="w-2 h-2 rounded-full bg-[#FF583E]" />
+                {/* Top Left Number/Category Badge */}
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
                   <span>01 &bull; FRUITS</span>
                 </div>
 
-                {/* Bottom Badge */}
-                <div className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[10px] font-space font-bold text-[#111111] shadow-md border border-[#DEDEDE] flex items-center gap-1">
+                {/* Floating Bottom Right Yellow Badge with Continuous Smooth Float */}
+                <motion.div
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center gap-1.5 group-hover:scale-105 transition-transform"
+                >
+                  <Sparkles className="w-2.5 h-2.5 text-[#111111]" />
                   <span>EXPORT GRADE A1</span>
-                </div>
+                </motion.div>
               </div>
 
               {/* Title & Subtitle */}
@@ -192,96 +233,108 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Description */}
+              {/* Description (Exact from User Screenshot) */}
               <p className="font-dmsans text-sm text-zinc-600 leading-relaxed mb-5 font-normal">
                 A selection of premium export fruits sourced directly from verified South Indian growers and prepared under stringent cold-chain protocols.
               </p>
 
-              {/* Key Features Bullet Points */}
+              {/* Key Features Bullet Points with High-Visibility Yellow Circle Checks */}
               <div className="space-y-2.5 mb-6 text-xs text-zinc-700 font-dmsans">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D]/40 border border-[#FFD84D] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-[#111111] stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                    <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
-                  <span>Cold-chain refrigerated export packaging</span>
+                  <span className="font-medium text-zinc-800">Cold-chain refrigerated export packaging</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D]/40 border border-[#FFD84D] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-[#111111] stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                    <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
-                  <span>Phytosanitary inspection certified</span>
+                  <span className="font-medium text-zinc-800">Phytosanitary inspection certified</span>
                 </div>
               </div>
 
-              {/* Interactive Variety Tags */}
+              {/* Interactive Variety Tags with Smooth Spring Hover */}
               <div className="text-xs text-zinc-500 mb-6 pb-4 border-t border-[#DEDEDE] pt-4 font-dmsans">
                 <span className="block text-[11px] font-space font-bold uppercase tracking-wider text-zinc-800 mb-2.5">
                   Key Export Varieties:
                 </span>
                 <div className="flex flex-wrap gap-1.5 font-dmsans">
                   {["Mango", "Banana", "Pomegranate", "Grapes", "Papaya"].map((item) => (
-                    <span
+                    <motion.span
                       key={item}
-                      className="px-2.5 py-1 rounded-lg bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-all cursor-pointer"
+                      whileHover={{ scale: 1.08, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-2.5 py-1 rounded-lg bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-colors cursor-pointer shadow-xs"
                     >
                       {item}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </div>
             </div>
 
-            {/* Bottom Action Footer */}
+            {/* Bottom Action Footer with View Full Catalog and Inquire Rates */}
             <div className="p-6 sm:p-7 pt-0 border-t border-[#DEDEDE] mt-auto flex items-center justify-between pt-4">
               <Link
-                href="/products"
-                className="text-xs font-space font-bold text-[#111111] group-hover:text-[#FF583E] transition-colors flex items-center gap-1.5"
+                href="/products#fruits"
+                className="group/link inline-flex items-center gap-1.5 text-xs font-space font-bold text-[#111111] hover:text-[#FF583E] transition-colors"
               >
                 <span>View Full Catalog</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform text-[#FF583E]" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#FF583E] group-hover/link:translate-x-1.5 transition-transform duration-200" />
               </Link>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.96 }}
                 onClick={() => openQuoteModal("Fruits")}
-                className="px-4 py-2 rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow hover:shadow-md transition-all hover:scale-105"
+                className="px-4 py-2 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
               >
                 Inquire Rates
-              </button>
+              </motion.button>
             </div>
           </motion.div>
 
-          {/* 🥕 Vegetables Card Frame */}
+          {/* 🥕 Vegetables Card Frame (3rd Image) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -10, scale: 1.01 }}
-            transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.1 }}
-            className="rounded-3xl bg-white border border-[#DEDEDE] hover:border-[#111111] shadow-sm hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+            viewport={{ once: true, margin: "-40px" }}
+            whileHover={{
+              y: -10,
+              boxShadow: "0 20px 45px -10px rgba(255, 216, 77, 0.45), 0 0 0 2px #FFD84D",
+              transition: { type: "spring", stiffness: 300, damping: 22 }
+            }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
+            className="rounded-3xl bg-white border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
-            {/* Top Glowing Accent Stripe */}
-            <div className="h-1.5 w-full bg-gradient-to-r from-[#FFD84D] via-[#FF583E] to-[#111111] opacity-90 group-hover:opacity-100 transition-opacity" />
+            {/* Shimmer Sweep on Hover */}
+            <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
 
             <div className="p-6 sm:p-7">
-              {/* Image Container with Smooth Scale & Sleek Pill Overlays */}
+              {/* Image Container with Smooth Zoom */}
               <div className="w-full h-60 rounded-2xl overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
                 <Image
                   src="/assets/images/products/vegetables/onion.jpg"
                   alt="Quality Vegetables Supply"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
                 
-                {/* Top Badge */}
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-space font-bold text-[#111111] shadow-sm flex items-center gap-1.5 border border-[#DEDEDE]">
-                  <span className="w-2 h-2 rounded-full bg-[#FF583E]" />
+                {/* Top Left Number/Category Badge */}
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
                   <span>02 &bull; VEGETABLES</span>
                 </div>
 
-                {/* Bottom Badge */}
-                <div className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[10px] font-space font-bold text-[#111111] shadow-md border border-[#DEDEDE] flex items-center gap-1">
+                {/* Floating Bottom Right Yellow Badge with Continuous Float */}
+                <motion.div
+                  animate={{ y: [0, -4, 0] }}
+                  transition={{ repeat: Infinity, duration: 3.2, ease: "easeInOut", delay: 0.2 }}
+                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center gap-1.5 group-hover:scale-105 transition-transform"
+                >
+                  <Sparkles className="w-2.5 h-2.5 text-[#111111]" />
                   <span>FARM HARVESTED</span>
-                </div>
+                </motion.div>
               </div>
 
               {/* Title & Subtitle */}
@@ -294,40 +347,42 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Description */}
+              {/* Description (Exact from User Screenshot) */}
               <p className="font-dmsans text-sm text-zinc-600 leading-relaxed mb-5 font-normal">
                 Quality vegetables carefully sourced and handled to meet the strict packaging and shelf-life requirements of international trade.
               </p>
 
-              {/* Key Features Bullet Points */}
+              {/* Key Features Bullet Points with High-Visibility Yellow Circle Checks */}
               <div className="space-y-2.5 mb-6 text-xs text-zinc-700 font-dmsans">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D]/40 border border-[#FFD84D] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-[#111111] stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                    <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
-                  <span>Carefully sorted, graded &amp; mesh packed</span>
+                  <span className="font-medium text-zinc-800">Carefully sorted, graded &amp; mesh packed</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D]/40 border border-[#FFD84D] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-[#111111] stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                    <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
-                  <span>Bulk cargo &amp; containerized reefer supply</span>
+                  <span className="font-medium text-zinc-800">Bulk cargo &amp; containerized reefer supply</span>
                 </div>
               </div>
 
-              {/* Interactive Variety Tags */}
+              {/* Interactive Variety Tags with Smooth Spring Hover */}
               <div className="text-xs text-zinc-500 mb-6 pb-4 border-t border-[#DEDEDE] pt-4 font-dmsans">
                 <span className="block text-[11px] font-space font-bold uppercase tracking-wider text-zinc-800 mb-2.5">
                   Key Export Varieties:
                 </span>
                 <div className="flex flex-wrap gap-1.5 font-dmsans">
                   {["Onion", "Potato", "Tomato", "Okra", "Green Chilli"].map((item) => (
-                    <span
+                    <motion.span
                       key={item}
-                      className="px-2.5 py-1 rounded-lg bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-all cursor-pointer"
+                      whileHover={{ scale: 1.08, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-2.5 py-1 rounded-lg bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-colors cursor-pointer shadow-xs"
                     >
                       {item}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </div>
@@ -336,54 +391,79 @@ export default function HomePage() {
             {/* Bottom Action Footer */}
             <div className="p-6 sm:p-7 pt-0 border-t border-[#DEDEDE] mt-auto flex items-center justify-between pt-4">
               <Link
-                href="/products"
-                className="text-xs font-space font-bold text-[#111111] group-hover:text-[#FF583E] transition-colors flex items-center gap-1.5"
+                href="/products#vegetables"
+                className="group/link inline-flex items-center gap-1.5 text-xs font-space font-bold text-[#111111] hover:text-[#FF583E] transition-colors"
               >
                 <span>View Full Catalog</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform text-[#FF583E]" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#FF583E] group-hover/link:translate-x-1.5 transition-transform duration-200" />
               </Link>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.96 }}
                 onClick={() => openQuoteModal("Vegetables")}
-                className="px-4 py-2 rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow hover:shadow-md transition-all hover:scale-105"
+                className="px-4 py-2 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
               >
                 Inquire Rates
-              </button>
+              </motion.button>
             </div>
           </motion.div>
 
-          {/* 🌶️ Spices Card Frame */}
+          {/* 🌶️ Spices Card Frame (4th Image - Rich Dynamic Animations & Pulse Aura) */}
           <motion.div
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 35 }}
             whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            whileHover={{ y: -10, scale: 1.01 }}
-            transition={{ type: "spring", stiffness: 260, damping: 20, delay: 0.2 }}
-            className="rounded-3xl bg-white border border-[#DEDEDE] hover:border-[#111111] shadow-sm hover:shadow-[0_20px_40px_-12px_rgba(0,0,0,0.1)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+            viewport={{ once: true, margin: "-40px" }}
+            whileHover={{
+              y: -10,
+              boxShadow: "0 20px 45px -10px rgba(255, 216, 77, 0.45), 0 0 0 2px #FFD84D",
+              transition: { type: "spring", stiffness: 300, damping: 22 }
+            }}
+            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.24 }}
+            className="rounded-3xl bg-white border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
           >
-            {/* Top Glowing Accent Stripe */}
-            <div className="h-1.5 w-full bg-gradient-to-r from-[#FFD84D] via-[#FF583E] to-[#111111] opacity-90 group-hover:opacity-100 transition-opacity" />
+            {/* Shimmer Sweep on Hover */}
+            <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
 
-            <div className="p-6 sm:p-7">
-              {/* Image Container with Smooth Scale & Sleek Pill Overlays */}
+            {/* Ambient Warm Golden Aura Glow behind Spices Image (Pulsing Smoothly) */}
+            <motion.div
+              animate={{
+                opacity: [0.25, 0.65, 0.25],
+                scale: [0.96, 1.04, 0.96]
+              }}
+              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+              className="absolute top-10 inset-x-6 h-64 bg-gradient-to-tr from-[#FFD84D]/35 via-[#FF583E]/25 to-amber-500/30 rounded-3xl blur-2xl pointer-events-none -z-0 opacity-40 group-hover:opacity-100 transition-opacity"
+            />
+
+            <div className="p-6 sm:p-7 relative z-10">
+              {/* Image Container with Smooth Zoom & Floating Origin Badge */}
               <div className="w-full h-60 rounded-2xl overflow-hidden mb-6 relative bg-zinc-100 border border-[#DEDEDE]">
                 <Image
                   src="/assets/images/products/spices/black-pepper.jpg"
                   alt="Authentic Indian Spices"
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500 ease-out"
+                  className="object-cover group-hover:scale-110 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
                 
-                {/* Top Badge */}
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-space font-bold text-[#111111] shadow-sm flex items-center gap-1.5 border border-[#DEDEDE]">
-                  <span className="w-2 h-2 rounded-full bg-[#FF583E]" />
+                {/* Top Left Number/Category Badge */}
+                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-[11px] font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
                   <span>03 &bull; SPICES</span>
                 </div>
 
-                {/* Bottom Badge */}
-                <div className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[10px] font-space font-bold text-[#111111] shadow-md border border-[#DEDEDE] flex items-center gap-1">
+                {/* Floating Bottom Right Yellow Badge with Continuous Smooth Float & Icon Shimmer */}
+                <motion.div
+                  animate={{ y: [0, -5, 0] }}
+                  transition={{ repeat: Infinity, duration: 2.8, ease: "easeInOut", delay: 0.4 }}
+                  className="absolute bottom-3 right-3 px-3 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center gap-1.5 group-hover:scale-105 transition-transform"
+                >
+                  <motion.span
+                    animate={{ rotate: [0, 10, -10, 0] }}
+                    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
+                  >
+                    ✨
+                  </motion.span>
                   <span>PURE INDIAN ORIGIN</span>
-                </div>
+                </motion.div>
               </div>
 
               {/* Title & Subtitle */}
@@ -396,60 +476,64 @@ export default function HomePage() {
                 </p>
               </div>
 
-              {/* Description */}
+              {/* Description (Exact from User Screenshot) */}
               <p className="font-dmsans text-sm text-zinc-600 leading-relaxed mb-5 font-normal">
                 Premium spices sourced from reliable suppliers, bringing rich flavour, vibrant color, and high essential oil content to global markets.
               </p>
 
-              {/* Key Features Bullet Points */}
+              {/* Key Features Bullet Points with High-Visibility Yellow Circle Checks */}
               <div className="space-y-2.5 mb-6 text-xs text-zinc-700 font-dmsans">
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D]/40 border border-[#FFD84D] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-[#111111] stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                    <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
-                  <span>Aroma sealed moisture barrier packing</span>
+                  <span className="font-medium text-zinc-800">Aroma sealed moisture barrier packing</span>
                 </div>
                 <div className="flex items-center gap-2.5">
-                  <div className="w-5 h-5 rounded-full bg-[#FFD84D]/40 border border-[#FFD84D] flex items-center justify-center shrink-0">
-                    <Check className="w-3 h-3 text-[#111111] stroke-[2.5]" />
+                  <div className="w-5 h-5 rounded-full bg-[#FFD84D] border border-[#E8C838] flex items-center justify-center shrink-0 shadow-xs">
+                    <Check className="w-3 h-3 text-[#111111] stroke-[2.8]" />
                   </div>
-                  <span>Lab tested for high essential oil content</span>
+                  <span className="font-medium text-zinc-800">Lab tested for high essential oil content</span>
                 </div>
               </div>
 
-              {/* Interactive Variety Tags */}
+              {/* Interactive Variety Tags with Smooth Spring Hover */}
               <div className="text-xs text-zinc-500 mb-6 pb-4 border-t border-[#DEDEDE] pt-4 font-dmsans">
                 <span className="block text-[11px] font-space font-bold uppercase tracking-wider text-zinc-800 mb-2.5">
                   Key Export Varieties:
                 </span>
                 <div className="flex flex-wrap gap-1.5 font-dmsans">
                   {["Black Pepper", "Cardamom", "Turmeric", "Cumin"].map((item) => (
-                    <span
+                    <motion.span
                       key={item}
-                      className="px-2.5 py-1 rounded-lg bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-all cursor-pointer"
+                      whileHover={{ scale: 1.08, y: -2 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="px-2.5 py-1 rounded-lg bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-[11px] font-medium transition-colors cursor-pointer shadow-xs"
                     >
                       {item}
-                    </span>
+                    </motion.span>
                   ))}
                 </div>
               </div>
             </div>
 
             {/* Bottom Action Footer */}
-            <div className="p-6 sm:p-7 pt-0 border-t border-[#DEDEDE] mt-auto flex items-center justify-between pt-4">
+            <div className="p-6 sm:p-7 pt-0 border-t border-[#DEDEDE] mt-auto flex items-center justify-between pt-4 relative z-10">
               <Link
-                href="/products"
-                className="text-xs font-space font-bold text-[#111111] group-hover:text-[#FF583E] transition-colors flex items-center gap-1.5"
+                href="/products#spices"
+                className="group/link inline-flex items-center gap-1.5 text-xs font-space font-bold text-[#111111] hover:text-[#FF583E] transition-colors"
               >
                 <span>View Full Catalog</span>
-                <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1.5 transition-transform text-[#FF583E]" />
+                <ArrowRight className="w-3.5 h-3.5 text-[#FF583E] group-hover/link:translate-x-1.5 transition-transform duration-200" />
               </Link>
-              <button
+              <motion.button
+                whileHover={{ scale: 1.06 }}
+                whileTap={{ scale: 0.96 }}
                 onClick={() => openQuoteModal("Spices")}
-                className="px-4 py-2 rounded-xl bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow hover:shadow-md transition-all hover:scale-105"
+                className="px-4 py-2 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
               >
                 Inquire Rates
-              </button>
+              </motion.button>
             </div>
           </motion.div>
         </div>
@@ -613,9 +697,10 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* 🌟 Closing CTA Section */}
+      {/* 🌟 Closing CTA Section with Ambient Particles & ScrollReveal */}
       <section className="py-24 bg-[#111111] text-white text-center relative overflow-hidden border-t border-zinc-800">
-        <div className="max-w-4xl mx-auto px-6 space-y-6 relative z-10">
+        <Particles quantity={25} color="#FF583E" className="opacity-25" />
+        <ScrollReveal animation="slide-up" duration={0.6} className="max-w-4xl mx-auto px-6 space-y-6 relative z-10">
           <span className="inline-block text-xs font-bold uppercase tracking-[0.24em] text-[#111111] bg-[#FFD84D] px-4 py-1.5 rounded-full border border-[#DEDEDE] font-dmsans shadow-sm">
             LET&apos;S CONNECT BEYOND BORDERS
           </span>
@@ -639,7 +724,7 @@ export default function HomePage() {
               Contact Us
             </Link>
           </div>
-        </div>
+        </ScrollReveal>
       </section>
     </main>
   );

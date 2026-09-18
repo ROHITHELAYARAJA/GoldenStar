@@ -75,9 +75,9 @@ export const TiltCard: React.FC<TiltCardProps> = ({
       onTouchCancel={handleTouchCancel}
       onMouseDown={handleMouseDown}
       onMouseUp={handleMouseUp}
-      className={`relative rounded-3xl transition-all duration-150 ease-out select-none cursor-pointer ${
+      className={`relative rounded-3xl transition-all duration-200 ease-out select-none cursor-pointer ${
         isTouched
-          ? "ring-2 ring-accent-crimson border-accent-crimson shadow-crimson-md scale-[0.985]"
+          ? "ring-2 ring-[#FF583E] border-[#FF583E] shadow-lg scale-[0.985]"
           : isHovered
           ? "-translate-y-1"
           : "translate-y-0"
@@ -90,8 +90,8 @@ export const TiltCard: React.FC<TiltCardProps> = ({
       {...props}
     >
       <div
-        className={`h-full w-full relative rounded-[inherit] transition-colors duration-150 ${
-          isTouched ? "bg-red-50/60" : ""
+        className={`h-full w-full relative rounded-[inherit] transition-colors duration-200 ${
+          isTouched ? "bg-amber-50/40" : ""
         }`}
       >
         {children}
@@ -103,15 +103,15 @@ export const TiltCard: React.FC<TiltCardProps> = ({
               isHovered && !isTouched ? "opacity-100" : "opacity-0"
             }`}
             style={{
-              background: `radial-gradient(400px circle at ${mousePos.x}% ${mousePos.y}%, rgba(220, 38, 38, 0.07), transparent 80%)`,
+              background: `radial-gradient(400px circle at ${mousePos.x}% ${mousePos.y}%, rgba(255, 216, 77, 0.15), transparent 80%)`,
             }}
           />
         )}
 
-        {/* Touch Flash Overlay (Appears when touched, disappears immediately on release) */}
+        {/* Touch Flash Overlay */}
         <div
           className={`pointer-events-none absolute inset-0 rounded-[inherit] transition-opacity duration-150 z-20 ${
-            isTouched ? "opacity-100 bg-red-500/10" : "opacity-0"
+            isTouched ? "opacity-100 bg-[#FF583E]/10" : "opacity-0"
           }`}
         />
       </div>

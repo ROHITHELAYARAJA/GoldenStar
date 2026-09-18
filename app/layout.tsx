@@ -4,13 +4,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import QuoteModal from "@/components/QuoteModal";
 import Toast from "@/components/Toast";
-import QuickNavWidget from "@/components/QuickNavWidget";
 import { QuoteModalProvider } from "@/context/QuoteModalContext";
+import { ScrollProgressBar } from "@/components/ui/ScrollProgressBar";
+import { ScrollToTop } from "@/components/ui/ScrollToTop";
+import { PageTransition } from "@/components/ui/PageTransition";
 
 export const metadata: Metadata = {
-  title: "The Golden Star | Agricultural Import & Export",
+  title: "The Golden Star | From the Finest Farms to the World",
   description:
-    "Connecting South India's finest agricultural harvest to global seaports. High-volume export of fresh fruits, quality vegetables, and authentic spices led by founder Sahul Hameed.",
+    "The Golden Star Company - Premium agricultural products, sourced with care and delivered across borders. Quality fruits, vegetables, and authentic spices.",
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },
@@ -37,18 +39,21 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
-          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Space+Grotesk:wght@300..700&display=swap"
+          href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Outfit:wght@600;700;800;900&family=Space+Grotesk:wght@300..700&display=swap"
           rel="stylesheet"
         />
       </head>
       <body className="bg-white text-[#111111] font-sans antialiased flex flex-col min-h-screen selection:bg-[#FFD84D] selection:text-[#111111]">
         <QuoteModalProvider>
+          <ScrollProgressBar />
           <Navbar />
-          <div className="flex-grow">{children}</div>
+          <PageTransition>
+            <div className="flex-grow">{children}</div>
+          </PageTransition>
           <Footer />
           <QuoteModal />
           <Toast />
-          <QuickNavWidget />
+          <ScrollToTop />
         </QuoteModalProvider>
       </body>
     </html>

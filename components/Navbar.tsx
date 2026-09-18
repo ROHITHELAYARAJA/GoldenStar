@@ -36,15 +36,9 @@ export default function Navbar() {
             />
           </div>
           <div className="flex flex-col justify-center">
-            <span className="font-space text-lg sm:text-xl lg:text-[22px] font-bold tracking-tight text-[#111111] leading-tight group-hover:text-black transition-colors">
+            <span className="font-outfit text-xl sm:text-[23px] font-extrabold tracking-tight text-[#111111] leading-none group-hover:text-black transition-colors">
               The Golden Star
             </span>
-            <div className="flex items-center gap-1.5 mt-0.5">
-              <span className="w-1.5 h-1.5 rounded-full bg-[#FFD84D]" />
-              <span className="font-dmsans text-[9px] sm:text-[10px] font-bold tracking-[0.22em] text-zinc-500 uppercase leading-none">
-                AGRICULTURAL EXPORT
-              </span>
-            </div>
           </div>
         </Link>
 
@@ -80,15 +74,15 @@ export default function Navbar() {
             href="https://wa.me/919345243790"
             target="_blank"
             rel="noopener noreferrer"
-            className="hidden lg:flex items-center gap-2 px-3.5 py-2 rounded-full border border-[#DEDEDE] bg-zinc-50 hover:bg-[#FFD84D]/25 hover:border-[#111111] text-[#111111] text-xs font-semibold font-dmsans transition-all shadow-sm"
+            className="hidden lg:flex items-center gap-2.5 px-4 py-2 rounded-full border border-zinc-200 bg-white hover:border-[#111111] hover:shadow-xs text-[#111111] transition-all duration-200 group"
             title="Direct Export Desk: +91 9345243790"
           >
-            <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF583E] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-[#FF583E]"></span>
+            <div className="w-5 h-5 rounded-full bg-[#25D366]/15 flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366] group-hover:text-white transition-colors duration-200">
+              <MessageCircle className="w-3 h-3 fill-current" />
+            </div>
+            <span className="font-space font-bold text-xs tracking-wide text-[#111111]">
+              +91 9345243790
             </span>
-            <MessageCircle className="w-3.5 h-3.5 text-[#111111]" />
-            <span>+91 9345243790</span>
           </a>
 
           {/* Primary CTA: Get a Quote */}
@@ -103,20 +97,23 @@ export default function Navbar() {
           {/* Mobile Menu Toggle Button */}
           <button
             onClick={() => setIsMobileOpen(true)}
-            className="md:hidden flex h-10 w-10 items-center justify-center rounded-full border border-[#DEDEDE] bg-white text-[#111111] hover:bg-zinc-100 transition-colors"
+            className="p-2.5 rounded-xl border border-[#DEDEDE] bg-white text-zinc-700 hover:text-[#111111] hover:bg-zinc-100 md:hidden transition-colors"
             aria-label="Open Navigation Menu"
           >
-            <Menu className="w-5 h-5" />
+            <Menu className="w-6 h-6" />
           </button>
         </div>
       </div>
 
-      {/* Clean Modern Mobile Drawer */}
+      {/* Modern Slide-Over Mobile Drawer */}
       {isMobileOpen && (
-        <div className="fixed inset-0 z-50 flex justify-end bg-black/50 backdrop-blur-sm md:hidden animate-in fade-in duration-200">
-          <div className="w-4/5 max-w-xs h-full bg-white p-6 flex flex-col justify-between shadow-2xl border-l border-[#DEDEDE] text-[#111111]">
+        <div className="fixed inset-0 z-50 md:hidden flex justify-end">
+          <div
+            className="fixed inset-0 bg-black/40 backdrop-blur-xs transition-opacity"
+            onClick={() => setIsMobileOpen(false)}
+          />
+          <div className="relative w-full max-w-xs bg-white h-full shadow-2xl p-6 flex flex-col justify-between overflow-y-auto border-l border-[#DEDEDE]">
             <div>
-              {/* Drawer Header */}
               <div className="flex items-center justify-between pb-4 border-b border-[#DEDEDE] mb-6">
                 <div className="flex items-center gap-3">
                   <div className="relative h-11 w-11 shrink-0">
@@ -127,12 +124,9 @@ export default function Navbar() {
                       className="object-contain"
                     />
                   </div>
-                  <div className="flex flex-col">
-                    <span className="font-space text-base font-bold text-[#111111] leading-tight">
+                  <div className="flex flex-col justify-center">
+                    <span className="font-outfit text-lg font-extrabold text-[#111111] leading-none">
                       The Golden Star
-                    </span>
-                    <span className="font-dmsans text-[8px] font-bold tracking-[0.2em] text-zinc-500 uppercase mt-0.5">
-                      IMPORT &amp; EXPORT
                     </span>
                   </div>
                 </div>

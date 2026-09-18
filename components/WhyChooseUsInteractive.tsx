@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Globe, MapPin, Package, Truck, ShieldCheck, ArrowUpRight } from "lucide-react";
 import { useQuoteModal } from "@/context/QuoteModalContext";
+import { AnimatedNumber } from "@/components/ui/animated-number";
 
 interface MetricCard {
   id: number;
@@ -72,9 +73,8 @@ export default function WhyChooseUsInteractive() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
-            className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFD84D] border border-[#DEDEDE] shadow-sm text-xs font-space font-bold text-[#111111] mb-4"
+            className="inline-flex items-center px-4 py-1.5 rounded-full bg-[#FFD84D] border border-[#DEDEDE] shadow-sm text-xs font-space font-bold text-[#111111] mb-4"
           >
-            <span className="w-2 h-2 rounded-full bg-[#FF583E]" />
             <span className="tracking-wider uppercase text-[10px] font-space font-bold">
               TRUSTED TRADE CAPABILITIES
             </span>
@@ -134,10 +134,10 @@ export default function WhyChooseUsInteractive() {
                     </span>
                   </div>
 
-                  {/* Refined Stat Counter */}
+                  {/* Refined Animated Stat Counter */}
                   <div className="mb-2">
                     <span className="font-space text-3xl sm:text-4xl font-bold tracking-tight leading-none text-[#111111] group-hover:text-[#FF583E] transition-colors duration-300">
-                      {item.stat}
+                      <AnimatedNumber value={parseInt(item.stat)} suffix={item.stat.includes("+") ? "+" : ""} />
                     </span>
                   </div>
 

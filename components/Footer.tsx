@@ -21,36 +21,43 @@ export default function Footer() {
   const { openQuoteModal } = useQuoteModal();
 
   return (
-    <footer className="w-full bg-[#111111] text-white border-t border-[#DEDEDE]/20 relative overflow-hidden">
-      {/* Top Ambient Glows */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#FFD84D]/5 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#FF583E]/5 rounded-full blur-3xl pointer-events-none" />
+    <footer className="w-full bg-[#FAF8F2] text-[#111111] border-t border-[#DEDEDE] relative overflow-hidden">
+      {/* Top Ambient Light Glows matching Logo Warm Gold and Coral */}
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#FFD84D]/15 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute bottom-0 left-10 w-96 h-96 bg-[#FF583E]/10 rounded-full blur-3xl pointer-events-none" />
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808008_1px,transparent_1px),linear-gradient(to_bottom,#80808008_1px,transparent_1px)] bg-[size:28px_28px] pointer-events-none" />
 
       {/* Top Banner: Global Corridors & Quick Quote */}
-      <div className="w-full border-b border-zinc-800 bg-[#0A0A0A]">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col md:flex-row items-center justify-between gap-4">
+      <div className="w-full border-b border-[#DEDEDE] bg-[#F4EFE6]/90 backdrop-blur-md relative z-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-center md:text-left">
-            <span className="flex h-3 w-3 relative">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#FF583E] opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-3 w-3 bg-[#FF583E]"></span>
-            </span>
-            <p className="font-dmsans text-xs sm:text-sm text-zinc-300">
-              <strong className="text-white font-space font-bold">24/7 International Desk:</strong> Direct Farm Procurement across South India &bull; Cold-Chain Reefer Shipping Worldwide
-            </p>
+            <div className="relative flex items-center justify-center shrink-0">
+              <span className="w-8 h-8 rounded-full bg-[#111111] text-[#FFD84D] flex items-center justify-center shadow-xs border border-[#FFD84D]/40">
+                <Globe2 className="w-4 h-4 text-[#FFD84D] animate-[spin_12s_linear_infinite]" />
+              </span>
+            </div>
+            <div className="flex flex-wrap items-center gap-2">
+              <span className="px-2.5 py-0.5 rounded-full text-[10px] font-space font-bold uppercase tracking-wider bg-[#FFD84D] text-[#111111] border border-[#E8C838] shadow-2xs">
+                Active Desk
+              </span>
+              <p className="font-dmsans text-xs sm:text-sm text-zinc-700 font-medium">
+                <strong className="text-[#111111] font-space font-bold">24/7 International Trade Desk:</strong> Direct Farm Procurement across South India &bull; Cold-Chain Reefer Shipping Worldwide
+              </p>
+            </div>
           </div>
           <button
             onClick={() => openQuoteModal("Footer Top Strip")}
-            className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FF583E] hover:bg-[#E8492C] text-white font-space font-bold text-xs sm:text-sm transition-all shadow-md hover:scale-105"
+            className="shrink-0 inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-[#FF583E] hover:bg-[#E8492C] text-white font-space font-bold text-xs sm:text-sm transition-all shadow-sm hover:shadow-md hover:scale-105 active:scale-95"
           >
             <span>Request Fast Quote</span>
-            <ArrowRight className="w-3.5 h-3.5" />
+            <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
           </button>
         </div>
       </div>
 
       {/* Main Multi-Column Section */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-zinc-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#DEDEDE]">
           {/* Column 1: Brand & Executive Founder Desk (5 cols) */}
           <div className="lg:col-span-5 space-y-5 pr-0 lg:pr-6">
             <Link href="/" className="inline-flex items-center gap-3.5 group">
@@ -63,46 +70,52 @@ export default function Footer() {
                 />
               </div>
               <div className="flex flex-col justify-center">
-                <span className="font-space text-xl sm:text-2xl font-bold tracking-tight text-white leading-tight">
-                  The Golden Star
+                <span className="font-space text-xl sm:text-2xl font-bold tracking-tight text-[#111111] leading-tight">
+                  The Golden Star Company
                 </span>
-                <div className="flex items-center gap-1.5 mt-1">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#FFD84D]" />
-                  <span className="font-dmsans text-[10px] font-bold uppercase tracking-[0.22em] text-[#FFD84D] leading-none">
-                    AGRICULTURAL IMPORT &amp; EXPORT
+                <div className="mt-1.5 flex items-center">
+                  <span className="inline-flex items-center px-3 py-1 rounded-md text-[10px] font-space font-bold uppercase tracking-[0.16em] text-[#111111] bg-[#FFD84D]/30 border border-[#FFD84D]">
+                    Import &amp; Export
                   </span>
                 </div>
               </div>
             </Link>
 
-            <p className="font-dmsans text-xs sm:text-sm text-zinc-400 leading-relaxed font-normal">
-              Connecting South India&apos;s finest agricultural harvest to global seaports. High-volume merchant export of fresh fruits, farm vegetables, and authentic spices with certified cold-chain reliability.
+            <p className="font-dmsans text-sm text-zinc-700 font-medium italic border-l-2 border-[#FF583E] pl-3 py-0.5">
+              &ldquo;Quality that travels. Trust that stays.&rdquo;
             </p>
 
-            {/* Direct Contact Card */}
-            <div className="p-4 rounded-2xl bg-white/5 border border-zinc-800 space-y-3 font-dmsans text-xs sm:text-sm text-zinc-300">
+            <p className="font-dmsans text-xs sm:text-sm text-zinc-600 leading-relaxed font-normal">
+              Connecting South India&apos;s finest agricultural harvest to global seaports. Sourcing with care, delivering with purpose.
+            </p>
+
+            {/* Direct Contact Card in Pure Crisp White with Gold Accents */}
+            <div className="p-5 rounded-2xl bg-white border border-[#DEDEDE] shadow-sm space-y-3 font-dmsans text-xs sm:text-sm text-zinc-700">
+              <div className="text-xs font-space font-bold uppercase tracking-wider text-[#111111] flex items-center gap-1.5">
+                <span>Executive Export Desk</span>
+              </div>
               <div className="flex items-start gap-2.5">
-                <MapPin className="w-4 h-4 shrink-0 text-[#FFD84D] mt-0.5" />
-                <span className="text-zinc-300 leading-relaxed">
+                <MapPin className="w-4 h-4 shrink-0 text-[#FF583E] mt-0.5" />
+                <span className="text-zinc-600 leading-relaxed">
                   Building No./Flat No. 876, Pudukkottai ullur main road, Naduvikkadu, Adiramapattinam, Thanjavur District, Tamil Nadu 614701, India
                 </span>
               </div>
 
               <div className="flex items-center gap-2.5">
-                <Phone className="w-4 h-4 shrink-0 text-[#FFD84D]" />
+                <Phone className="w-4 h-4 shrink-0 text-[#111111]" />
                 <a
                   href="tel:+919345243790"
-                  className="hover:text-white transition-colors font-medium"
+                  className="hover:text-[#FF583E] transition-colors font-medium text-[#111111]"
                 >
                   +91 9345243790 <span className="text-xs text-zinc-500">(Founder Sahul Hameed)</span>
                 </a>
               </div>
 
               <div className="flex items-center gap-2.5">
-                <Mail className="w-4 h-4 shrink-0 text-[#FFD84D]" />
+                <Mail className="w-4 h-4 shrink-0 text-[#FF583E]" />
                 <a
                   href="mailto:hameedsahul9978@gmail.com"
-                  className="hover:text-white transition-colors font-medium"
+                  className="hover:text-[#111111] transition-colors font-medium text-zinc-700"
                 >
                   hameedsahul9978@gmail.com
                 </a>
@@ -110,40 +123,40 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Column 2: Export Commodities (2 cols) */}
+          {/* Column 2: Quick Links (2 cols) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="font-space text-xs font-bold tracking-[0.2em] text-[#FFD84D] uppercase">
-              Commodities
+            <h4 className="font-space text-xs font-bold tracking-[0.2em] text-[#111111] uppercase">
+              Quick Links
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-zinc-400 font-dmsans">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-zinc-600 font-dmsans">
               <li>
-                <Link href="/products" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-zinc-600">&bull;</span>
-                  <span>Fresh Fruits (Mango, Banana)</span>
+                <Link href="/" className="hover:text-[#FF583E] transition-colors flex items-center gap-1.5 font-medium">
+                  <span className="text-zinc-400">&bull;</span>
+                  <span>Home</span>
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-zinc-600">&bull;</span>
-                  <span>Vegetables (Onion, Potato)</span>
+                <Link href="/services" className="hover:text-[#FF583E] transition-colors flex items-center gap-1.5 font-medium">
+                  <span className="text-zinc-400">&bull;</span>
+                  <span>Services</span>
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-zinc-600">&bull;</span>
-                  <span>Authentic Spices (Pepper, Cardamom)</span>
+                <Link href="/products" className="hover:text-[#FF583E] transition-colors flex items-center gap-1.5 font-medium">
+                  <span className="text-zinc-400">&bull;</span>
+                  <span>Products</span>
                 </Link>
               </li>
               <li>
-                <Link href="/products" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-zinc-600">&bull;</span>
-                  <span>Turmeric &amp; Cumin</span>
+                <Link href="/why-us" className="hover:text-[#FF583E] transition-colors flex items-center gap-1.5 font-medium">
+                  <span className="text-zinc-400">&bull;</span>
+                  <span>Why Us</span>
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="hover:text-white transition-colors flex items-center gap-1.5">
-                  <span className="text-zinc-600">&bull;</span>
-                  <span>Custom Grading &amp; Packing</span>
+                <Link href="/about" className="hover:text-[#FF583E] transition-colors flex items-center gap-1.5 font-medium">
+                  <span className="text-zinc-400">&bull;</span>
+                  <span>About</span>
                 </Link>
               </li>
             </ul>
@@ -151,50 +164,50 @@ export default function Footer() {
 
           {/* Column 3: Global Corridors & Seaports (2 cols) */}
           <div className="lg:col-span-2 space-y-3.5">
-            <h4 className="font-space text-xs font-bold tracking-[0.2em] text-[#FFD84D] uppercase">
+            <h4 className="font-space text-xs font-bold tracking-[0.2em] text-[#111111] uppercase">
               Trade Corridors
             </h4>
-            <ul className="space-y-2.5 text-xs sm:text-sm text-zinc-400 font-dmsans">
-              <li className="flex items-center gap-1.5">
+            <ul className="space-y-2.5 text-xs sm:text-sm text-zinc-600 font-dmsans">
+              <li className="flex items-center gap-2">
                 <Anchor className="w-3.5 h-3.5 text-[#FF583E] shrink-0" />
-                <span>UAE / Jebel Ali Port</span>
+                <span className="font-medium">UAE / Jebel Ali</span>
               </li>
-              <li className="flex items-center gap-1.5">
+              <li className="flex items-center gap-2">
                 <Anchor className="w-3.5 h-3.5 text-[#FF583E] shrink-0" />
-                <span>Port of Singapore</span>
+                <span className="font-medium">Port of Singapore</span>
               </li>
-              <li className="flex items-center gap-1.5">
+              <li className="flex items-center gap-2">
                 <Anchor className="w-3.5 h-3.5 text-[#FF583E] shrink-0" />
-                <span>Malaysia / Port Klang</span>
+                <span className="font-medium">Malaysia / Port Klang</span>
               </li>
-              <li className="flex items-center gap-1.5">
+              <li className="flex items-center gap-2">
                 <Anchor className="w-3.5 h-3.5 text-[#FF583E] shrink-0" />
-                <span>Saudi Arabia / Dammam</span>
+                <span className="font-medium">Saudi / Dammam</span>
               </li>
-              <li className="flex items-center gap-1.5">
+              <li className="flex items-center gap-2">
                 <Anchor className="w-3.5 h-3.5 text-[#FF583E] shrink-0" />
-                <span>UK &amp; European Ports</span>
+                <span className="font-medium">UK &amp; European Ports</span>
               </li>
             </ul>
           </div>
 
           {/* Column 4: Quality & Compliance (3 cols) */}
           <div className="lg:col-span-3 space-y-4">
-            <h4 className="font-space text-xs font-bold tracking-[0.2em] text-[#FFD84D] uppercase">
+            <h4 className="font-space text-xs font-bold tracking-[0.2em] text-[#111111] uppercase">
               Trust &amp; Compliance
             </h4>
-            <div className="space-y-2.5 font-dmsans text-xs text-zinc-400">
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-zinc-800">
-                <ShieldCheck className="w-4 h-4 text-[#FFD84D] shrink-0" />
-                <span>100% Phytosanitary Inspected</span>
+            <div className="space-y-2 font-dmsans text-xs text-zinc-700">
+              <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-[#DEDEDE] shadow-xs">
+                <ShieldCheck className="w-4 h-4 text-[#FF583E] shrink-0" />
+                <span className="font-medium text-zinc-800">100% Phytosanitary Inspected</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-zinc-800">
-                <Globe2 className="w-4 h-4 text-[#FF583E] shrink-0" />
-                <span>APEDA &amp; Spices Board Adherent</span>
+              <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-[#DEDEDE] shadow-xs">
+                <Globe2 className="w-4 h-4 text-[#111111] shrink-0" />
+                <span className="font-medium text-zinc-800">APEDA &amp; Spices Board Adherent</span>
               </div>
-              <div className="flex items-center gap-2 p-2.5 rounded-xl bg-white/5 border border-zinc-800">
-                <Clock className="w-4 h-4 text-[#FFD84D] shrink-0" />
-                <span>Continuous Reefer Cold-Chain</span>
+              <div className="flex items-center gap-2.5 p-2.5 rounded-xl bg-white border border-[#DEDEDE] shadow-xs">
+                <Clock className="w-4 h-4 text-[#FF583E] shrink-0" />
+                <span className="font-medium text-zinc-800">Continuous Reefer Cold-Chain</span>
               </div>
             </div>
 
@@ -203,7 +216,7 @@ export default function Footer() {
                 href="https://wa.me/919345243790"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full flex items-center justify-center gap-2 py-2.5 rounded-full bg-[#FFD84D] hover:bg-[#ffd230] text-[#111111] font-space font-bold text-xs transition-all shadow-md hover:scale-[1.02]"
+                className="w-full flex items-center justify-center gap-2 py-3 rounded-full bg-[#FFD84D] hover:bg-[#ffe066] text-[#111111] font-space font-bold text-xs transition-all shadow-sm hover:shadow-md border border-[#E8C838] hover:scale-[1.02] active:scale-98"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Direct WhatsApp Inquiries</span>
@@ -213,20 +226,20 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar: Copyright & Navigation */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-500 font-dmsans">
+        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-zinc-600 font-dmsans">
           <div>
             &copy; 2026 The Golden Star. All rights reserved. &bull; Registered Agricultural Export Enterprise, India.
           </div>
           <div className="flex items-center gap-5">
-            <Link href="/privacy" className="hover:text-zinc-300 transition-colors">
+            <Link href="/privacy" className="hover:text-[#FF583E] transition-colors">
               Terms of Trade
             </Link>
             <span>&bull;</span>
-            <Link href="/privacy" className="hover:text-zinc-300 transition-colors">
+            <Link href="/privacy" className="hover:text-[#FF583E] transition-colors">
               Privacy Policy
             </Link>
             <span>&bull;</span>
-            <Link href="/contact" className="hover:text-zinc-300 transition-colors">
+            <Link href="/contact" className="hover:text-[#FF583E] transition-colors">
               Port Clearance Desk
             </Link>
           </div>
@@ -235,4 +248,3 @@ export default function Footer() {
     </footer>
   );
 }
-
