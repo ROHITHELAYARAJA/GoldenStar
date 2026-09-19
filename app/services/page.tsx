@@ -102,13 +102,16 @@ export default function ServicesPage() {
           color="#FFD84D"
           ease={60}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center max-w-3xl">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal animation="slide-down" delay={0.05}>
             <div className="badge-pill-gold mb-4 font-dmsans inline-block">OUR SERVICES</div>
           </ScrollReveal>
           <ScrollReveal animation="slide-up" delay={0.15}>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold font-space tracking-tight text-[#111111] mb-3">
-              What We Do — <span className="text-[#FF583E]">From Source to Destination</span>
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-extrabold font-dmsans tracking-tight text-[#111111] mb-4">
+              What We Do <span className="font-light text-zinc-400">—</span>{" "}
+              <span className="bg-gradient-to-r from-[#FF583E] via-[#FB6C00] to-[#E73F1E] bg-clip-text text-transparent">
+                From Source to Destination
+              </span>
             </h1>
           </ScrollReveal>
           <ScrollReveal animation="fade" delay={0.25}>
@@ -120,9 +123,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Port Operations Showcase Visual */}
-      <section className="py-8 sm:py-12 max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-6 sm:py-10 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6">
         <ScrollReveal animation="scale" delay={0.1}>
-          <div className="relative h-64 sm:h-96 w-full overflow-hidden border border-[#DEDEDE] shadow-xl">
+          <div className="relative h-64 sm:h-96 w-full rounded-3xl overflow-hidden border border-[#DEDEDE] shadow-xl">
             <Image
               src="/assets/images/hero/services-ocean-port.jpg"
               alt="International Ocean Cargo Vessel"
@@ -146,9 +149,9 @@ export default function ServicesPage() {
       </section>
 
       {/* 5 Service Pillars + 1 Inquiry Card (6 Cards Total) */}
-      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-10 sm:py-14 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6">
         <ScrollReveal animation="slide-up">
-          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
             <div className="badge-pill-gold mb-3 font-dmsans inline-block">CORE COMPETENCIES</div>
             <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
               Five Pillars of Trade Excellence
@@ -172,11 +175,11 @@ export default function ServicesPage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="luxury-card p-5 sm:p-8 flex flex-col justify-between group shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 h-full"
+                  className="luxury-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 h-full"
                 >
                   <div>
                     <div className="flex items-center justify-between mb-4 sm:mb-6">
-                      <div className="w-11 h-11 sm:w-12 sm:h-12 bg-[#FFD84D]/30 border border-[#FFD84D] flex items-center justify-center text-[#111111] group-hover:bg-[#FF583E] group-hover:text-white transition-colors duration-300">
+                      <div className="w-12 h-12 rounded-2xl bg-[#FFD84D]/30 border border-[#FFD84D] flex items-center justify-center text-[#111111] group-hover:bg-[#FF583E] group-hover:text-white transition-colors duration-300">
                         <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
                       </div>
                       <span className="font-space font-bold text-xl sm:text-2xl text-zinc-300 group-hover:text-[#FF583E] transition-colors duration-300">
@@ -220,12 +223,12 @@ export default function ServicesPage() {
 
           {/* Quick Inquiry Card */}
           <ScrollReveal animation="slide-up" delay={0.3} className="h-full">
-            <div className="p-6 sm:p-8 bg-white text-[#111111] border-2 border-[#F9B637] flex flex-col justify-between shadow-lg hover:shadow-2xl h-full transition-all duration-300">
+            <div className="p-6 sm:p-8 rounded-3xl bg-white text-[#111111] border-2 border-[#F9B637] flex flex-col justify-between shadow-lg hover:shadow-2xl h-full transition-all duration-300">
               <div>
-                <div className="w-12 h-12 bg-gradient-to-br from-[#FFDD9C] to-[#FFD84D] text-[#111111] flex items-center justify-center mb-5 shadow-xs border border-[#F9B637]/50">
+                <div className="w-12 h-12 rounded-2xl bg-gradient-to-br from-[#FFDD9C] to-[#FFD84D] text-[#111111] flex items-center justify-center mb-5 shadow-xs border border-[#F9B637]/50">
                   <Sparkles className="w-6 h-6 text-[#111111]" />
                 </div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-space font-bold uppercase tracking-wider bg-[#FFDD9C]/45 text-[#E73F1E] border border-[#F9B637]/50 mb-3 shadow-2xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-space font-bold uppercase tracking-wider bg-[#FFDD9C]/45 text-[#E73F1E] border border-[#F9B637]/50 mb-3 rounded-full shadow-2xs">
                   Custom Inquiries
                 </span>
                 <h3 className="text-xl sm:text-2xl font-bold font-space text-[#111111] mb-3">
@@ -242,7 +245,7 @@ export default function ServicesPage() {
               <div className="pt-6 mt-6 font-dmsans">
                 <button
                   onClick={() => openQuoteModal("Custom Trade Requirements")}
-                  className="w-full py-3 sm:py-3.5 bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] hover:from-[#FB6C00] hover:to-[#E73F1E] text-white font-space font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer uppercase tracking-wider"
+                  className="w-full py-3.5 rounded-full bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] hover:from-[#FB6C00] hover:to-[#E73F1E] text-white font-space font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer uppercase tracking-wider"
                 >
                   <span>Request Custom Plan</span>
                 </button>
@@ -253,10 +256,10 @@ export default function ServicesPage() {
       </section>
 
       {/* Strategic Workflow Roadmap */}
-      <section className="py-24 bg-zinc-50 border-y border-[#DEDEDE]">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-12 sm:py-16 bg-zinc-50 border-y border-[#DEDEDE]">
+        <div className="max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-6">
           <ScrollReveal animation="slide-up">
-            <div className="text-center max-w-2xl mx-auto mb-16">
+            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
               <div className="badge-pill-gold mb-3 font-dmsans inline-block">SEAMLESS PIPELINE</div>
               <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
                 One Journey. Every Step Connected.
@@ -267,7 +270,7 @@ export default function ServicesPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
             {roadmap.map((step, idx) => (
               <ScrollReveal
                 key={idx}
@@ -276,9 +279,9 @@ export default function ServicesPage() {
                 className="h-full"
               >
                 <div
-                  className="luxury-card p-6 text-center flex flex-col justify-center items-center shadow-sm h-full"
+                  className="luxury-card rounded-3xl p-6 text-center flex flex-col justify-center items-center shadow-sm h-full"
                 >
-                  <div className="w-10 h-10 bg-[#FFD84D] border border-[#FFD84D] flex items-center justify-center font-bold text-sm text-[#111111] font-space mb-4">
+                  <div className="w-10 h-10 rounded-full bg-[#FFD84D] border border-[#FFD84D] flex items-center justify-center font-bold text-sm text-[#111111] font-space mb-4">
                     {step.step}
                   </div>
                   <h4 className="text-base font-bold text-[#111111] font-space tracking-wider mb-1">
@@ -293,9 +296,9 @@ export default function ServicesPage() {
       </section>
 
       {/* Bottom CTA */}
-      <section className="py-20 max-w-7xl mx-auto px-6 text-center">
+      <section className="py-10 sm:py-14 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-6 text-center">
         <ScrollReveal animation="scale">
-          <div className="relative border border-[#DEDEDE] bg-white p-12 sm:p-16 shadow-sm overflow-hidden">
+          <div className="relative rounded-3xl border border-[#DEDEDE] bg-white p-10 sm:p-14 shadow-sm overflow-hidden">
             <Particles
               className="absolute inset-0 pointer-events-none opacity-20"
               quantity={20}

@@ -157,21 +157,21 @@ export default function ProductsPage() {
   return (
     <main className="min-h-screen bg-white text-[#111111] pb-20">
       {/* 🌟 Subpage Hero Banner */}
-      <section className="relative py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white overflow-hidden">
         <Particles
           className="absolute inset-0 pointer-events-none opacity-20"
           quantity={25}
           color="#FFD84D"
           ease={60}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center max-w-3xl">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal animation="slide-down" delay={0.05}>
             <span className="badge-pill-gold inline-block mb-3">
               OUR PRODUCTS
             </span>
           </ScrollReveal>
           <ScrollReveal animation="slide-up" delay={0.15}>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-space font-bold tracking-tight text-[#111111] mb-3">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-space font-bold tracking-tight text-[#111111] mb-3">
               A World of <span className="font-dmsans italic text-[#FF583E] font-normal">Freshness &amp; Flavour</span>
             </h1>
           </ScrollReveal>
@@ -183,8 +183,8 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* 🌟 Interactive Category Filter Tabs (Sleek Horizontal Segmented Bar - No Awkward Wrapping) */}
-      <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">
+      {/* 🌟 Interactive Category Filter Tabs */}
+      <section className="py-6 sm:py-8 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-6">
         <ScrollReveal animation="fade" delay={0.1}>
           <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-1.5 sm:gap-2 p-1.5 bg-zinc-100/90 border border-[#DEDEDE] rounded-full max-w-2xl mx-auto shadow-sm">
             {[
@@ -209,12 +209,12 @@ export default function ProductsPage() {
         </ScrollReveal>
       </section>
 
-      {/* 🌟 Section 1: Fruits (Responsive 2-Column on Mobile, 3-Column on Desktop) */}
+      {/* 🌟 Section 1: Fruits */}
       {(activeTab === "all" || activeTab === "fruits") && (
-        <section className="py-8 sm:py-12 max-w-7xl mx-auto px-3 sm:px-6" id="fruits">
+        <section className="py-8 sm:py-12 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12" id="fruits">
           <ScrollReveal animation="slide-up">
             <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-              <h2 className="text-xl sm:text-3xl font-space font-bold text-[#111111]">
+              <h2 className="text-2xl sm:text-4xl font-space font-bold text-[#111111]">
                 Fresh Fruits
               </h2>
               <p className="text-xs sm:text-sm text-zinc-600 mt-2 font-dmsans font-normal">
@@ -223,7 +223,7 @@ export default function ProductsPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {fruits.map((item, idx) => (
               <ScrollReveal
                 key={idx}
@@ -234,11 +234,11 @@ export default function ProductsPage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
+                  className="bg-white rounded-3xl border border-[#DEDEDE] p-4 sm:p-6 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
                 >
                   <div>
                     {/* Clean Image Frame */}
-                    <div className="relative h-32 sm:h-52 w-full overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
+                    <div className="relative h-36 sm:h-56 w-full rounded-2xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
                       <Image
                         src={item.img}
                         alt={item.title}
@@ -267,7 +267,7 @@ export default function ProductsPage() {
                   {/* Enquiry Button */}
                   <button
                     onClick={() => openQuoteModal(`Fruits - ${item.title}`)}
-                    className="w-full py-2 sm:py-2.5 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                    className="w-full py-2.5 sm:py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
                   >
                     <span>Enquire Now</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
@@ -279,12 +279,12 @@ export default function ProductsPage() {
         </section>
       )}
 
-      {/* 🌟 Section 2: Vegetables (Responsive 2-Column on Mobile, 3-Column on Desktop) */}
+      {/* 🌟 Section 2: Vegetables */}
       {(activeTab === "all" || activeTab === "vegetables") && (
-        <section className="py-8 sm:py-12 max-w-7xl mx-auto px-3 sm:px-6 border-t border-[#DEDEDE]" id="vegetables">
+        <section className="py-8 sm:py-12 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 border-t border-[#DEDEDE]" id="vegetables">
           <ScrollReveal animation="slide-up">
             <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-              <h2 className="text-xl sm:text-3xl font-space font-bold text-[#111111]">
+              <h2 className="text-2xl sm:text-4xl font-space font-bold text-[#111111]">
                 Fresh Vegetables
               </h2>
               <p className="text-xs sm:text-sm text-zinc-600 mt-2 font-dmsans font-normal">
@@ -293,7 +293,7 @@ export default function ProductsPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {vegetables.map((item, idx) => (
               <ScrollReveal
                 key={idx}
@@ -304,11 +304,11 @@ export default function ProductsPage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
+                  className="bg-white rounded-3xl border border-[#DEDEDE] p-4 sm:p-6 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
                 >
                   <div>
                     {/* Clean Image Frame */}
-                    <div className="relative h-32 sm:h-52 w-full overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
+                    <div className="relative h-36 sm:h-56 w-full rounded-2xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
                       <Image
                         src={item.img}
                         alt={item.title}
@@ -337,7 +337,7 @@ export default function ProductsPage() {
                   {/* Enquiry Button */}
                   <button
                     onClick={() => openQuoteModal(`Vegetables - ${item.title}`)}
-                    className="w-full py-2 sm:py-2.5 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                    className="w-full py-2.5 sm:py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
                   >
                     <span>Enquire Now</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
@@ -349,12 +349,12 @@ export default function ProductsPage() {
         </section>
       )}
 
-      {/* 🌟 Section 3: Chillies & Spices (Responsive 2-Column on Mobile, 3-Column on Desktop) */}
+      {/* 🌟 Section 3: Chillies & Spices */}
       {(activeTab === "all" || activeTab === "spices") && (
-        <section className="py-8 sm:py-12 max-w-7xl mx-auto px-3 sm:px-6 border-t border-[#DEDEDE]" id="spices">
+        <section className="py-8 sm:py-12 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 border-t border-[#DEDEDE]" id="spices">
           <ScrollReveal animation="slide-up">
             <div className="text-center max-w-2xl mx-auto mb-8 sm:mb-12">
-              <h2 className="text-xl sm:text-3xl font-space font-bold text-[#111111]">
+              <h2 className="text-2xl sm:text-4xl font-space font-bold text-[#111111]">
                 Chillies &amp; Spices
               </h2>
               <p className="text-xs sm:text-sm text-zinc-600 mt-2 font-dmsans font-normal">
@@ -363,7 +363,7 @@ export default function ProductsPage() {
             </div>
           </ScrollReveal>
 
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-6 lg:gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8">
             {spices.map((item, idx) => (
               <ScrollReveal
                 key={idx}
@@ -374,11 +374,11 @@ export default function ProductsPage() {
                 <motion.div
                   whileHover={{ y: -6 }}
                   transition={{ duration: 0.3 }}
-                  className="bg-white border border-[#DEDEDE] p-3 sm:p-5 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
+                  className="bg-white rounded-3xl border border-[#DEDEDE] p-4 sm:p-6 shadow-sm hover:shadow-[0_16px_36px_-12px_rgba(255,88,62,0.18)] hover:border-[#FF583E] transition-all duration-300 flex flex-col justify-between group h-full"
                 >
                   <div>
                     {/* Clean Image Frame */}
-                    <div className="relative h-32 sm:h-52 w-full overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
+                    <div className="relative h-36 sm:h-56 w-full rounded-2xl overflow-hidden bg-zinc-100 border border-[#DEDEDE] mb-3 sm:mb-4">
                       <Image
                         src={item.img}
                         alt={item.title}
@@ -407,7 +407,7 @@ export default function ProductsPage() {
                   {/* Enquiry Button */}
                   <button
                     onClick={() => openQuoteModal(`Spices - ${item.title}`)}
-                    className="w-full py-2 sm:py-2.5 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
+                    className="w-full py-2.5 sm:py-3 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-[11px] sm:text-xs transition-all duration-200 shadow flex items-center justify-center gap-1.5"
                   >
                     <span>Enquire Now</span>
                     <ArrowRight className="w-3.5 h-3.5 text-[#FFD84D]" />
@@ -420,7 +420,7 @@ export default function ProductsPage() {
       )}
 
       {/* 🌟 Bottom Call-to-Action */}
-      <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
+      <section className="py-10 sm:py-14 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <ScrollReveal animation="scale">
           <div className="relative rounded-3xl border border-[#DEDEDE] bg-white p-8 sm:p-14 text-center shadow-sm overflow-hidden">
             <Particles
@@ -443,7 +443,7 @@ export default function ProductsPage() {
               <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                 <button
                   onClick={() => openQuoteModal("All Agricultural Commodities")}
-                  className="rounded-lg px-6 sm:rounded-lg px-8 py-3 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
+                  className="rounded-full px-8 py-3.5 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
                 >
                   Enquire About Products &rarr;
                 </button>

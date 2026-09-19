@@ -21,8 +21,8 @@ export default function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 w-full px-3 sm:px-6 lg:px-8 py-3.5 sm:py-4 bg-transparent pointer-events-none">
-      {/* 🌟 Floating Rounded Pill Navbar (Increased Height & Width + Golden Star Border Combo) */}
-      <div className="max-w-7xl w-full mx-auto bg-white/95 backdrop-blur-md rounded-full border-2 border-[#F9B637]/75 ring-1 ring-[#FFD84D]/50 shadow-[0_8px_30px_rgba(249,182,55,0.16),0_2px_8px_rgba(0,0,0,0.04)] px-5 sm:px-8 lg:px-10 py-3 sm:py-4 flex items-center justify-between gap-4 pointer-events-auto transition-all">
+      {/* 🌟 Floating Rounded Pill Navbar (Wide Screen Coverage + Golden Star Border Combo) */}
+      <div className="max-w-[1520px] 2xl:max-w-[1600px] w-full mx-auto bg-white/95 backdrop-blur-md rounded-full border-2 border-[#F9B637]/75 ring-1 ring-[#FFD84D]/50 shadow-[0_8px_30px_rgba(249,182,55,0.16),0_2px_8px_rgba(0,0,0,0.04)] px-5 sm:px-8 lg:px-10 py-3 sm:py-4 flex items-center justify-between gap-4 pointer-events-auto transition-all">
         {/* Left: Brand Emblem + Distinctive Cinzel Corporate Typography */}
         <Link href="/" className="flex items-center gap-2.5 sm:gap-3.5 group shrink-0">
           <div className="relative h-13 w-13 sm:h-16 sm:w-16 shrink-0 transition-transform group-hover:scale-105 duration-300">

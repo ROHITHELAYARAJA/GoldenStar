@@ -31,7 +31,7 @@ export default function Footer() {
           DESKTOP TOP BANNER (md and above - 100% Unchanged)
       ========================================================================= */}
       <div className="hidden md:block w-full border-b border-[#DEDEDE] bg-[#F4EFE6]/90 backdrop-blur-md relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 sm:py-6 flex flex-row items-center justify-between gap-4">
+        <div className="max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-4 sm:py-5 flex flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-3 text-left">
             <div className="relative flex items-center justify-center shrink-0">
               <div className="relative w-8 h-8 rounded-full overflow-hidden shadow-xs shrink-0">
@@ -89,7 +89,7 @@ export default function Footer() {
       {/* =========================================================================
           DESKTOP MAIN SECTION (md and above - 100% Unchanged)
       ========================================================================= */}
-      <div className="hidden md:block max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14 sm:py-16 relative z-10">
+      <div className="hidden md:block max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 py-12 sm:py-14 relative z-10">
         <div className="grid grid-cols-2 lg:grid-cols-12 gap-10 lg:gap-8 pb-12 border-b border-[#DEDEDE]">
           {/* Column 1: Brand & Executive Founder Desk (5 cols) */}
           <div className="lg:col-span-5 space-y-5 pr-0 lg:pr-6">

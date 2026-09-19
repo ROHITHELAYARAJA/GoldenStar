@@ -99,9 +99,9 @@ export default function HeroSection() {
   return (
     <section
       ref={containerRef}
-      className="relative w-full bg-white text-[#111111] overflow-hidden pt-10 pb-16 sm:pt-14 sm:pb-24 lg:pt-16 lg:pb-28 border-b border-zinc-100"
+      className="relative w-full bg-white text-[#111111] overflow-hidden pt-6 pb-12 sm:pt-10 sm:pb-16 lg:pt-12 lg:pb-20 border-b border-zinc-100"
     >
-      {/* 🌟 Professional Ambient Warm Illumination on Pure White Canvas */}
+      {/* Delicate warm ambient background glow layers with golden tones */}
       {/* Soft creamy gold glow at top-right (#FFDD9C) */}
       <div
         className="absolute top-0 right-10 w-[550px] h-[550px] pointer-events-none -z-0"
@@ -127,7 +127,7 @@ export default function HeroSection() {
         }}
       />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 sm:px-8 lg:px-12">
+      <div className="relative z-10 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-6 sm:px-8 lg:px-12">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-center">
           {/* =========================================================================
               LEFT COLUMN: Editorial Typography & High-Conversion CTAs

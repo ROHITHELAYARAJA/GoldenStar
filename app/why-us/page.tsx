@@ -87,21 +87,21 @@ export default function WhyUsPage() {
   return (
     <main className="min-h-screen bg-white text-[#111111]">
       {/* Subpage Hero Banner */}
-      <section className="relative py-20 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white overflow-hidden">
+      <section className="relative py-12 sm:py-16 border-b border-[#DEDEDE] bg-gradient-to-b from-zinc-50 to-white overflow-hidden">
         <Particles
           className="absolute inset-0 pointer-events-none opacity-20"
           quantity={25}
           color="#FFD84D"
           ease={60}
         />
-        <div className="relative z-10 max-w-7xl mx-auto px-6 text-center max-w-3xl">
+        <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
           <ScrollReveal animation="slide-down" delay={0.05}>
             <span className="badge-pill-gold inline-block mb-3">
               GLOBAL REACH
             </span>
           </ScrollReveal>
           <ScrollReveal animation="slide-up" delay={0.15}>
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-space font-bold tracking-tight text-[#111111] mb-3">
+            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-space font-bold tracking-tight text-[#111111] mb-3">
               Connecting Producers With <span className="font-dmsans italic text-[#FF583E] font-normal">Markets Worldwide</span>
             </h1>
           </ScrollReveal>
@@ -117,7 +117,7 @@ export default function WhyUsPage() {
       </section>
 
       {/* Ocean Freight Showcase Banner */}
-      <section className="py-12 max-w-7xl mx-auto px-6">
+      <section className="py-6 sm:py-10 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <ScrollReveal animation="scale" delay={0.1}>
           <div className="relative h-72 sm:h-96 w-full rounded-3xl overflow-hidden border border-[#DEDEDE] shadow-lg">
             <Image
@@ -146,13 +146,13 @@ export default function WhyUsPage() {
       <WhyChooseUsInteractive />
 
       {/* Section 1: Our Global Approach */}
-      <section className="py-20 max-w-7xl mx-auto px-6">
+      <section className="py-10 sm:py-14 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <ScrollReveal animation="slide-up">
-          <div className="text-center max-w-2xl mx-auto mb-16">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-14">
             <span className="badge-pill-gold inline-block mb-3">
               OUR GLOBAL APPROACH
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
+            <h2 className="text-2xl sm:text-4xl font-bold font-space tracking-tight text-[#111111] mb-3">
               One Source. Many Possibilities.
             </h2>
             <p className="text-sm sm:text-base text-zinc-600 leading-relaxed font-dmsans">
@@ -173,7 +173,7 @@ export default function WhyUsPage() {
               >
                 <motion.div
                   whileHover={{ y: -6 }}
-                  className="luxury-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between group shadow-sm border border-[#DEDEDE] h-full"
+                  className="luxury-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between group shadow-sm border border-[#DEDEDE] h-full"
                 >
                   <div>
                     <div className="w-12 h-12 rounded-2xl bg-[#FFD84D]/30 border border-[#FFD84D] flex items-center justify-center text-[#111111] mb-6 group-hover:bg-[#FF583E] group-hover:text-white transition-colors duration-300">
@@ -197,14 +197,14 @@ export default function WhyUsPage() {
       </section>
 
       {/* Section 2: Why The Golden Star */}
-      <section className="py-20 bg-zinc-50 border-y border-[#DEDEDE]">
-        <div className="max-w-7xl mx-auto px-6">
+      <section className="py-10 sm:py-14 bg-zinc-50 border-y border-[#DEDEDE]">
+        <div className="max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
           <ScrollReveal animation="slide-up">
-            <div className="text-center max-w-2xl mx-auto mb-14">
+            <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
               <span className="badge-pill-gold inline-block mb-3">
                 WHY THE GOLDEN STAR?
               </span>
-              <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
+              <h2 className="text-2xl sm:text-4xl font-bold font-space tracking-tight text-[#111111] mb-3">
                 More Than a Supplier. A Trusted Connection.
               </h2>
               <p className="font-dmsans text-sm sm:text-base text-zinc-600">
@@ -223,7 +223,7 @@ export default function WhyUsPage() {
               >
                 <motion.div
                   whileHover={{ y: -4 }}
-                  className="luxury-card rounded-2xl p-6 sm:p-8 bg-white shadow-sm border border-[#DEDEDE] h-full"
+                  className="luxury-card rounded-3xl p-6 sm:p-8 bg-white shadow-sm border border-[#DEDEDE] h-full"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="badge-pill-gold text-[10px] font-space">Advantage {item.num}</div>
@@ -249,13 +249,13 @@ export default function WhyUsPage() {
       </section>
 
       {/* Section 3: Our Trade Journey */}
-      <section className="py-20 max-w-7xl mx-auto px-6">
+      <section className="py-10 sm:py-14 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12">
         <ScrollReveal animation="slide-up">
-          <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="text-center max-w-2xl mx-auto mb-10 sm:mb-12">
             <span className="badge-pill-gold inline-block mb-3">
               OUR TRADE JOURNEY
             </span>
-            <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
+            <h2 className="text-2xl sm:text-4xl font-bold font-space tracking-tight text-[#111111] mb-3">
               End-to-End Trade Integrity
             </h2>
             <p className="font-dmsans font-semibold text-lg text-[#FF583E]">
@@ -267,7 +267,7 @@ export default function WhyUsPage() {
           </div>
         </ScrollReveal>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-6">
           {tradeJourney.map((step, idx) => (
             <ScrollReveal
               key={idx}
@@ -276,7 +276,7 @@ export default function WhyUsPage() {
               className="h-full"
             >
               <div
-                className="luxury-card rounded-2xl p-6 text-center flex flex-col justify-center items-center shadow-sm border border-[#DEDEDE] h-full"
+                className="luxury-card rounded-3xl p-6 text-center flex flex-col justify-center items-center shadow-sm border border-[#DEDEDE] h-full"
               >
                 <div className="w-10 h-10 rounded-full bg-[#FFD84D] border border-[#FFD84D] flex items-center justify-center font-space font-bold text-sm text-[#111111] mb-4">
                   {step.step}
@@ -292,7 +292,7 @@ export default function WhyUsPage() {
       </section>
 
       {/* Section 4: Closing CTA */}
-      <section className="py-16 max-w-7xl mx-auto px-6 text-center">
+      <section className="py-10 sm:py-14 max-w-[1520px] 2xl:max-w-[1600px] mx-auto px-4 sm:px-8 lg:px-12 text-center">
         <ScrollReveal animation="scale">
           <div className="relative rounded-3xl border border-[#DEDEDE] bg-white p-10 sm:p-14 shadow-sm overflow-hidden">
             <Particles
@@ -303,7 +303,7 @@ export default function WhyUsPage() {
             />
             <div className="relative z-10">
               <span className="badge-pill-gold mb-4 font-dmsans inline-block">LET’S CONNECT BEYOND BORDERS</span>
-              <h2 className="text-2xl sm:text-3xl font-bold font-space tracking-tight text-[#111111] mb-3">
+              <h2 className="text-2xl sm:text-4xl font-bold font-space tracking-tight text-[#111111] mb-3">
                 Your Market. Our Connections. New Possibilities.
               </h2>
               <p className="font-dmsans text-base sm:text-lg text-zinc-600 mb-8 max-w-xl mx-auto">
@@ -313,12 +313,12 @@ export default function WhyUsPage() {
               <div className="flex flex-wrap items-center justify-center gap-4">
                 <button
                   onClick={() => openQuoteModal("Global Trade Inquiry")}
-                  className="btn-pill-primary text-sm py-3 px-7 font-space"
+                  className="btn-pill-primary text-sm py-3 px-8 font-space"
                 >
                   <span>GET A QUOTE</span>
                   <ArrowUpRight className="w-4 h-4 text-[#FFD84D]" />
                 </button>
-                <Link href="/contact" className="btn-pill-secondary text-sm py-3 px-7 font-space">
+                <Link href="/contact" className="btn-pill-secondary text-sm py-3 px-8 font-space">
                   <span>Contact Our Team</span>
                 </Link>
               </div>
