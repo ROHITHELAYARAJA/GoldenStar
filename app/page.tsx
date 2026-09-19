@@ -101,329 +101,146 @@ export default function HomePage() {
           </p>
         </motion.div>
 
-        {/* 3 Luxury Product Frames with Visual Hierarchy & No Unwanted Text Clutter */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-          {/* 🍎 Fruits Card Frame */}
-          <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            whileHover={{
-              y: -8,
-              boxShadow: "0 20px 45px -10px rgba(255, 216, 77, 0.45), 0 0 0 2px #FFD84D",
-              transition: { type: "spring", stiffness: 300, damping: 22 }
-            }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
-            className="bg-white rounded-3xl border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-          >
-            {/* Shimmer / Light Beam Sweep across card on hover */}
-            <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
-
-            <div className="p-6 sm:p-7">
-              {/* Image Container with Smooth Zoom & Floating Badges */}
-              <div className="w-full h-64 sm:h-72 rounded-2xl overflow-hidden mb-5 relative bg-zinc-100 border border-[#DEDEDE]">
-                <Image
-                  src="/assets/images/products/fruits-display.jpg"
-                  alt="Fresh Quality Fruits Display"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-                
-                {/* Top Left Number/Category Badge */}
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
-                  <span>01 / FRUITS</span>
-                </div>
-
-                {/* Floating Bottom Right Badge */}
-                <motion.div
-                  animate={{ y: [0, -4, 0] }}
-                  transition={{ repeat: Infinity, duration: 3, ease: "easeInOut" }}
-                  className="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[11px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
-                >
-                  <span>EXPORT GRADE A1</span>
-                </motion.div>
-              </div>
-
-              {/* Title & Subtitle */}
-              <div className="mb-4">
-                <h3 className="font-space text-2xl sm:text-3xl font-bold text-[#111111] group-hover:text-[#FF583E] transition-colors leading-tight">
-                  Fruits
-                </h3>
-                <p className="font-dmsans text-xs sm:text-sm font-semibold text-zinc-500 tracking-wide mt-1">
-                  Freshness from South Indian farms to your destination port.
-                </p>
-              </div>
-
-              {/* Quick Visual Specs (No Wall of Text) */}
-              <div className="flex flex-wrap gap-2 mb-5 text-xs text-zinc-700 font-dmsans">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-zinc-800 font-medium border border-amber-200">
-                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
-                  Reefer Cold-Chain (-18°C / +4°C)
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-zinc-800 font-medium border border-amber-200">
-                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
-                  Phytosanitary Certified
-                </span>
-              </div>
-
-              {/* Interactive Variety Tags */}
-              <div className="text-xs text-zinc-500 pt-3 border-t border-[#DEDEDE] font-dmsans">
-                <span className="block text-xs font-space font-bold uppercase tracking-wider text-zinc-800 mb-2">
-                  Key Export Varieties:
-                </span>
-                <div className="flex flex-wrap gap-1.5 font-dmsans">
-                  {["Mango", "Banana", "Pomegranate", "Grapes", "Papaya"].map((item) => (
-                    <motion.span
-                      key={item}
-                      whileHover={{ scale: 1.08, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="px-3 py-1 rounded-full bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-xs font-semibold transition-colors cursor-pointer shadow-2xs"
-                    >
-                      {item}
-                    </motion.span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Action Footer */}
-            <div className="p-6 sm:p-7 pt-0 border-t border-[#DEDEDE] mt-auto flex items-center justify-between pt-4">
-              <Link
-                href="/products#fruits"
-                className="group/link inline-flex items-center gap-1.5 text-xs sm:text-sm font-space font-bold text-[#111111] hover:text-[#FF583E] transition-colors"
-              >
-                <span>View Full Catalog</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#FF583E] group-hover/link:translate-x-1.5 transition-transform duration-200" />
-              </Link>
-              <motion.button
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.96 }}
-                onClick={() => openQuoteModal("Fruits")}
-                className="px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
-              >
-                Inquire Rates
-              </motion.button>
-            </div>
-          </motion.div>
-
-          {/* 🥕 Vegetables Card Frame */}
-          <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            whileHover={{
-              y: -8,
-              boxShadow: "0 20px 45px -10px rgba(255, 216, 77, 0.45), 0 0 0 2px #FFD84D",
-              transition: { type: "spring", stiffness: 300, damping: 22 }
-            }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.12 }}
-            className="bg-white rounded-3xl border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-          >
-            {/* Shimmer Sweep on Hover */}
-            <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
-
-            <div className="p-6 sm:p-7">
-              {/* Image Container with Smooth Zoom */}
-              <div className="w-full h-64 sm:h-72 rounded-2xl overflow-hidden mb-5 relative bg-zinc-100 border border-[#DEDEDE]">
-                <Image
-                  src="/assets/images/products/vegetables-display.jpg"
-                  alt="Fresh Quality Vegetables Display"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-                
-                {/* Top Left Number/Category Badge */}
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
-                  <span>02 / VEGETABLES</span>
-                </div>
-
-                {/* Floating Bottom Right Badge */}
-                <motion.div
-                  animate={{ y: [0, -4, 0] }}
-                  transition={{ repeat: Infinity, duration: 3.2, ease: "easeInOut", delay: 0.2 }}
-                  className="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[11px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
-                >
-                  <span>FARM HARVESTED</span>
-                </motion.div>
-              </div>
-
-              {/* Title & Subtitle */}
-              <div className="mb-4">
-                <h3 className="font-space text-2xl sm:text-3xl font-bold text-[#111111] group-hover:text-[#FF583E] transition-colors leading-tight">
-                  Vegetables
-                </h3>
-                <p className="font-dmsans text-xs sm:text-sm font-semibold text-zinc-500 tracking-wide mt-1">
-                  Fresh farm produce direct to global destinations.
-                </p>
-              </div>
-
-              {/* Quick Visual Specs (No Wall of Text) */}
-              <div className="flex flex-wrap gap-2 mb-5 text-xs text-zinc-700 font-dmsans">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-zinc-800 font-medium border border-amber-200">
-                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
-                  Graded &amp; Mesh Packed
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-zinc-800 font-medium border border-amber-200">
-                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
-                  Bulk Reefer Supply
-                </span>
-              </div>
-
-              {/* Interactive Variety Tags */}
-              <div className="text-xs text-zinc-500 pt-3 border-t border-[#DEDEDE] font-dmsans">
-                <span className="block text-xs font-space font-bold uppercase tracking-wider text-zinc-800 mb-2">
-                  Key Export Varieties:
-                </span>
-                <div className="flex flex-wrap gap-1.5 font-dmsans">
-                  {["Onion", "Potato", "Tomato", "Okra", "Green Chilli"].map((item) => (
-                    <motion.span
-                      key={item}
-                      whileHover={{ scale: 1.08, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="px-3 py-1 rounded-full bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-xs font-semibold transition-colors cursor-pointer shadow-2xs"
-                    >
-                      {item}
-                    </motion.span>
-                  ))}
-                </div>
-              </div>
-            </div>
-
-            {/* Bottom Action Footer */}
-            <div className="p-6 sm:p-7 pt-0 border-t border-[#DEDEDE] mt-auto flex items-center justify-between pt-4">
-              <Link
-                href="/products#vegetables"
-                className="group/link inline-flex items-center gap-1.5 text-xs sm:text-sm font-space font-bold text-[#111111] hover:text-[#FF583E] transition-colors"
-              >
-                <span>View Full Catalog</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#FF583E] group-hover/link:translate-x-1.5 transition-transform duration-200" />
-              </Link>
-              <motion.button
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.96 }}
-                onClick={() => openQuoteModal("Vegetables")}
-                className="px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
-              >
-                Inquire Rates
-              </motion.button>
-            </div>
-          </motion.div>
-
-          {/* 🌶️ Spices Card Frame */}
-          <motion.div
-            initial={{ opacity: 0, y: 35 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: "-40px" }}
-            whileHover={{
-              y: -8,
-              boxShadow: "0 20px 45px -10px rgba(255, 216, 77, 0.45), 0 0 0 2px #FFD84D",
-              transition: { type: "spring", stiffness: 300, damping: 22 }
-            }}
-            transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1], delay: 0.24 }}
-            className="bg-white rounded-3xl border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
-          >
-            {/* Shimmer Sweep on Hover */}
-            <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
-
-            {/* Ambient Warm Golden Aura Glow behind Spices Image */}
+        {/* 3 Luxury Product Frames with Unified Div Structure & Zero Clutter */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          {[
+            {
+              id: "fruits",
+              num: "01 / FRUITS",
+              badge: "EXPORT GRADE A1",
+              title: "Fruits",
+              image: "/assets/images/products/fruits-display.jpg",
+              specs: ["Cold-Chain Reefer", "Phytosanitary Certified"],
+              varieties: ["Mango", "Banana", "Pomegranate", "Grapes", "Papaya"],
+              link: "/products#fruits",
+              subject: "Fruits",
+            },
+            {
+              id: "vegetables",
+              num: "02 / VEGETABLES",
+              badge: "FARM HARVESTED",
+              title: "Vegetables",
+              image: "/assets/images/products/vegetables-display.jpg",
+              specs: ["Graded & Mesh Packed", "Bulk Reefer Supply"],
+              varieties: ["Onion", "Potato", "Tomato", "Okra", "Green Chilli"],
+              link: "/products#vegetables",
+              subject: "Vegetables",
+            },
+            {
+              id: "spices",
+              num: "03 / SPICES",
+              badge: "PURE INDIAN ORIGIN",
+              title: "Spices",
+              image: "/assets/images/products/spices-display.jpg",
+              specs: ["Moisture-Barrier Sealed", "100% Lab Tested Pure"],
+              varieties: ["Black Pepper", "Cardamom", "Turmeric", "Cumin", "Cloves"],
+              link: "/products#spices",
+              subject: "Spices",
+            },
+          ].map((cat, idx) => (
             <motion.div
-              animate={{
-                opacity: [0.25, 0.65, 0.25],
-                scale: [0.96, 1.04, 0.96]
+              key={cat.id}
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: "-40px" }}
+              whileHover={{
+                y: -6,
+                boxShadow: "0 20px 45px -10px rgba(255, 216, 77, 0.45), 0 0 0 2px #FFD84D",
+                transition: { type: "spring", stiffness: 300, damping: 22 },
               }}
-              transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-              className="absolute top-10 inset-x-6 h-64 bg-gradient-to-tr from-[#FFD84D]/35 via-[#FF583E]/25 to-amber-500/30 blur-2xl pointer-events-none -z-0 opacity-40 group-hover:opacity-100 transition-opacity"
-            />
+              transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1], delay: idx * 0.1 }}
+              className="bg-white rounded-3xl border-2 border-[#FFD84D] shadow-[0_4px_25px_rgba(255,216,77,0.16)] transition-all duration-300 flex flex-col justify-between group relative overflow-hidden h-full"
+            >
+              {/* Shimmer / Light Beam Sweep across card on hover */}
+              <div className="absolute -inset-full bg-gradient-to-r from-transparent via-white/20 to-transparent rotate-45 pointer-events-none group-hover:translate-x-[200%] transition-transform duration-1000 ease-in-out" />
 
-            <div className="p-6 sm:p-7 relative z-10">
-              {/* Image Container with Smooth Zoom & Floating Origin Badge */}
-              <div className="w-full h-64 sm:h-72 rounded-2xl overflow-hidden mb-5 relative bg-zinc-100 border border-[#DEDEDE]">
-                <Image
-                  src="/assets/images/products/spices-display.jpg"
-                  alt="Authentic Quality Indian Spices Display"
-                  fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
-                
-                {/* Top Left Number/Category Badge */}
-                <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
-                  <span>03 / SPICES</span>
+              {/* Top & Middle: Unified Card Body Div */}
+              <div className="p-6 sm:p-7 flex flex-col flex-1">
+                {/* Image Container with Smooth Zoom & Floating Badges */}
+                <div className="w-full h-56 sm:h-64 rounded-2xl overflow-hidden mb-4 relative bg-zinc-100 border border-[#DEDEDE]">
+                  <Image
+                    src={cat.image}
+                    alt={`Fresh Quality ${cat.title} Display`}
+                    fill
+                    className="object-cover group-hover:scale-105 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)]"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-black/20" />
+
+                  {/* Top Left Number/Category Badge */}
+                  <div className="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/95 backdrop-blur-md text-xs font-space font-bold text-[#111111] shadow-sm flex items-center border border-[#DEDEDE]">
+                    <span>{cat.num}</span>
+                  </div>
+
+                  {/* Floating Bottom Right Badge */}
+                  <motion.div
+                    animate={{ y: [0, -4, 0] }}
+                    transition={{ repeat: Infinity, duration: 3, ease: "easeInOut", delay: idx * 0.2 }}
+                    className="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[10px] sm:text-[11px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
+                  >
+                    <span>{cat.badge}</span>
+                  </motion.div>
                 </div>
 
-                {/* Floating Bottom Right Badge */}
-                <motion.div
-                  animate={{ y: [0, -5, 0] }}
-                  transition={{ repeat: Infinity, duration: 2.8, ease: "easeInOut", delay: 0.4 }}
-                  className="absolute bottom-3 right-3 px-3.5 py-1 rounded-full bg-[#FFD84D] text-[#111111] font-space font-bold text-[11px] shadow-md border border-[#E8C838] tracking-wider uppercase flex items-center group-hover:scale-105 transition-transform"
-                >
-                  <span>PURE INDIAN ORIGIN</span>
-                </motion.div>
-              </div>
+                {/* Title */}
+                <div className="mb-3">
+                  <h3 className="font-space text-2xl sm:text-3xl font-bold text-[#111111] group-hover:text-[#FF583E] transition-colors leading-tight">
+                    {cat.title}
+                  </h3>
+                </div>
 
-              {/* Title & Subtitle */}
-              <div className="mb-4">
-                <h3 className="font-space text-2xl sm:text-3xl font-bold text-[#111111] group-hover:text-[#FF583E] transition-colors leading-tight">
-                  Spices
-                </h3>
-                <p className="font-dmsans text-xs sm:text-sm font-semibold text-zinc-500 tracking-wide mt-1">
-                  Authentic flavours, unadulterated purity &amp; rich aroma.
-                </p>
-              </div>
-
-              {/* Quick Visual Specs (No Wall of Text) */}
-              <div className="flex flex-wrap gap-2 mb-5 text-xs text-zinc-700 font-dmsans">
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-zinc-800 font-medium border border-amber-200">
-                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
-                  Moisture-Barrier Sealed
-                </span>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-zinc-800 font-medium border border-amber-200">
-                  <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3]" />
-                  Lab Tested High Essential Oils
-                </span>
-              </div>
-
-              {/* Interactive Variety Tags */}
-              <div className="text-xs text-zinc-500 pt-3 border-t border-[#DEDEDE] font-dmsans">
-                <span className="block text-xs font-space font-bold uppercase tracking-wider text-zinc-800 mb-2">
-                  Key Export Varieties:
-                </span>
-                <div className="flex flex-wrap gap-1.5 font-dmsans">
-                  {["Black Pepper", "Cardamom", "Turmeric", "Cumin"].map((item) => (
-                    <motion.span
-                      key={item}
-                      whileHover={{ scale: 1.08, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
-                      className="px-3 py-1 rounded-full bg-zinc-50 hover:bg-[#FFD84D] border border-[#DEDEDE] hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-xs font-semibold transition-colors cursor-pointer shadow-2xs"
+                {/* Export Quality Specs */}
+                <div className="flex flex-wrap gap-2 mb-4 text-xs font-dmsans">
+                  {cat.specs.map((spec) => (
+                    <span
+                      key={spec}
+                      className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-amber-50 text-zinc-800 font-medium border border-amber-200 text-xs"
                     >
-                      {item}
-                    </motion.span>
+                      <Check className="w-3.5 h-3.5 text-emerald-600 stroke-[3] shrink-0" />
+                      <span>{spec}</span>
+                    </span>
                   ))}
                 </div>
-              </div>
-            </div>
 
-            {/* Bottom Action Footer */}
-            <div className="p-6 sm:p-7 pt-0 border-t border-[#DEDEDE] mt-auto flex items-center justify-between pt-4 relative z-10">
-              <Link
-                href="/products#spices"
-                className="group/link inline-flex items-center gap-1.5 text-xs sm:text-sm font-space font-bold text-[#111111] hover:text-[#FF583E] transition-colors"
-              >
-                <span>View Full Catalog</span>
-                <ArrowRight className="w-3.5 h-3.5 text-[#FF583E] group-hover/link:translate-x-1.5 transition-transform duration-200" />
-              </Link>
-              <motion.button
-                whileHover={{ scale: 1.06 }}
-                whileTap={{ scale: 0.96 }}
-                onClick={() => openQuoteModal("Spices")}
-                className="px-5 py-2.5 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors"
-              >
-                Inquire Rates
-              </motion.button>
-            </div>
-          </motion.div>
+                {/* Interactive Variety Tags */}
+                <div className="mt-auto pt-2">
+                  <span className="block text-[11px] font-space font-bold uppercase tracking-wider text-zinc-500 mb-2">
+                    Key Export Varieties:
+                  </span>
+                  <div className="flex flex-wrap gap-1.5 font-dmsans">
+                    {cat.varieties.map((item) => (
+                      <motion.span
+                        key={item}
+                        whileHover={{ scale: 1.08, y: -2 }}
+                        whileTap={{ scale: 0.95 }}
+                        className="px-2.5 py-1 rounded-full bg-zinc-50 hover:bg-[#FFD84D] border border-zinc-200 hover:border-[#111111] text-zinc-800 hover:text-[#111111] text-xs font-semibold transition-colors cursor-pointer"
+                      >
+                        {item}
+                      </motion.span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+
+              {/* Bottom Action Footer */}
+              <div className="px-6 py-4 border-t border-zinc-100 bg-zinc-50/50 rounded-b-3xl mt-auto flex items-center justify-between gap-2">
+                <Link
+                  href={cat.link}
+                  className="group/link inline-flex items-center gap-1.5 text-xs sm:text-sm font-space font-bold text-[#111111] hover:text-[#FF583E] transition-colors whitespace-nowrap"
+                >
+                  <span>View Full Catalog</span>
+                  <ArrowRight className="w-3.5 h-3.5 text-[#FF583E] group-hover/link:translate-x-1.5 transition-transform duration-200 shrink-0" />
+                </Link>
+                <motion.button
+                  whileHover={{ scale: 1.06 }}
+                  whileTap={{ scale: 0.96 }}
+                  onClick={() => openQuoteModal(cat.subject)}
+                  className="px-4 sm:px-5 py-2 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs shadow-sm hover:shadow-md transition-colors whitespace-nowrap shrink-0"
+                >
+                  Inquire Rates
+                </motion.button>
+              </div>
+            </motion.div>
+          ))}
         </div>
       </section>
 
