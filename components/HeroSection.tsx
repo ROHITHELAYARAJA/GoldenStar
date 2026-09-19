@@ -282,19 +282,7 @@ export default function HeroSection() {
                 <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/45 via-black/15 to-transparent pointer-events-none" />
                 <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/65 via-black/25 to-transparent pointer-events-none" />
 
-                {/* Embedded Live Port Status Tag (Top-Left inside frame) */}
-                <div className="absolute top-4 left-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55 backdrop-blur-md border border-white/20 text-white shadow-md">
-                  <span className="relative flex h-2 w-2">
-                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
-                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
-                  </span>
-                  <span className="text-[10px] font-space font-bold uppercase tracking-wider text-white">
-                    Live Maritime Corridor
-                  </span>
-                  <span className="text-[9px] font-dmsans text-zinc-300 hidden sm:inline">
-                    &bull; Tuticorin &amp; Chennai Ports
-                  </span>
-                </div>
+
               </div>
 
               {/* =========================================================================
@@ -302,7 +290,7 @@ export default function HeroSection() {
               ========================================================================= */}
 
               {/* Card 1: Left Floating Agricultural Harvest Preview Card */}
-              <div className="hero-floating-stat animate-float-2 absolute bottom-24 -left-3 sm:bottom-28 sm:-left-6 z-30 bg-white/95 backdrop-blur-md rounded-2xl border border-zinc-200/90 p-2.5 sm:p-3 shadow-[0_16px_36px_-6px_rgba(0,0,0,0.16)] flex items-center gap-3 max-w-[250px] sm:max-w-[275px] transition-transform hover:scale-105 duration-300">
+              <div className="hero-floating-stat animate-float-2 absolute top-16 sm:top-20 -left-3 sm:-left-6 z-30 bg-white/95 backdrop-blur-md rounded-2xl border border-zinc-200/90 p-2.5 sm:p-3 shadow-[0_16px_36px_-6px_rgba(0,0,0,0.16)] flex items-center gap-3 max-w-[250px] sm:max-w-[275px] transition-transform hover:scale-105 duration-300">
                 <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden shrink-0 border border-zinc-100 shadow-xs">
                   <Image
                     src="/assets/images/products/fruits-display.jpg"
