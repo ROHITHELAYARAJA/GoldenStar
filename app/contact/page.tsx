@@ -124,7 +124,7 @@ export default function ContactPage() {
             {/* Phone & WhatsApp Card */}
             <ScrollReveal animation="slide-up" delay={0.2}>
               <div className="rounded-3xl p-6 bg-white border border-[#DEDEDE] hover:border-[#FF583E] flex items-start gap-4 shadow-sm transition-colors">
-                <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D] shrink-0">
+                <div className="p-3 rounded-xl rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D] shrink-0">
                   <Phone className="w-5 h-5" />
                 </div>
                 <div>
@@ -149,7 +149,7 @@ export default function ContactPage() {
             {/* Email Card */}
             <ScrollReveal animation="slide-up" delay={0.25}>
               <div className="rounded-3xl p-6 bg-white border border-[#DEDEDE] hover:border-[#FF583E] flex items-start gap-4 shadow-sm transition-colors">
-                <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D] shrink-0">
+                <div className="p-3 rounded-xl rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D] shrink-0">
                   <Mail className="w-5 h-5" />
                 </div>
                 <div>
@@ -172,7 +172,7 @@ export default function ContactPage() {
             {/* Official Registered Address Card */}
             <ScrollReveal animation="slide-up" delay={0.3}>
               <div className="rounded-3xl p-6 bg-white border border-[#DEDEDE] hover:border-[#FF583E] flex items-start gap-4 shadow-sm transition-colors">
-                <div className="p-3 rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D] shrink-0">
+                <div className="p-3 rounded-xl rounded-2xl bg-[#FFD84D]/30 text-[#111111] border border-[#FFD84D] shrink-0">
                   <MapPin className="w-5 h-5" />
                 </div>
                 <div>
@@ -366,3 +366,4 @@ export default function ContactPage() {
     </main>
   );
 }
+

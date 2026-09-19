@@ -422,7 +422,7 @@ export default function ProductsPage() {
       {/* 🌟 Bottom Call-to-Action */}
       <section className="py-12 sm:py-16 max-w-7xl mx-auto px-4 sm:px-6">
         <ScrollReveal animation="scale">
-          <div className="relative border border-[#DEDEDE] bg-white p-8 sm:p-14 text-center shadow-sm overflow-hidden">
+          <div className="relative rounded-3xl border border-[#DEDEDE] bg-white p-8 sm:p-14 text-center shadow-sm overflow-hidden">
             <Particles
               className="absolute inset-0 pointer-events-none opacity-20"
               quantity={20}
@@ -443,7 +443,7 @@ export default function ProductsPage() {
               <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-4">
                 <button
                   onClick={() => openQuoteModal("All Agricultural Commodities")}
-                  className="px-6 sm:px-8 py-3 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
+                  className="rounded-lg px-6 sm:rounded-lg px-8 py-3 bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-105 transition-all"
                 >
                   Enquire About Products &rarr;
                 </button>
@@ -455,3 +455,4 @@ export default function ProductsPage() {
     </main>
   );
 }
+

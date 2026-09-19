@@ -173,7 +173,7 @@ export default function WhyUsPage() {
               >
                 <motion.div
                   whileHover={{ y: -6 }}
-                  className="luxury-card p-6 sm:p-8 flex flex-col justify-between group shadow-sm border border-[#DEDEDE] h-full"
+                  className="luxury-card rounded-2xl p-6 sm:p-8 flex flex-col justify-between group shadow-sm border border-[#DEDEDE] h-full"
                 >
                   <div>
                     <div className="w-12 h-12 rounded-2xl bg-[#FFD84D]/30 border border-[#FFD84D] flex items-center justify-center text-[#111111] mb-6 group-hover:bg-[#FF583E] group-hover:text-white transition-colors duration-300">
@@ -223,7 +223,7 @@ export default function WhyUsPage() {
               >
                 <motion.div
                   whileHover={{ y: -4 }}
-                  className="luxury-card p-6 sm:p-8 bg-white shadow-sm border border-[#DEDEDE] h-full"
+                  className="luxury-card rounded-2xl p-6 sm:p-8 bg-white shadow-sm border border-[#DEDEDE] h-full"
                 >
                   <div className="flex items-center justify-between mb-4">
                     <div className="badge-pill-gold text-[10px] font-space">Advantage {item.num}</div>
@@ -276,7 +276,7 @@ export default function WhyUsPage() {
               className="h-full"
             >
               <div
-                className="luxury-card p-6 text-center flex flex-col justify-center items-center shadow-sm border border-[#DEDEDE] h-full"
+                className="luxury-card rounded-2xl p-6 text-center flex flex-col justify-center items-center shadow-sm border border-[#DEDEDE] h-full"
               >
                 <div className="w-10 h-10 rounded-full bg-[#FFD84D] border border-[#FFD84D] flex items-center justify-center font-space font-bold text-sm text-[#111111] mb-4">
                   {step.step}
@@ -329,3 +329,4 @@ export default function WhyUsPage() {
     </main>
   );
 }
+
