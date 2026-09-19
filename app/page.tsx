@@ -480,8 +480,8 @@ export default function HomePage() {
             </p>
           </motion.div>
 
-          {/* Clean 5-Step Process Cards (Zero duplication, readable, needed words only) */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
+          {/* Clean 5-Step Process with Soft Curvy Finish (rounded-3xl capsules, rounded-full icons & pills) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-5 sm:gap-6 relative">
             {promiseSteps.map((step, idx) => {
               const IconComponent = step.icon;
               return (
@@ -491,22 +491,22 @@ export default function HomePage() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.4, delay: idx * 0.08 }}
-                  whileHover={{ y: -4 }}
-                  className="bg-white rounded-2xl p-6 border border-zinc-200/90 hover:border-[#FB6C00]/40 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                  whileHover={{ y: -6 }}
+                  className="bg-white rounded-3xl p-6 sm:p-7 border-2 border-[#F9B637]/35 hover:border-[#FB6C00] shadow-sm hover:shadow-xl transition-all duration-300 flex flex-col items-center text-center justify-between group relative overflow-hidden"
                 >
-                  {/* Subtle top gradient accent on hover */}
-                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] opacity-0 group-hover:opacity-100 transition-opacity" />
+                  {/* Soft top curved glow line */}
+                  <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-[#E73F1E] via-[#FB6C00] to-[#F9B637] opacity-0 group-hover:opacity-100 transition-opacity rounded-t-3xl" />
 
-                  <div>
-                    {/* Header: Step Number & Icon */}
-                    <div className="flex items-center justify-between mb-4">
-                      <span className="text-2xl sm:text-3xl font-extrabold font-space text-[#E73F1E] transition-colors">
-                        {step.num}
-                      </span>
-                      <div className="w-11 h-11 rounded-xl bg-orange-50 group-hover:bg-gradient-to-br group-hover:from-[#E73F1E] group-hover:to-[#FB6C00] text-[#E73F1E] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-2xs">
-                        <IconComponent className="w-5 h-5 transition-transform group-hover:scale-110" />
-                      </div>
+                  <div className="flex flex-col items-center">
+                    {/* Curvy Circular Icon Pod with Luminous Gradient */}
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#E73F1E] via-[#FB6C00] to-[#F9B637] flex items-center justify-center text-white shadow-md mb-3.5 group-hover:scale-110 group-hover:shadow-[0_8px_20px_-4px_rgba(231,63,30,0.4)] transition-all duration-300">
+                      <IconComponent className="w-7 h-7 text-white drop-shadow-xs" />
                     </div>
+
+                    {/* Curvy Step Number Pill */}
+                    <span className="px-3.5 py-1 rounded-full text-xs font-bold font-space bg-[#FFDD9C]/60 text-[#E73F1E] border border-[#F9B637] mb-2.5 inline-block shadow-2xs">
+                      {step.num}
+                    </span>
 
                     {/* Step Title */}
                     <h3 className="text-xl font-bold text-[#111111] font-space mb-2 group-hover:text-[#E73F1E] transition-colors">
@@ -514,16 +514,18 @@ export default function HomePage() {
                     </h3>
 
                     {/* Step Description */}
-                    <p className="text-[13px] sm:text-sm text-zinc-700 font-dmsans leading-relaxed">
+                    <p className="text-xs sm:text-[13px] text-zinc-600 font-dmsans leading-relaxed mb-4">
                       {step.desc}
                     </p>
                   </div>
 
-                  {/* Clean Bottom Tag with Forward Flow */}
-                  <div className="mt-5 pt-3 border-t border-zinc-100 flex items-center justify-between text-xs font-semibold text-zinc-700 font-dmsans">
-                    <span className="text-zinc-800">{step.highlight}</span>
-                    <span className="text-[#FB6C00] font-bold group-hover:translate-x-1 transition-transform">
-                      {idx < 4 ? "→" : "✓"}
+                  {/* Curvy Bottom Pill Badge with Flow Arrow */}
+                  <div className="w-full pt-3 border-t border-zinc-100/90 flex items-center justify-center">
+                    <span className="px-3.5 py-1 rounded-full text-[11px] font-semibold font-dmsans bg-zinc-50 group-hover:bg-[#FFDD9C]/40 text-zinc-700 group-hover:text-[#E73F1E] border border-zinc-200 group-hover:border-[#F9B637] transition-all flex items-center gap-1.5">
+                      <span>{step.highlight}</span>
+                      <span className="text-[#FB6C00] font-bold">
+                        {idx < 4 ? "→" : "✓"}
+                      </span>
                     </span>
                   </div>
                 </motion.div>

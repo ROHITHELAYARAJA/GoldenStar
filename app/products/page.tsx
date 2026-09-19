@@ -186,7 +186,7 @@ export default function ProductsPage() {
       {/* 🌟 Interactive Category Filter Tabs (Sleek Horizontal Segmented Bar - No Awkward Wrapping) */}
       <section className="py-6 sm:py-8 max-w-7xl mx-auto px-4 sm:px-6">
         <ScrollReveal animation="fade" delay={0.1}>
-          <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-2 sm:gap-3 p-1.5 bg-zinc-100 border border-[#DEDEDE] max-w-2xl mx-auto shadow-sm">
+          <div className="flex items-center justify-start sm:justify-center overflow-x-auto no-scrollbar gap-1.5 sm:gap-2 p-1.5 bg-zinc-100/90 border border-[#DEDEDE] rounded-full max-w-2xl mx-auto shadow-sm">
             {[
               { id: "all", label: "All Commodities" },
               { id: "fruits", label: "Fruits" },
@@ -196,10 +196,10 @@ export default function ProductsPage() {
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id as any)}
-                className={`whitespace-nowrap py-2.5 px-4 sm:px-6 text-xs font-space font-bold uppercase tracking-wider transition-all duration-200 shrink-0 ${
+                className={`whitespace-nowrap py-2.5 px-5 sm:px-6 text-xs font-space font-bold uppercase tracking-wider rounded-full transition-all duration-200 shrink-0 ${
                   activeTab === tab.id
-                    ? "bg-[#111111] text-[#FFD84D] border border-[#111111] shadow-md scale-[1.02]"
-                    : "text-zinc-600 hover:text-[#111111] hover:bg-white font-semibold"
+                    ? "bg-[#111111] text-[#FFD84D] shadow-md scale-[1.02]"
+                    : "text-zinc-600 hover:text-[#111111] hover:bg-white/80 font-semibold"
                 }`}
               >
                 {tab.label}

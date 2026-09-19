@@ -175,21 +175,21 @@ export default function HeroSection() {
                 />
               </div>
 
-              {/* Box 2: Secondary Action Button in Crisp White & Gold Border */}
+              {/* Box 2: Secondary Action Button in Crisp White & Gold Border (Curvy Pill Finish) */}
               <Link
                 href="/about"
-                className="h-12 px-5 bg-white hover:bg-[#FFDD9C]/20 text-[#111111] border-2 border-[#F9B637] hover:border-[#FB6C00] font-space font-bold text-xs tracking-wider uppercase shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
+                className="h-12 px-6 rounded-full bg-white hover:bg-[#FFDD9C]/20 text-[#111111] border-2 border-[#F9B637] hover:border-[#FB6C00] font-space font-bold text-xs tracking-wider uppercase shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
               >
                 <span>LEARN ABOUT US</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#FB6C00]" />
               </Link>
 
-              {/* Box 3: Direct Trade Desk Inline Pill Container */}
+              {/* Box 3: Direct Trade Desk Inline Pill Container (Curvy Pill Finish) */}
               <a
                 href="https://wa.me/919443389648?text=Hello%20The%20Golden%20Star,%20I%20would%20like%20to%20inquire%20about%20agricultural%20exports."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-12 px-4 bg-white/95 hover:bg-zinc-50 text-zinc-800 hover:text-[#E73F1E] border border-[#F9B637]/70 hover:border-[#FB6C00] font-space font-semibold text-xs shadow-xs hover:shadow-sm transition-all duration-200 inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
+                className="h-12 px-5 rounded-full bg-white/95 hover:bg-zinc-50 text-zinc-800 hover:text-[#E73F1E] border border-[#F9B637]/70 hover:border-[#FB6C00] font-space font-semibold text-xs shadow-xs hover:shadow-sm transition-all duration-200 inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
               >
                 <PhoneCall className="w-3.5 h-3.5 text-[#FB6C00] shrink-0" />
                 <span className="font-dmsans">
