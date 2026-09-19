@@ -12,6 +12,7 @@ import {
   PhoneCall,
   CheckCircle2,
   Globe2,
+  Leaf,
 } from "lucide-react";
 import gsap from "gsap";
 import GetStartedButton from "@/components/ui/get-started-button";
@@ -132,8 +133,8 @@ export default function HeroSection() {
               LEFT COLUMN: Editorial Typography & High-Conversion CTAs
           ========================================================================= */}
           <div className="lg:col-span-7 flex flex-col justify-center">
-            {/* Main Headline: Clean White Background with Urbanist Font & Smooth Sequential Word Animation */}
-            <h1 className="hero-title-main font-urbanist text-3xl sm:text-5xl lg:text-[58px] xl:text-[66px] font-extrabold text-[#111111] leading-[1.14] tracking-tight mb-5 sm:mb-6">
+            {/* Main Headline: Clean White Background with Space Grotesk Font & Smooth Sequential Word Animation */}
+            <h1 className="hero-title-main font-space text-3xl sm:text-5xl lg:text-[58px] xl:text-[66px] font-extrabold text-[#111111] leading-[1.14] tracking-tight mb-5 sm:mb-6">
               <span className="flex flex-wrap items-baseline gap-x-2.5 sm:gap-x-3.5">
                 <span className="hero-word inline-block">From</span>
                 <span className="hero-word inline-block">the</span>
@@ -153,8 +154,8 @@ export default function HeroSection() {
               </span>
             </h1>
 
-            {/* Tagline & Corporate Mission Description: Open Sans for Maximum Legibility */}
-            <p className="hero-description-text font-opensans text-sm sm:text-base lg:text-[17px] text-zinc-600 leading-relaxed max-w-2xl mb-6 sm:mb-8 font-normal">
+            {/* Tagline & Corporate Mission Description: DM Sans for Maximum Legibility */}
+            <p className="hero-description-text font-dmsans text-sm sm:text-base lg:text-[17px] text-zinc-600 leading-relaxed max-w-2xl mb-6 sm:mb-8 font-normal">
               <strong className="text-zinc-900 font-semibold">
                 Premium agricultural products, sourced with care and delivered across borders.
               </strong>{" "}
@@ -170,14 +171,14 @@ export default function HeroSection() {
                 <GetStartedButton
                   label="REQUEST FAST QUOTE"
                   onClick={() => openQuoteModal("Hero Primary Quote")}
-                  className="h-12 px-5 bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] text-white hover:border-[#FB6C00] hover:text-[#111111] font-urbanist font-bold text-xs tracking-wider uppercase shadow-[0_10px_24px_-4px_rgba(231,63,30,0.42)] hover:shadow-[0_16px_32px_-4px_rgba(231,63,30,0.55)] hover:scale-[1.03] active:scale-95 transition-all duration-200 whitespace-nowrap justify-center"
+                  className="h-12 px-5 bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] text-white hover:border-[#FB6C00] hover:text-[#111111] font-space font-bold text-xs tracking-wider uppercase shadow-[0_10px_24px_-4px_rgba(231,63,30,0.42)] hover:shadow-[0_16px_32px_-4px_rgba(231,63,30,0.55)] hover:scale-[1.03] active:scale-95 transition-all duration-200 whitespace-nowrap justify-center"
                 />
               </div>
 
               {/* Box 2: Secondary Action Button in Crisp White & Gold Border */}
               <Link
                 href="/about"
-                className="h-12 px-5 bg-white hover:bg-[#FFDD9C]/20 text-[#111111] border-2 border-[#F9B637] hover:border-[#FB6C00] font-urbanist font-bold text-xs tracking-wider uppercase shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
+                className="h-12 px-5 bg-white hover:bg-[#FFDD9C]/20 text-[#111111] border-2 border-[#F9B637] hover:border-[#FB6C00] font-space font-bold text-xs tracking-wider uppercase shadow-xs hover:shadow-md transition-all duration-200 cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
               >
                 <span>LEARN ABOUT US</span>
                 <ArrowRight className="w-3.5 h-3.5 text-[#FB6C00]" />
@@ -188,11 +189,11 @@ export default function HeroSection() {
                 href="https://wa.me/919443389648?text=Hello%20The%20Golden%20Star,%20I%20would%20like%20to%20inquire%20about%20agricultural%20exports."
                 target="_blank"
                 rel="noopener noreferrer"
-                className="h-12 px-4 bg-white/95 hover:bg-zinc-50 text-zinc-800 hover:text-[#E73F1E] border border-[#F9B637]/70 hover:border-[#FB6C00] font-urbanist font-semibold text-xs shadow-xs hover:shadow-sm transition-all duration-200 inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
+                className="h-12 px-4 bg-white/95 hover:bg-zinc-50 text-zinc-800 hover:text-[#E73F1E] border border-[#F9B637]/70 hover:border-[#FB6C00] font-space font-semibold text-xs shadow-xs hover:shadow-sm transition-all duration-200 inline-flex items-center justify-center gap-2 whitespace-nowrap shrink-0"
               >
                 <PhoneCall className="w-3.5 h-3.5 text-[#FB6C00] shrink-0" />
-                <span>
-                  Trade Desk: <strong className="font-bold text-zinc-900">+91 94433 89648</strong>
+                <span className="font-dmsans">
+                  Trade Desk: <strong className="font-bold text-zinc-900 font-space">+91 94433 89648</strong>
                 </span>
               </a>
             </div>
@@ -201,51 +202,51 @@ export default function HeroSection() {
             <div className="hero-stats-strip pt-5 sm:pt-6 border-t border-zinc-200 grid grid-cols-3 gap-2 sm:gap-6">
               <div>
                 <div
-                  className="text-xl sm:text-2xl lg:text-3xl font-black font-urbanist bg-clip-text text-transparent"
+                  className="text-xl sm:text-2xl lg:text-3xl font-black font-space bg-clip-text text-transparent"
                   style={{
                     backgroundImage: "linear-gradient(90deg, #E73F1E, #FB6C00)",
                   }}
                 >
                   100%
                 </div>
-                <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-zinc-900 font-opensans leading-tight mt-0.5">
+                <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-zinc-900 font-space leading-tight mt-0.5">
                   Direct Farm Sourcing
                 </div>
-                <div className="text-[9.5px] sm:text-[11px] text-zinc-500 font-opensans mt-0.5">
+                <div className="text-[9.5px] sm:text-[11px] text-zinc-500 font-dmsans mt-0.5">
                   APEDA &amp; Spices Board
                 </div>
               </div>
 
               <div>
                 <div
-                  className="text-xl sm:text-2xl lg:text-3xl font-black font-urbanist bg-clip-text text-transparent"
+                  className="text-xl sm:text-2xl lg:text-3xl font-black font-space bg-clip-text text-transparent"
                   style={{
                     backgroundImage: "linear-gradient(90deg, #FB6C00, #F9B637)",
                   }}
                 >
                   15+
                 </div>
-                <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-zinc-900 font-opensans leading-tight mt-0.5">
+                <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-zinc-900 font-space leading-tight mt-0.5">
                   Global Sea Ports
                 </div>
-                <div className="text-[9.5px] sm:text-[11px] text-zinc-500 font-opensans mt-0.5">
+                <div className="text-[9.5px] sm:text-[11px] text-zinc-500 font-dmsans mt-0.5">
                   Middle East &amp; SE Asia
                 </div>
               </div>
 
               <div>
                 <div
-                  className="text-xl sm:text-2xl lg:text-3xl font-black font-urbanist bg-clip-text text-transparent"
+                  className="text-xl sm:text-2xl lg:text-3xl font-black font-space bg-clip-text text-transparent"
                   style={{
                     backgroundImage: "linear-gradient(90deg, #F9B637, #FB6C00)",
                   }}
                 >
                   0
                 </div>
-                <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-zinc-900 font-opensans leading-tight mt-0.5">
+                <div className="text-[11px] sm:text-xs lg:text-sm font-bold text-zinc-900 font-space leading-tight mt-0.5">
                   Intermediaries
                 </div>
-                <div className="text-[9.5px] sm:text-[11px] text-zinc-500 font-opensans mt-0.5">
+                <div className="text-[9.5px] sm:text-[11px] text-zinc-500 font-dmsans mt-0.5">
                   Farmer to Port Direct
                 </div>
               </div>
@@ -253,93 +254,123 @@ export default function HeroSection() {
           </div>
 
           {/* =========================================================================
-              RIGHT COLUMN: Authentic Ocean Cargo Vessel Showcase with Floating Badges Outside Frame
+              RIGHT COLUMN: Redesigned Farm-to-Port Global Showcase (Modern & Refined)
           ========================================================================= */}
           <div className="lg:col-span-5 relative mt-12 lg:mt-0 px-2 sm:px-4 lg:px-2">
-            {/* Outer Wrapper for Image + Floating Elements (Allows Elements to Float Outside) */}
-            <div className="relative mx-auto max-w-[460px] lg:max-w-none">
-              {/* Clean Unobstructed Ship Image Frame */}
-              <div className="hero-visual-frame relative w-full h-[480px] sm:h-[550px] lg:h-[600px] overflow-hidden shadow-[0_22px_55px_-12px_rgba(0,0,0,0.2)] border-2 border-[#F9B637]/50 bg-zinc-50 group">
-                <Image
-                  src="/assets/images/hero/hero-maersk-port-cranes.jpg"
-                  alt="The Golden Star - International Maritime Container Cargo Vessel under Port Cranes"
-                  fill
-                  className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
-                  priority
-                />
-                {/* Minimal subtle gradient at bottom edge only */}
-                <div className="absolute inset-x-0 bottom-0 h-16 bg-gradient-to-t from-black/30 to-transparent pointer-events-none" />
-              </div>
-
-              {/* =========================================================================
-                  FLOATING CARDS OUTSIDE THE SHIP FRAME (Structured, Balanced, Non-Colliding)
-              ========================================================================= */}
-              {/* Card 1: Top-Left Floating Badge (50+ Countries Served) */}
-              <div className="animate-float-1 absolute -top-4 -left-2 sm:-top-6 sm:-left-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] px-3 py-2 sm:px-3.5 sm:py-2.5 shadow-[0_12px_28px_-4px_rgba(251,108,0,0.25)] flex items-center gap-2.5 sm:gap-3 transition-transform hover:scale-105 duration-300">
-                <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-full overflow-hidden shadow-xs shrink-0">
-                  <Image
-                    src="/assets/images/branding/real-globe.jpg"
-                    alt="Real 3D Earth Globe"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <div className="text-base sm:text-lg font-black font-urbanist bg-clip-text text-transparent bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] leading-none">
-                    50+
-                  </div>
-                  <div className="text-[9.5px] sm:text-[10.5px] font-bold font-opensans text-zinc-900 uppercase tracking-wide mt-0.5">
-                    Countries Served
-                  </div>
-                  <div className="text-[8.5px] sm:text-[9.5px] text-zinc-500 font-opensans leading-none">
-                    Global Maritime Trade
-                  </div>
-                </div>
-              </div>
-
-              {/* Card 2: Top-Right Floating Pill (Govt Recognized Export House) */}
-              <div className="absolute -top-3 right-1 sm:-top-5 sm:-right-4 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] px-3 py-1.5 sm:px-4 sm:py-2 shadow-[0_10px_24px_-4px_rgba(0,0,0,0.12)] flex items-center gap-1.5 sm:gap-2 shrink-0 transition-transform hover:scale-105 duration-300">
-                <ShieldCheck className="w-3.5 h-3.5 sm:w-4 sm:h-4 text-[#FB6C00] shrink-0" />
-                <span className="text-[9px] sm:text-[10.5px] font-urbanist font-bold uppercase tracking-wider text-[#111111] whitespace-nowrap">
+            {/* Outer Showcase Wrapper with Ambient Backdrop Aura */}
+            <div className="relative mx-auto max-w-[480px] lg:max-w-none">
+              
+              {/* Top Floating Regulatory Trust Pill */}
+              <div className="hero-floating-stat animate-float-1 absolute -top-4 right-2 sm:-top-5 sm:right-2 z-30 bg-white/95 backdrop-blur-md rounded-full border border-amber-300/80 px-3.5 py-1.5 sm:px-4 sm:py-2 shadow-[0_10px_25px_-5px_rgba(249,182,55,0.35)] flex items-center gap-2 transition-transform hover:scale-105 duration-300">
+                <ShieldCheck className="w-4 h-4 text-[#FB6C00] shrink-0" />
+                <span className="text-[10px] sm:text-[11px] font-space font-bold uppercase tracking-wider text-[#111111] whitespace-nowrap">
                   Govt Recognized &bull; APEDA Certified
                 </span>
               </div>
 
+              {/* Main Visual Vessel Showcase Frame (Smooth Curved Luxury Corners) */}
+              <div className="hero-visual-frame relative w-full h-[470px] sm:h-[530px] lg:h-[580px] rounded-[28px] overflow-hidden shadow-[0_24px_55px_-12px_rgba(0,0,0,0.18)] border border-zinc-200/90 bg-zinc-900 group">
+                <Image
+                  src="/assets/images/hero/hero-maersk-port-cranes.jpg"
+                  alt="The Golden Star - International Maritime Container Cargo Vessel at Port"
+                  fill
+                  className="object-cover object-center group-hover:scale-105 transition-transform duration-1000 ease-out"
+                  priority
+                />
 
-              {/* Card 4: Bottom-Left Floating Pill (Cold-Chain Reefer Logistics) */}
-              <div className="absolute -bottom-5 -left-2 sm:-bottom-7 sm:-left-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] p-3 sm:p-3.5 shadow-[0_16px_36px_-6px_rgba(231,63,30,0.25)] max-w-[240px] sm:max-w-[270px] transition-transform hover:scale-105 duration-300">
-                <div className="flex items-center gap-1.5 mb-1">
-                  <Ship className="w-3.5 h-3.5 text-[#E73F1E] shrink-0" />
-                  <span className="text-[9px] sm:text-[10px] font-urbanist font-bold uppercase tracking-wider text-[#FB6C00]">
-                    Cold-Chain Reefer Logistics
+                {/* Subtle top & bottom ambient overlays */}
+                <div className="absolute inset-x-0 top-0 h-28 bg-gradient-to-b from-black/45 via-black/15 to-transparent pointer-events-none" />
+                <div className="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black/65 via-black/25 to-transparent pointer-events-none" />
+
+                {/* Embedded Live Port Status Tag (Top-Left inside frame) */}
+                <div className="absolute top-4 left-4 z-20 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/55 backdrop-blur-md border border-white/20 text-white shadow-md">
+                  <span className="relative flex h-2 w-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75" />
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500" />
+                  </span>
+                  <span className="text-[10px] font-space font-bold uppercase tracking-wider text-white">
+                    Live Maritime Corridor
+                  </span>
+                  <span className="text-[9px] font-dmsans text-zinc-300 hidden sm:inline">
+                    &bull; Tuticorin &amp; Chennai Ports
                   </span>
                 </div>
-                <p className="text-[10px] sm:text-[11px] font-opensans font-bold text-[#111111] leading-snug">
-                  Direct from Thanjavur Cauvery Delta to Global Seaports
-                </p>
-                <div className="flex mt-1.5 items-center gap-1.5 text-[8.5px] sm:text-[9px] font-opensans font-semibold text-zinc-500">
-                  <CheckCircle2 className="w-3 h-3 text-[#F9B637] shrink-0" />
-                  <span>APEDA &bull; SPICES BOARD &bull; FSSAI</span>
+              </div>
+
+              {/* =========================================================================
+                  ELEVATED OVERLAY CARDS: Farm-to-Port Synergy (No Boxy Harsh Yellow Borders)
+              ========================================================================= */}
+
+              {/* Card 1: Left Floating Agricultural Harvest Preview Card */}
+              <div className="hero-floating-stat animate-float-2 absolute bottom-24 -left-3 sm:bottom-28 sm:-left-6 z-30 bg-white/95 backdrop-blur-md rounded-2xl border border-zinc-200/90 p-2.5 sm:p-3 shadow-[0_16px_36px_-6px_rgba(0,0,0,0.16)] flex items-center gap-3 max-w-[250px] sm:max-w-[275px] transition-transform hover:scale-105 duration-300">
+                <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-xl overflow-hidden shrink-0 border border-zinc-100 shadow-xs">
+                  <Image
+                    src="/assets/images/products/fruits-display.jpg"
+                    alt="Cauvery Delta Fresh Agricultural Export Produce"
+                    fill
+                    className="object-cover"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
+                  <span className="absolute bottom-0.5 inset-x-0 text-center text-[7.5px] font-space font-bold text-white uppercase tracking-tight">
+                    GRADE A1
+                  </span>
+                </div>
+                <div>
+                  <div className="flex items-center gap-1">
+                    <Leaf className="w-3 h-3 text-[#FB6C00] shrink-0" />
+                    <span className="text-[9px] font-space font-bold uppercase tracking-wider text-[#FB6C00]">
+                      Cauvery Delta Sourcing
+                    </span>
+                  </div>
+                  <p className="text-[10.5px] sm:text-[11.5px] font-space font-bold text-[#111111] leading-snug mt-0.5">
+                    Fresh Fruits &amp; Spices
+                  </p>
+                  <div className="flex items-center gap-1 text-[8.5px] font-dmsans font-medium text-zinc-500 mt-0.5">
+                    <CheckCircle2 className="w-2.5 h-2.5 text-emerald-600 shrink-0" />
+                    <span>Cold-Chain -18&deg;C to +4&deg;C</span>
+                  </div>
                 </div>
               </div>
 
-              {/* Card 5: Bottom-Right Floating Badge (99.8% On-Time Clearance) */}
-              <div className="animate-float-3 absolute -bottom-5 -right-2 sm:-bottom-7 sm:-right-6 z-20 bg-white/95 backdrop-blur-md border-2 border-[#F9B637] p-2.5 sm:p-3.5 shadow-[0_16px_36px_-6px_rgba(231,63,30,0.25)] flex items-center gap-2.5 transition-transform hover:scale-105 duration-300">
-                <div className="w-8 h-8 sm:w-9 sm:h-9 bg-gradient-to-br from-[#E73F1E] via-[#FB6C00] to-[#F9B637] flex items-center justify-center text-white shadow-xs shrink-0">
-                  <Award className="w-4 h-4 sm:w-4.5 sm:h-4.5" />
+              {/* Card 2: Bottom-Right Floating Global Maritime Performance Card */}
+              <div className="hero-floating-stat animate-float-3 absolute -bottom-5 right-2 sm:-bottom-6 sm:-right-4 z-30 bg-white/95 backdrop-blur-md rounded-2xl border border-zinc-200/90 p-3 sm:p-3.5 shadow-[0_18px_42px_-6px_rgba(231,63,30,0.2)] flex flex-col gap-2 min-w-[210px] sm:min-w-[230px] transition-transform hover:scale-105 duration-300">
+                <div className="flex items-center gap-2.5">
+                  <div className="relative w-9 h-9 rounded-full overflow-hidden shadow-xs shrink-0 border border-zinc-200">
+                    <Image
+                      src="/assets/images/branding/real-globe.jpg"
+                      alt="Real 3D Earth Globe"
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <div className="text-base sm:text-lg font-black font-space bg-clip-text text-transparent bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] leading-none">
+                      50+ Countries
+                    </div>
+                    <div className="text-[9.5px] sm:text-[10px] font-dmsans font-bold text-zinc-800 uppercase tracking-wide mt-0.5">
+                      Global Sea Routes
+                    </div>
+                  </div>
                 </div>
-                <div>
-                  <div className="text-base sm:text-lg font-black font-urbanist bg-clip-text text-transparent bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] leading-none">
-                    99.8%
+
+                <div className="pt-2 border-t border-zinc-100 flex items-center justify-between gap-2">
+                  <div className="flex items-center gap-1.5">
+                    <Award className="w-3.5 h-3.5 text-[#E73F1E] shrink-0" />
+                    <div>
+                      <span className="text-[11px] sm:text-xs font-bold font-space text-[#111111] leading-none block">
+                        99.8% On-Time
+                      </span>
+                      <span className="text-[8.5px] text-zinc-500 font-dmsans leading-none block mt-0.5">
+                        Zero Demurrage Standard
+                      </span>
+                    </div>
                   </div>
-                  <div className="text-[9.5px] sm:text-[10.5px] font-bold font-opensans text-zinc-900 uppercase tracking-wide mt-0.5">
-                    On-Time Clearance
-                  </div>
-                  <div className="text-[8.5px] sm:text-[9.5px] text-zinc-500 font-opensans leading-none">
-                    Zero Demurrage Standard
-                  </div>
+                  <span className="px-2 py-0.5 rounded-full text-[8px] font-space font-bold uppercase bg-emerald-50 text-emerald-700 border border-emerald-200 shrink-0">
+                    Verified
+                  </span>
                 </div>
               </div>
+
             </div>
           </div>
         </div>

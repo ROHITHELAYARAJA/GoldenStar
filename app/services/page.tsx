@@ -225,16 +225,16 @@ export default function ServicesPage() {
                 <div className="w-12 h-12 bg-gradient-to-br from-[#FFDD9C] to-[#FFD84D] text-[#111111] flex items-center justify-center mb-5 shadow-xs border border-[#F9B637]/50">
                   <Sparkles className="w-6 h-6 text-[#111111]" />
                 </div>
-                <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-urbanist font-black uppercase tracking-wider bg-[#FFDD9C]/45 text-[#E73F1E] border border-[#F9B637]/50 mb-3 shadow-2xs">
+                <span className="inline-flex items-center gap-1.5 px-3 py-1 text-[11px] font-space font-bold uppercase tracking-wider bg-[#FFDD9C]/45 text-[#E73F1E] border border-[#F9B637]/50 mb-3 shadow-2xs">
                   Custom Inquiries
                 </span>
-                <h3 className="text-xl sm:text-2xl font-extrabold font-urbanist text-[#111111] mb-3">
+                <h3 className="text-xl sm:text-2xl font-bold font-space text-[#111111] mb-3">
                   Tailored Export Solutions
                 </h3>
-                <p className="text-sm sm:text-[15px] font-opensans text-zinc-900 font-bold leading-relaxed mb-3">
+                <p className="text-sm sm:text-[15px] font-dmsans text-zinc-900 font-semibold leading-relaxed mb-3">
                   Require customized container mix, specific mesh packaging sizes, or specialized phytosanitary parameters?
                 </p>
-                <p className="text-xs sm:text-sm font-opensans text-zinc-700 font-semibold leading-relaxed">
+                <p className="text-xs sm:text-sm font-dmsans text-zinc-700 font-medium leading-relaxed">
                   Our export desk creates bespoke contracts aligned with your destination country port regulations.
                 </p>
               </div>
@@ -242,7 +242,7 @@ export default function ServicesPage() {
               <div className="pt-6 mt-6 font-dmsans">
                 <button
                   onClick={() => openQuoteModal("Custom Trade Requirements")}
-                  className="w-full py-3 sm:py-3.5 bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] hover:from-[#FB6C00] hover:to-[#E73F1E] text-white font-urbanist font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer uppercase tracking-wider"
+                  className="w-full py-3 sm:py-3.5 bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] hover:from-[#FB6C00] hover:to-[#E73F1E] text-white font-space font-bold text-sm shadow-md hover:shadow-lg transition-all active:scale-98 cursor-pointer uppercase tracking-wider"
                 >
                   <span>Request Custom Plan</span>
                 </button>

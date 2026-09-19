@@ -114,7 +114,7 @@ export default function ContactPage() {
                   <span className="text-[11px] font-space font-bold uppercase tracking-[0.2em] text-[#FB6C00] block">
                     Proprietor &amp; Managing Director
                   </span>
-                  <h3 className="font-outfit text-xl sm:text-2xl font-extrabold text-[#111111] mt-0.5 tracking-tight">
+                  <h3 className="font-space text-xl sm:text-2xl font-bold text-[#111111] mt-0.5 tracking-tight">
                     Sahul Hameed
                   </h3>
                 </div>

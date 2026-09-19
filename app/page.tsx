@@ -469,13 +469,13 @@ export default function HomePage() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-3xl mx-auto mb-10 sm:mb-12"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E73F1E] bg-[#FFDD9C]/50 px-4 py-1.5 inline-block mb-3 font-urbanist border border-[#F9B637]/60 shadow-xs">
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E73F1E] bg-[#FFDD9C]/50 px-4 py-1.5 inline-block mb-3 font-space border border-[#F9B637]/60 shadow-xs">
               OUR PROMISE
             </span>
-            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-[#111111] font-urbanist">
+            <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#111111] font-space">
               Our Promise
             </h2>
-            <p className="font-opensans text-base sm:text-lg text-zinc-600 mt-2.5 italic">
+            <p className="font-dmsans text-base sm:text-lg text-zinc-600 mt-2.5 italic">
               &ldquo;Every product. Every shipment. Every partnership — handled with care.&rdquo;
             </p>
           </motion.div>
@@ -519,23 +519,23 @@ export default function HomePage() {
                       </div>
 
                       {/* Top Step Number Pill in Creamy Gold & Flame Coral */}
-                      <span className="absolute -top-2.5 px-3 py-0.5 text-[11px] font-urbanist font-black bg-[#FFDD9C] text-[#E73F1E] shadow-xs border border-[#F9B637]">
+                      <span className="absolute -top-2.5 px-3 py-0.5 text-[11px] font-space font-bold bg-[#FFDD9C] text-[#E73F1E] shadow-xs border border-[#F9B637]">
                         {step.num}
                       </span>
                     </motion.div>
 
                     {/* Step Name */}
-                    <h3 className="text-base sm:text-lg font-extrabold text-[#111111] font-urbanist mb-1.5 group-hover:text-[#E73F1E] transition-colors">
+                    <h3 className="text-base sm:text-lg font-bold text-[#111111] font-space mb-1.5 group-hover:text-[#E73F1E] transition-colors">
                       {step.num} — {step.name}
                     </h3>
 
                     {/* Highlight Badge */}
-                    <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider text-[#E73F1E] bg-[#FFDD9C]/45 px-3 py-0.5 mb-3 border border-[#F9B637]/50 font-opensans shadow-2xs">
+                    <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider text-[#E73F1E] bg-[#FFDD9C]/45 px-3 py-0.5 mb-3 border border-[#F9B637]/50 font-dmsans shadow-2xs">
                       {step.highlight}
                     </span>
 
                     {/* Step Description */}
-                    <p className="text-xs text-zinc-600 leading-relaxed font-normal font-opensans max-w-[220px]">
+                    <p className="text-xs text-zinc-600 leading-relaxed font-normal font-dmsans max-w-[220px]">
                       {step.desc}
                     </p>
                   </motion.div>
