@@ -38,40 +38,40 @@ export default function HomePage() {
       num: "01",
       name: "Source",
       icon: Leaf,
-      desc: "We source quality fruits, vegetables, and spices through trusted farmers and suppliers.",
-      highlight: "Direct Farm Procurement",
+      desc: "We buy fresh produce directly from trusted local farmers across South India with zero middlemen.",
+      highlight: "Farm-Direct Sourcing",
       gradient: "from-[#E73F1E] to-[#FB6C00]",
     },
     {
       num: "02",
-      name: "Select",
+      name: "Inspect",
       icon: ShieldCheck,
-      desc: "Products are carefully selected based on quality, freshness, and customer requirements.",
-      highlight: "100% Quality Inspection",
+      desc: "Every item is hand-checked for freshness, grade, size, and strict export quality standards.",
+      highlight: "100% Quality Inspected",
       gradient: "from-[#FB6C00] to-[#F9B637]",
     },
     {
       num: "03",
-      name: "Prepare",
+      name: "Pack",
       icon: Package,
-      desc: "Products are sorted, graded, packed, and prepared according to shipment requirements.",
-      highlight: "Export-Grade Sorting",
+      desc: "Cleaned, sorted, and packed into heavy-duty export boxes with your custom branding and labels.",
+      highlight: "Export-Grade Packaging",
       gradient: "from-[#F9B637] to-[#FB6C00]",
     },
     {
       num: "04",
       name: "Ship",
       icon: Ship,
-      desc: "We coordinate documentation, logistics, and transportation for smooth international movement.",
-      highlight: "Cold-Chain Maritime",
+      desc: "Refrigerated sea containers (-18°C to +4°C) with full customs documentation and cargo tracking.",
+      highlight: "Refrigerated Sea Freight",
       gradient: "from-[#FB6C00] to-[#E73F1E]",
     },
     {
       num: "05",
       name: "Deliver",
       icon: Globe2,
-      desc: "Products reach their destination efficiently, helping our customers maintain a reliable supply.",
-      highlight: "On-Time Destination Delivery",
+      desc: "Safe and on-time arrival at your destination port, ready for quick and hassle-free clearance.",
+      highlight: "On-Time Port Arrival",
       gradient: "from-[#E73F1E] via-[#FB6C00] to-[#F9B637]",
     },
   ];
@@ -457,91 +457,78 @@ export default function HomePage() {
       {/* 🌟 Interactive "Why Choose Us" Metrics Section (Matching Reference Screenshot) */}
       <WhyChooseUsInteractive />
 
-      {/* 🌟 Upgraded "Our Promise" Section (Golden Star Brand Palette + Vibrant Animated Roadmap) */}
-      <section className="py-14 sm:py-18 bg-gradient-to-b from-zinc-50/80 via-white to-amber-50/20 border-t border-b border-[#F9B637]/30 relative overflow-hidden">
-        <div className="absolute inset-0 bg-[radial-gradient(#FB6C00_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.035] pointer-events-none" />
+      {/* 🌟 Redesigned "Our Promise" Section (Clean, Modern, Non-Redundant 5-Step Workflow) */}
+      <section className="py-14 sm:py-18 bg-gradient-to-b from-zinc-50/70 via-white to-amber-50/20 border-t border-b border-[#F9B637]/30 relative overflow-hidden">
+        <div className="absolute inset-0 bg-[radial-gradient(#FB6C00_1px,transparent_1px)] [background-size:24px_24px] opacity-[0.03] pointer-events-none" />
 
         <div className="max-w-7xl mx-auto px-6 sm:px-8 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.5 }}
             className="text-center max-w-3xl mx-auto mb-10 sm:mb-12"
           >
-            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E73F1E] bg-[#FFDD9C]/50 px-4 py-1.5 rounded-full inline-block mb-3 font-space border border-[#F9B637]/60 shadow-xs">
-              OUR PROMISE
+            <span className="text-xs font-bold uppercase tracking-[0.2em] text-[#E73F1E] bg-[#FFDD9C]/45 px-3.5 py-1.5 rounded-full inline-block mb-3 font-space border border-[#F9B637]/50">
+              HOW WE EXPORT
             </span>
             <h2 className="text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#111111] font-space">
               Our Promise
             </h2>
-            <p className="font-dmsans text-base sm:text-lg text-zinc-600 mt-2.5 italic">
-              &ldquo;Every product. Every shipment. Every partnership — handled with care.&rdquo;
+            <p className="font-dmsans text-base sm:text-lg text-zinc-700 mt-2 italic">
+              &ldquo;From South Indian farms to your destination port — handled with care and delivered on time.&rdquo;
             </p>
           </motion.div>
 
-          {/* Connected Roadmap Timeline with Luminous Gold/Orange Gradient Track */}
-          <div className="relative mt-10">
-            <div className="hidden lg:block absolute top-[50px] left-[6%] right-[6%] h-[3px] bg-gradient-to-r from-[#FFDD9C] via-[#F9B637] to-[#FB6C00] z-0 overflow-hidden shadow-xs">
-              <div className="w-48 h-full bg-gradient-to-r from-transparent via-[#E73F1E] to-transparent animate-pulse-track" />
-            </div>
+          {/* Clean 5-Step Process Cards (Zero duplication, readable, needed words only) */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 sm:gap-5">
+            {promiseSteps.map((step, idx) => {
+              const IconComponent = step.icon;
+              return (
+                <motion.div
+                  key={step.num}
+                  initial={{ opacity: 0, y: 24 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.4, delay: idx * 0.08 }}
+                  whileHover={{ y: -4 }}
+                  className="bg-white rounded-2xl p-6 border border-zinc-200/90 hover:border-[#FB6C00]/40 shadow-xs hover:shadow-lg transition-all duration-300 flex flex-col justify-between group relative overflow-hidden"
+                >
+                  {/* Subtle top gradient accent on hover */}
+                  <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#E73F1E] to-[#FB6C00] opacity-0 group-hover:opacity-100 transition-opacity" />
 
-            <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8 lg:gap-4 relative z-10">
-              {promiseSteps.map((step, idx) => {
-                const IconComponent = step.icon;
-                const isHovered = activeStepHover === idx;
-                return (
-                  <motion.div
-                    key={step.num}
-                    initial={{ opacity: 0, y: 30 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5, delay: idx * 0.1 }}
-                    onMouseEnter={() => setActiveStepHover(idx)}
-                    onMouseLeave={() => setActiveStepHover(null)}
-                    className="flex flex-col items-center text-center group cursor-pointer"
-                  >
-                    {/* Node Circle with Pure White Outer Ring + Radiant Gradient Core */}
-                    <motion.div
-                      whileHover={{ scale: 1.08, y: -4 }}
-                      transition={{ type: "spring", stiffness: 300, damping: 15 }}
-                      className={`w-24 h-24 rounded-2xl bg-white border-2 flex items-center justify-center mb-5 relative shadow-md transition-all duration-300 ${
-                        isHovered
-                          ? "border-[#E73F1E] shadow-[0_12px_32px_-4px_rgba(231,63,30,0.35)]"
-                          : "border-[#F9B637]/60 group-hover:border-[#E73F1E] group-hover:shadow-[0_12px_28px_-6px_rgba(251,108,0,0.3)]"
-                      }`}
-                    >
-                      {/* Gradient Core Container */}
-                      <div
-                        className={`w-16 h-16 rounded-xl bg-gradient-to-br ${step.gradient} flex items-center justify-center text-white shadow-md group-hover:scale-105 transition-transform duration-300`}
-                      >
-                        <IconComponent className="w-7 h-7 text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.2)] transition-transform group-hover:scale-110 duration-300" />
-                      </div>
-
-                      {/* Top Step Number Pill in Creamy Gold & Flame Coral */}
-                      <span className="absolute -top-2.5 px-3 py-0.5 rounded-full text-[11px] font-space font-bold bg-[#FFDD9C] text-[#E73F1E] shadow-xs border border-[#F9B637]">
+                  <div>
+                    {/* Header: Step Number & Icon */}
+                    <div className="flex items-center justify-between mb-4">
+                      <span className="text-2xl sm:text-3xl font-extrabold font-space text-[#E73F1E] transition-colors">
                         {step.num}
                       </span>
-                    </motion.div>
+                      <div className="w-11 h-11 rounded-xl bg-orange-50 group-hover:bg-gradient-to-br group-hover:from-[#E73F1E] group-hover:to-[#FB6C00] text-[#E73F1E] group-hover:text-white flex items-center justify-center transition-all duration-300 shadow-2xs">
+                        <IconComponent className="w-5 h-5 transition-transform group-hover:scale-110" />
+                      </div>
+                    </div>
 
-                    {/* Step Name */}
-                    <h3 className="text-base sm:text-lg font-bold text-[#111111] font-space mb-1.5 group-hover:text-[#E73F1E] transition-colors">
-                      {step.num} — {step.name}
+                    {/* Step Title */}
+                    <h3 className="text-xl font-bold text-[#111111] font-space mb-2 group-hover:text-[#E73F1E] transition-colors">
+                      {step.name}
                     </h3>
 
-                    {/* Highlight Badge */}
-                    <span className="text-[10px] sm:text-[10.5px] font-bold uppercase tracking-wider text-[#E73F1E] bg-[#FFDD9C]/45 px-3 py-0.5 rounded-full mb-3 border border-[#F9B637]/50 font-dmsans shadow-2xs">
-                      {step.highlight}
-                    </span>
-
                     {/* Step Description */}
-                    <p className="text-xs text-zinc-600 leading-relaxed font-normal font-dmsans max-w-[220px]">
+                    <p className="text-[13px] sm:text-sm text-zinc-700 font-dmsans leading-relaxed">
                       {step.desc}
                     </p>
-                  </motion.div>
-                );
-              })}
-            </div>
+                  </div>
+
+                  {/* Clean Bottom Tag with Forward Flow */}
+                  <div className="mt-5 pt-3 border-t border-zinc-100 flex items-center justify-between text-xs font-semibold text-zinc-700 font-dmsans">
+                    <span className="text-zinc-800">{step.highlight}</span>
+                    <span className="text-[#FB6C00] font-bold group-hover:translate-x-1 transition-transform">
+                      {idx < 4 ? "→" : "✓"}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
