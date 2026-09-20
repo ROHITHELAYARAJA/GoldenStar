@@ -21,15 +21,41 @@ export function QuoteModalProvider({ children }: { children: React.ReactNode }) 
   const [toastMessage, setToastMessage] = useState<string | null>(null);
 
   const openQuoteModal = (productOrCategory?: string) => {
+    let category = "Fruits";
+    let product = "";
+
     if (productOrCategory) {
-      if (
-        productOrCategory.includes("Fruits") ||
-        productOrCategory.includes("Vegetables") ||
-        productOrCategory.includes("Spices")
+      if (productOrCategory.includes(" - ")) {
+        const parts = productOrCategory.split(" - ");
+        const catPart = parts[0].trim();
+        const prodPart = parts.slice(1).join(" - ").trim();
+        if (["Fruits", "Vegetables", "Spices", "Mixed"].includes(catPart)) {
+          category = catPart;
+        }
+        product = prodPart;
+      } else if (productOrCategory.toLowerCase().includes("fruit")) {
+        category = "Fruits";
+      } else if (productOrCategory.toLowerCase().includes("vegetable")) {
+        category = "Vegetables";
+      } else if (
+        productOrCategory.toLowerCase().includes("spice") ||
+        productOrCategory.toLowerCase().includes("chilli")
       ) {
-        setSelectedCategory(productOrCategory);
+        category = "Spices";
+      } else if (
+        productOrCategory.toLowerCase().includes("mixed") ||
+        productOrCategory.toLowerCase().includes("all")
+      ) {
+        category = "Mixed";
+        product = productOrCategory;
+      } else {
+        product = productOrCategory;
       }
-      setPrefillProduct(productOrCategory);
+      setSelectedCategory(category);
+      setPrefillProduct(product);
+    } else {
+      setSelectedCategory("Fruits");
+      setPrefillProduct("");
     }
     setIsOpen(true);
   };

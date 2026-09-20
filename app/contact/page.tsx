@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import Image from "next/image";
 import { useQuoteModal } from "@/context/QuoteModalContext";
 import {
@@ -18,6 +18,7 @@ import { ScrollReveal } from "@/components/ui/ScrollReveal";
 
 export default function ContactPage() {
   const { showToast } = useQuoteModal();
+  const formRef = useRef<HTMLFormElement>(null);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     name: "",
@@ -29,23 +30,96 @@ export default function ContactPage() {
     message: "",
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSend = (channel: "whatsapp" | "email") => {
+    if (formRef.current && !formRef.current.reportValidity()) {
+      return;
+    }
     setIsSubmitting(true);
 
-    setTimeout(() => {
-      setIsSubmitting(false);
-      showToast("Thank you! Your trade inquiry has been received. Founder Sahul Hameed & our export desk will reach out within 12 hours.");
-      setFormData({
-        name: "",
-        company: "",
-        email: "",
-        phone: "",
-        product: "Fruits",
-        quantity: "",
-        message: "",
-      });
-    }, 700);
+    if (channel === "whatsapp") {
+      const messageLines = [
+        `*EXPORT TRADE INQUIRY - THE GOLDEN STAR*`,
+        `----------------------------------------`,
+        `*Full Name:* ${formData.name.trim()}`,
+        `*Company:* ${formData.company.trim()}`,
+        `*Work Email:* ${formData.email.trim()}`,
+        `*Phone / WhatsApp:* ${formData.phone.trim()}`,
+        `*Product:* ${formData.product}`,
+        `*Quantity / Volume:* ${formData.quantity.trim() || "Not specified"}`,
+        `*Message / Destination:* ${formData.message.trim() || "General Export Inquiry"}`,
+        `----------------------------------------`,
+        `Hello The Golden Star, I am submitting this export trade inquiry from your website.`,
+      ];
+
+      const messageText = messageLines.join("\n");
+      const encoded = encodeURIComponent(messageText);
+      const whatsappUrl = `https://wa.me/919345243790?text=${encoded}`;
+
+      try {
+        const win = window.open(whatsappUrl, "_blank");
+        if (!win || win.closed || typeof win.closed === "undefined") {
+          window.location.href = whatsappUrl;
+        }
+      } catch {
+        window.location.href = whatsappUrl;
+      }
+
+      setTimeout(() => {
+        setIsSubmitting(false);
+        showToast("Opening WhatsApp with your trade inquiry for Founder Sahul Hameed...");
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          product: "Fruits",
+          quantity: "",
+          message: "",
+        });
+      }, 600);
+    } else {
+      const subject = `Trade Inquiry: ${formData.product} - ${formData.company.trim() || formData.name.trim()}`;
+      const emailBodyLines = [
+        `EXPORT TRADE INQUIRY - THE GOLDEN STAR`,
+        `----------------------------------------`,
+        `Full Name: ${formData.name.trim()}`,
+        `Company: ${formData.company.trim()}`,
+        `Work Email: ${formData.email.trim()}`,
+        `Phone / WhatsApp: ${formData.phone.trim()}`,
+        `Product Interested In: ${formData.product}`,
+        `Quantity / Volume: ${formData.quantity.trim() || "Not specified"}`,
+        `Message / Destination: ${formData.message.trim() || "General Export Inquiry"}`,
+        `----------------------------------------`,
+        `Hello The Golden Star Export Desk,`,
+        ``,
+        `I would like to explore trade opportunities and request a quotation for the requirement specified above.`,
+        ``,
+        `Best regards,`,
+        `${formData.name.trim()}`,
+        `${formData.company.trim()}`,
+        `${formData.phone.trim()}`,
+      ];
+
+      const mailtoUrl = `mailto:hameedsahul9978@gmail.com?subject=${encodeURIComponent(
+        subject
+      )}&body=${encodeURIComponent(emailBodyLines.join("\n"))}`;
+
+      window.location.href = mailtoUrl;
+
+      setTimeout(() => {
+        setIsSubmitting(false);
+        showToast("Opening email client to send inquiry to hameedsahul9978@gmail.com...");
+        setFormData({
+          name: "",
+          company: "",
+          email: "",
+          phone: "",
+          product: "Fruits",
+          quantity: "",
+          message: "",
+        });
+      }, 600);
+    }
   };
 
   return (
@@ -222,7 +296,7 @@ export default function ContactPage() {
                   </p>
                 </div>
 
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form ref={formRef} onSubmit={(e) => e.preventDefault()} className="space-y-6">
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                     <div>
                       <label className="block text-xs font-space font-bold uppercase tracking-wider text-zinc-800 mb-2">
@@ -324,14 +398,37 @@ export default function ContactPage() {
                     />
                   </div>
 
-                  <button
-                    type="submit"
-                    disabled={isSubmitting}
-                    className="w-full py-4 font-space font-bold text-sm bg-[#111111] hover:bg-[#FF583E] text-white rounded-full shadow-xl hover:scale-[1.01] transition-all flex items-center justify-center gap-2"
-                  >
-                    <Send className="w-4 h-4 text-[#FFD84D]" />
-                    <span>{isSubmitting ? "TRANSMITTING INQUIRY..." : "SEND ENQUIRY →"}</span>
-                  </button>
+                  <div className="pt-2">
+                    <div className="flex items-center justify-between mb-2.5 px-1">
+                      <span className="text-xs font-space font-bold uppercase tracking-wider text-zinc-600">
+                        Choose Submission Channel:
+                      </span>
+                      <span className="text-[11px] font-dmsans text-zinc-500 font-medium">
+                        Direct to Founder Sahul Hameed
+                      </span>
+                    </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                      <button
+                        type="button"
+                        onClick={() => handleSend("whatsapp")}
+                        disabled={isSubmitting}
+                        className="w-full py-4 rounded-full bg-[#25D366] hover:bg-[#20bd5a] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-[1.01] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                      >
+                        <MessageCircle className="w-4 h-4 sm:w-5 sm:h-5 text-white" />
+                        <span>Send via WhatsApp</span>
+                      </button>
+
+                      <button
+                        type="button"
+                        onClick={() => handleSend("email")}
+                        disabled={isSubmitting}
+                        className="w-full py-4 rounded-full bg-[#111111] hover:bg-[#FF583E] text-white font-space font-bold text-xs sm:text-sm shadow-md hover:scale-[1.01] transition-all flex items-center justify-center gap-2 cursor-pointer disabled:opacity-50"
+                      >
+                        <Mail className="w-4 h-4 sm:w-5 sm:h-5 text-[#FFD84D]" />
+                        <span>Send via Email</span>
+                      </button>
+                    </div>
+                  </div>
                 </form>
               </div>
             </ScrollReveal>
